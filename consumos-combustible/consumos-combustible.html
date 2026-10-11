@@ -902,10 +902,7 @@
 
     <!-- Resultados -->
     <div id="sap-results" style="padding:10px 14px 14px;flex:1;min-height:0;overflow-y:auto;display:flex;flex-direction:column">
-        <div class="empty-state">
-            <div class="empty-icon">🔗</div>
-            <div>Sube el Excel SAP con el botón <strong>Nuevo Excel</strong> y luego<br>presiona <strong>Cargar ciclos nuevos</strong> para vincular con AP1</div>
-        </div>
+        <div class="empty-state"><div class="empty-icon"><span class="spinner" style="width:30px;height:30px;border-width:3px;margin:0"></span></div><div>Cargando información…</div></div>
     </div>
 
 </div><!-- /screen-consumos-sap -->
@@ -1647,7 +1644,7 @@ function _estrSubir(input) {
             var sin = filas.filter(function(f) { return !f.campamentos; }).length;
             var LOTE = 400;
             for (var i = 0; i < filas.length; i += LOTE) {
-                _combUpProgress('Guardando estructura en D1… (' + (i / LOTE + 1) + ' de ' + Math.ceil(filas.length / LOTE) + ')');
+                _combUpProgress('Guardando estructura… (' + (i / LOTE + 1) + ' de ' + Math.ceil(filas.length / LOTE) + ')');
                 var resp = await fetch(_PROXY + '/db/centro-costo-estructura/sync', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json', 'X-Api-Key': _COMB_D1_API_KEY },
@@ -3157,7 +3154,7 @@ async function _combSyncD1(allRows, onlyKeys, onProgress) {
         });
         if (!resp.ok) {
             var txt = await resp.text();
-            throw new Error('D1 sync HTTP ' + resp.status + ': ' + txt);
+            throw new Error('Error al guardar, HTTP ' + resp.status + ': ' + txt);
         }
     }
     console.log('[D1] consumo_combustible sync: ' + filas.length + ' consumos puros, ' + eliminar.length + ' excluidos (anulados/anulaciones).');
@@ -3234,16 +3231,16 @@ function sapSubirNuevoExcel(input) {
                 return;
             }
             var addedKeys = new Set(added.map(_sapRowKey));
-            _combUpProgress('Guardando ' + added.length + ' filas nuevas en D1…');
+            _combUpProgress('Guardando ' + added.length + ' filas nuevas…');
             _combSyncD1(_sapExcelRows, addedKeys, function(n, tot) {
-                _combUpProgress('Guardando ' + added.length + ' filas nuevas en D1… (' + n + ' de ' + tot + ')');
+                _combUpProgress('Guardando ' + added.length + ' filas nuevas… (' + n + ' de ' + tot + ')');
             }).then(function() {
                 _combUpProgress('');
-                alert('Listo: ' + added.length + ' filas nuevas guardadas en D1.\nTotal acumulado: ' + _sapExcelRows.length + ' filas.');
+                alert('Listo: ' + added.length + ' filas nuevas guardadas.\nTotal acumulado: ' + _sapExcelRows.length + ' filas.');
             }).catch(function(err) {
                 _combUpProgress('');
                 console.warn('D1 sync error:', err);
-                alert('Se agregaron ' + added.length + ' filas en pantalla, pero NO se pudieron guardar en D1:\n' + err.message);
+                alert('Se agregaron ' + added.length + ' filas en pantalla, pero NO se pudieron guardar:\n' + err.message);
             });
         } catch(ex) { _combUpProgress(''); alert('Error leyendo el archivo: ' + ex.message); }
     };
@@ -3932,9 +3929,13 @@ function sapSetTab(tab) {
     updateSapResults();
 }
 
+// Mientras llegan los consumos se muestra "Cargando información…" (no los avisos de "sube el Excel")
+var _sapIniciando = true;
+var _SAP_LOADER = '<div class="empty-state"><div class="empty-icon"><span class="spinner" style="width:30px;height:30px;border-width:3px;margin:0"></span></div><div>Cargando información…</div></div>';
 function updateSapResults() {
     _fpRenderCount();
     const resultsDiv   = document.getElementById('sap-results');
+    if (_sapIniciando && !_sapExcelRows.length) { resultsDiv.innerHTML = _SAP_LOADER; return; }
     const isTendencia  = _sapTab === 'tendencia';
     const isMaterial   = _sapTab === 'material';
     const isCiclo      = _sapTab === 'ciclo';
@@ -6939,6 +6940,7 @@ function initSapScreen() {
     // Fuente principal: D1 (consumo_combustible, ya validado/neteado). Si falla o
     // esta vacia, cae al flujo anterior (KV compartido, luego IndexedDB local).
     function _applyAndRender(rows) {
+        _sapIniciando = false;
         if (rows && rows.length) {
             // Migración de signos para filas antiguas almacenadas con convenio incorrecto
             rows.forEach(function(r) {
@@ -6955,7 +6957,7 @@ function initSapScreen() {
     function _fallbackToIdb() {
         _sapIdbGet('rows').then(function(saved) {
             _applyAndRender(saved && saved.length ? saved : []);
-        }).catch(function() { updateSapResults(); });
+        }).catch(function() { _sapIniciando = false; updateSapResults(); });
     }
     function _fallbackToKvOrIdb() {
         _kvPull('excel').then(function(kvRows) {

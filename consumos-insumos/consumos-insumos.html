@@ -823,10 +823,7 @@
 
     <!-- Resultados -->
     <div id="sap-results" style="padding:10px 14px 14px;flex:1;min-height:0;overflow-y:auto;display:flex;flex-direction:column">
-        <div class="empty-state">
-            <div class="empty-icon">🔗</div>
-            <div>Sube el Excel SAP con el botón <strong>Nuevo Excel</strong> y luego<br>presiona <strong>Cargar ciclos nuevos</strong> para vincular con AP1</div>
-        </div>
+        <div class="empty-state"><div class="empty-icon"><span class="spinner" style="width:30px;height:30px;border-width:3px;margin:0"></span></div><div>Cargando información…</div></div>
     </div>
 
 </div><!-- /screen-consumos-sap -->
@@ -2231,7 +2228,7 @@ async function _sapSyncD1(rows) {
         });
         if (!resp.ok) {
             var txt = await resp.text();
-            throw new Error('D1 sync HTTP ' + resp.status + ': ' + txt);
+            throw new Error('Error al guardar, HTTP ' + resp.status + ': ' + txt);
         }
     }
     console.log('[D1] sync completado:', filas.length, 'filas');
@@ -2264,11 +2261,11 @@ function sapSubirNuevoExcel(input) {
             if (!rows.length) { alert('El archivo no contiene filas de almacén tipo 02.'); return; }
 
             statusEl.style.display = '';
-            statusEl.innerHTML = '<div style="display:flex;align-items:center;gap:8px;font-size:12px;color:#1e40af"><span class="spinner" style="width:14px;height:14px;border-width:2px"></span>Subiendo ' + rows.length + ' filas a D1...</div>';
+            statusEl.innerHTML = '<div style="display:flex;align-items:center;gap:8px;font-size:12px;color:#1e40af"><span class="spinner" style="width:14px;height:14px;border-width:2px"></span>Guardando ' + rows.length + ' filas…</div>';
 
             await _sapSyncD1(rows);
 
-            statusEl.innerHTML = '<div style="display:flex;align-items:center;gap:8px;font-size:12px;color:#1e40af"><span class="spinner" style="width:14px;height:14px;border-width:2px"></span>Recargando datos desde D1...</div>';
+            statusEl.innerHTML = '<div style="display:flex;align-items:center;gap:8px;font-size:12px;color:#1e40af"><span class="spinner" style="width:14px;height:14px;border-width:2px"></span>Actualizando datos…</div>';
             await sapCargarExcelDesdeD1();
 
             statusEl.style.display = 'none';
@@ -2276,7 +2273,7 @@ function sapSubirNuevoExcel(input) {
             _sapExcelMeta = { filename: file.name, rows: _sapExcelRows.length, savedAt: ts };
             sapPopulateYearMonth(); sapPopulateClusterSub(); sapPopulatePiscinaCiclo();
             sapUpdateStatus(); updateSapResults();
-            alert('✅ ' + rows.length + ' filas subidas a D1.\nTotal disponible: ' + _sapExcelRows.length + ' filas.');
+            alert('✅ ' + rows.length + ' filas guardadas.\nTotal disponible: ' + _sapExcelRows.length + ' filas.');
         } catch(ex) {
             statusEl.style.display = 'none';
             alert('Error al subir: ' + ex.message);
@@ -2288,7 +2285,7 @@ function sapSubirNuevoExcel(input) {
 
 
 function sapBorrarExcel() {
-    if (!confirm('¿Recargar datos desde D1?\nEsto descarta los datos en memoria y los vuelve a cargar desde la base de datos.')) return;
+    if (!confirm('¿Recargar los datos?\nEsto descarta los datos en memoria y los vuelve a cargar.')) return;
     _sapExcelRows = []; _sapExcelMeta = null;
     sapUpdateStatus(); updateSapResults();
     sapCargarExcelDesdeD1().then(function() {
@@ -2363,7 +2360,7 @@ async function sapCargarCiclos(force) {
     const subById      = Object.fromEntries(sapAllSubs().map(function(s) { return [String(s.id), s.name]; }));
     const subClusterById = Object.fromEntries(sapAllSubs().map(function(s) { return [String(s.id), s.cluster || null]; }));
 
-    setP('Cargando ciclos desde D1...');
+    setP('Cargando información…');
     try {
         // Ciclos y órdenes de control en paralelo desde D1
         const [resCiclos, resOC] = await Promise.all([
@@ -2384,7 +2381,7 @@ async function sapCargarCiclos(force) {
             });
         }
 
-        setP('Procesando ' + ciclosD1.length + ' ciclos...');
+        setP('Preparando información…');
         _sapCycles = [];
         const curYr = new Date().getFullYear();
         ciclosD1.forEach(function(c) {
@@ -2430,7 +2427,7 @@ async function sapCargarCiclos(force) {
 async function sapSincronizarParaTodos() {
     _hdrUserClose();
     // Todos los datos ahora vienen de D1 directamente — cada usuario carga fresco al abrir la app.
-    alert('Los datos de consumo ya están en D1 y son accesibles para todos los usuarios automáticamente.\n\nSube el Excel con el botón "Subir Excel" para actualizar los datos.');
+    alert('Los datos de consumo ya están guardados y son accesibles para todos los usuarios automáticamente.\n\nSube el Excel con el botón "Subir Excel" para actualizar los datos.');
 }
 document.addEventListener('click', function(e) {
     // Multi-select sucursal (ciclo tab)
@@ -2547,11 +2544,11 @@ document.addEventListener('click', function(e) {
 });
 
 function sapLimpiarDatos() {
-    if (!confirm('Borrar datos en memoria y recargar desde D1?')) return;
+    if (!confirm('¿Borrar los datos en memoria y recargarlos?')) return;
     _sapExcelRows=[]; _sapExcelMeta=null; _sapCycles=[]; _sapSubsFetched=new Set(); _sapPools=[];
     document.getElementById('sap-file-input').value = '';
     _sapRepoblateSubSelect(); sapPopulatePiscinaCiclo(); sapUpdateStatus();
-    document.getElementById('sap-results').innerHTML = '<div class="empty-state"><div class="empty-icon">&#128279;</div><div>Recargando desde D1...</div></div>';
+    document.getElementById('sap-results').innerHTML = '<div class="empty-state"><div class="empty-icon">&#128279;</div><div>Actualizando datos…</div></div>';
     Promise.all([sapCargarCiclos(true), sapCargarPools(), sapCargarExcelDesdeD1()]).then(function() {
         sapPopulateYearMonth(); sapPopulateClusterSub(); sapPopulatePiscinaCiclo(); sapPopulateCicSub(); sapUpdateStatus(); updateSapResults();
     });
@@ -2808,6 +2805,7 @@ function updateSapResults() {
     const activeCycles = (isTendencia || isMaterial || isCiclo || isMapa) ? _sapCycles : sapGetActiveCycles();
 
     if (isMapa) { _sapRenderMapa(document.getElementById('sap-mapa-persistent')); return; }
+    if (_sapIniciando && !_sapExcelRows.length) { resultsDiv.innerHTML = _SAP_LOADER; return; }
 
     if (!_sapCycles.length && !_sapExcelRows.length) {
         resultsDiv.innerHTML = '<div class="empty-state"><div class="empty-icon">🔗</div><div>Sube el Excel SAP para comenzar</div></div>';
@@ -4431,7 +4429,7 @@ function _sapRenderTendencia(filteredRows, el) {
 
 // ── Vista Sucursal: fetch directo desde D1 (mismo endpoint que la app) ────────
 async function _sapRenderTendenciaSubD1(filteredRows, el) {
-    el.innerHTML = '<div style="padding:24px;text-align:center;color:var(--muted);font-size:13px">Cargando tendencias desde D1…</div>';
+    el.innerHTML = '<div style="padding:24px;text-align:center;color:var(--muted);font-size:13px">Cargando tendencias…</div>';
 
     // Actualizar botones
     var _vSub = document.getElementById('tend-view-sub-btn');
@@ -4453,7 +4451,7 @@ async function _sapRenderTendenciaSubD1(filteredRows, el) {
         _renderTendSubTabla(tendData, filteredRows, el, subSel);
     } catch(e) {
         console.error('tendencias D1 sub:', e);
-        el.innerHTML = '<div class="empty-state"><div class="empty-icon">⚠️</div><div>Error cargando datos de D1</div></div>';
+        el.innerHTML = '<div class="empty-state"><div class="empty-icon">⚠️</div><div>No se pudieron cargar los datos</div></div>';
     }
 }
 
@@ -5119,7 +5117,11 @@ function sapExportExcel() {
 // ══════════════════════════════════════════════════════════════════════════════
 
 // ── Init ──────────────────────────────────────────────────────
+// Mientras llega la carga inicial se muestra "Cargando información…" (no los avisos de "sube el Excel")
+var _sapIniciando = false;
+var _SAP_LOADER = '<div class="empty-state"><div class="empty-icon"><span class="spinner" style="width:30px;height:30px;border-width:3px;margin:0"></span></div><div>Cargando información…</div></div>';
 function initSapScreen() {
+    _sapIniciando = true;
     _sapSyncFilters();
     var _res = document.getElementById('sap-results');
     if (_res) _res.style.padding = _sapTab === 'tendencia' ? '0' : '10px 14px 14px';
@@ -5131,6 +5133,7 @@ function initSapScreen() {
         sapCargarExcelDesdeD1(),
         _cargarHistorialHa()
     ]).then(function() {
+        _sapIniciando = false;
         sapPopulateYearMonth();
         sapPopulateClusterSub();
         sapPopulatePiscinaCiclo();
