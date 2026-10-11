@@ -406,6 +406,29 @@
             .ap-brand span { display: none; }
             .content-wrap { left: 0; }
         }
+        /* ── Login (estilo AP1) ── */
+        .lg-wrap { position: fixed; inset: 0; z-index: 9999; align-items: center; justify-content: center; padding: 16px;
+            background: radial-gradient(1200px 600px at 50% 0%, #2a5683 0%, #1b3c5e 45%, #10243a 100%); font-family: 'Segoe UI', Roboto, -apple-system, sans-serif; }
+        .lg-card { width: 380px; max-width: 100%; background: #fff; border-radius: 6px; overflow: hidden; box-shadow: 0 18px 50px rgba(0,0,0,.35); }
+        .lg-head { background: #1b3c5e; padding: 26px 24px 20px; text-align: center; color: #fff; border-bottom: 3px solid #00b4d8; }
+        .lg-head svg { display: block; margin: 0 auto 6px; }
+        .lg-brand { font-size: 26px; font-weight: 700; letter-spacing: -.5px; line-height: 1.1; }
+        .lg-app { font-size: 13px; color: rgba(255,255,255,.75); margin-top: 4px; }
+        .lg-body { padding: 22px 26px 18px; }
+        .lg-lbl { display: block; font-size: 12px; font-weight: 600; color: #1f2f44; margin: 0 0 4px; }
+        .lg-inp { display: block; width: 100%; height: 38px; padding: 0 12px; margin-bottom: 14px; border: 1px solid #b9c3cd; border-radius: 4px; font-size: 14px; color: #1f2f44; background: #fff; box-sizing: border-box; outline: none; font-family: inherit; }
+        .lg-inp:focus { border-color: #1b3c5e; box-shadow: 0 0 0 2px rgba(27,60,94,.15); }
+        .lg-mono { font-family: monospace; font-size: 12px; }
+        .lg-btn { display: block; width: 100%; height: 40px; margin-top: 4px; border: none; border-radius: 4px; background: #1b3c5e; color: #fff; font-size: 14.5px; font-weight: 700; cursor: pointer; font-family: inherit; }
+        .lg-btn:hover { background: #234d76; }
+        .lg-btn:disabled { opacity: .7; cursor: wait; }
+        .lg-btn-2 { background: #0f766e; font-size: 13px; height: 36px; }
+        .lg-btn-2:hover { background: #0d6660; }
+        .lg-status { min-height: 18px; margin-top: 10px; text-align: center; font-size: 13px; color: #dc2626; }
+        .lg-tok { margin-top: 8px; padding-top: 12px; border-top: 1px solid #e8ebef; text-align: center; }
+        .lg-tok-link { border: none; background: none; color: #64748b; font-size: 11.5px; cursor: pointer; font-family: inherit; }
+        .lg-tok-link:hover { color: #1b3c5e; }
+        .lg-tok-help { font-size: 11px; color: #64748b; line-height: 1.5; margin: 8px 0; text-align: left; }
     </style>
 </head>
 <body>
@@ -465,54 +488,31 @@
 </div>
 
 <!-- ── Modal de inicio de sesión ──────────────────────────────── -->
-<div id="login-modal" style="position:fixed;inset:0;background:#0f172a;z-index:9999;display:flex;align-items:center;justify-content:center;">
-    <div style="background:white;border-radius:16px;padding:36px 32px;width:380px;max-width:92vw;box-shadow:0 16px 40px rgba(0,0,0,0.35);">
-        <div style="text-align:center;margin-bottom:26px;">
-            <svg width="52" height="52" viewBox="0 0 26 26" fill="none" style="display:block;margin:0 auto 12px;">
-                <circle cx="13" cy="13" r="12" stroke="#00b4d8" stroke-width="1.8"/>
-                <ellipse cx="13" cy="13" rx="6" ry="4" fill="#00b4d8" opacity="0.85" transform="rotate(-20 13 13)"/>
-                <ellipse cx="13" cy="13" rx="6" ry="4" fill="#00b4d8" opacity="0.5" transform="rotate(30 13 13)"/>
-            </svg>
-            <div style="font-size:21px;font-weight:800;color:#1a3a5c;letter-spacing:0.5px;">NATURISA</div>
-            <div style="font-size:12.5px;color:#6e6e73;margin-top:4px;">Consumos Combustible</div>
+<div id="login-modal" class="lg-wrap" style="display:flex">
+    <div class="lg-card">
+        <div class="lg-head">
+            <svg width="44" height="31" viewBox="0 0 40 28" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round"><path d="M3 9c6-6 13-6 19 0s13 6 15 2"/><path d="M3 19c6-6 13-6 19 0s13 6 15 2" opacity=".75"/></svg>
+            <div class="lg-brand">Naturisa</div>
+            <div class="lg-app">Consumos Combustible</div>
         </div>
-        <div style="margin-bottom:12px;">
-            <label style="display:block;font-size:11px;font-weight:700;color:#6e6e73;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:5px;">Usuario</label>
-            <input type="text" id="modal-user" placeholder="Ingresa tu usuario" autocomplete="username"
-                style="width:100%;padding:10px 13px;border:1.5px solid #e5e5ea;border-radius:8px;font-size:14px;box-sizing:border-box;outline:none;transition:border-color 0.15s;"
-                onfocus="this.style.borderColor='#2d6a9f'" onblur="this.style.borderColor='#e5e5ea'"
+        <div class="lg-body">
+            <label class="lg-lbl" for="modal-user">Usuario</label>
+            <input type="text" id="modal-user" class="lg-inp" placeholder="Ingresa tu usuario" autocomplete="username"
                 onkeydown="if(event.key==='Enter') document.getElementById('modal-pass').focus()">
-        </div>
-        <div style="margin-bottom:20px;">
-            <label style="display:block;font-size:11px;font-weight:700;color:#6e6e73;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:5px;">Contraseña</label>
-            <input type="password" id="modal-pass" placeholder="Ingresa tu contraseña" autocomplete="current-password"
-                style="width:100%;padding:10px 13px;border:1.5px solid #e5e5ea;border-radius:8px;font-size:14px;box-sizing:border-box;outline:none;transition:border-color 0.15s;"
-                onfocus="this.style.borderColor='#2d6a9f'" onblur="this.style.borderColor='#e5e5ea'"
+            <label class="lg-lbl" for="modal-pass">Contraseña</label>
+            <input type="password" id="modal-pass" class="lg-inp" placeholder="Ingresa tu contraseña" autocomplete="current-password"
                 onkeydown="if(event.key==='Enter') doModalLogin()">
-        </div>
-        <button id="modal-btn-login" onclick="doModalLogin()"
-            style="width:100%;padding:12px;background:#1a3a5c;color:white;border:none;border-radius:8px;font-size:14.5px;font-weight:700;cursor:pointer;letter-spacing:0.2px;transition:background 0.15s;"
-            onmouseover="this.style.background='#2d6a9f'" onmouseout="this.style.background='#1a3a5c'">
-            Ingresar
-        </button>
-        <div id="modal-status" style="text-align:center;margin-top:12px;font-size:13px;color:#ef4444;min-height:18px;"></div>
+            <button id="modal-btn-login" class="lg-btn" onclick="doModalLogin()">Ingresar</button>
+            <div id="modal-status" class="lg-status"></div>
 
-        <!-- Token manual fallback -->
-        <div style="margin-top:16px;border-top:1px solid #e5e5ea;padding-top:14px;">
-            <div style="font-size:11px;color:#94a3b8;text-align:center;margin-bottom:8px;cursor:pointer;" onclick="document.getElementById('modal-token-section').style.display=document.getElementById('modal-token-section').style.display==='none'?'block':'none'">
-                ¿Error de conexión? Usa token manual ▾
-            </div>
-            <div id="modal-token-section" style="display:none;">
-                <div style="font-size:11px;color:#6e6e73;margin-bottom:8px;line-height:1.5;">
-                    Abre DevTools (F12) en otra pestaña de Naturisa → Network → cualquier request → Headers → copia el valor de <strong>Authorization</strong> (sin "Bearer ").
+            <!-- Token manual (respaldo si el login falla por conexion) -->
+            <div class="lg-tok">
+                <button type="button" class="lg-tok-link" onclick="var s=document.getElementById('modal-token-section');s.style.display=s.style.display==='none'?'block':'none'">¿Error de conexión? Usa token manual ▾</button>
+                <div id="modal-token-section" style="display:none">
+                    <div class="lg-tok-help">Abre DevTools (F12) en otra pestaña de Naturisa → Network → cualquier request → Headers → copia el valor de <strong>Authorization</strong> (sin "Bearer ").</div>
+                    <input type="password" id="modal-token-inp" class="lg-inp lg-mono" placeholder="Pega el Bearer token aquí...">
+                    <button class="lg-btn lg-btn-2" onclick="saveModalToken()">Conectar con token</button>
                 </div>
-                <input type="password" id="modal-token-inp" placeholder="Pega el Bearer token aquí..."
-                    style="width:100%;padding:9px 12px;border:1.5px solid #e5e5ea;border-radius:8px;font-size:12px;box-sizing:border-box;font-family:monospace;outline:none;"
-                    onfocus="this.style.borderColor='#2d6a9f'" onblur="this.style.borderColor='#e5e5ea'">
-                <button onclick="saveModalToken()"
-                    style="width:100%;margin-top:8px;padding:9px;background:#0f766e;color:white;border:none;border-radius:8px;font-size:13px;font-weight:700;cursor:pointer;">
-                    Conectar con token
-                </button>
             </div>
         </div>
     </div>
@@ -7318,6 +7318,7 @@ updateSapResults = function() {
     function applyFit() {
         var z = Math.min(window.outerWidth / BASE_W, 1); // solo reduce, nunca agranda
         document.documentElement.style.zoom = String(z);
+        var lg = document.getElementById('login-modal'); if (lg) lg.style.zoom = String(1 / z);
     }
     window.addEventListener('resize', applyFit);
     applyFit();
