@@ -491,9 +491,8 @@
 <div id="login-modal" class="lg-wrap" style="display:flex">
     <div class="lg-card">
         <div class="lg-head">
-            <svg width="44" height="31" viewBox="0 0 40 28" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round"><path d="M3 9c6-6 13-6 19 0s13 6 15 2"/><path d="M3 19c6-6 13-6 19 0s13 6 15 2" opacity=".75"/></svg>
             <div class="lg-brand">Naturisa</div>
-            <div class="lg-app">Consumos Combustible</div>
+            <div class="lg-app">Consumos</div>
         </div>
         <div class="lg-body">
             <label class="lg-lbl" for="modal-user">Usuario</label>
@@ -504,16 +503,6 @@
                 onkeydown="if(event.key==='Enter') doModalLogin()">
             <button id="modal-btn-login" class="lg-btn" onclick="doModalLogin()">Ingresar</button>
             <div id="modal-status" class="lg-status"></div>
-
-            <!-- Token manual (respaldo si el login falla por conexion) -->
-            <div class="lg-tok">
-                <button type="button" class="lg-tok-link" onclick="var s=document.getElementById('modal-token-section');s.style.display=s.style.display==='none'?'block':'none'">¿Error de conexión? Usa token manual ▾</button>
-                <div id="modal-token-section" style="display:none">
-                    <div class="lg-tok-help">Abre DevTools (F12) en otra pestaña de Naturisa → Network → cualquier request → Headers → copia el valor de <strong>Authorization</strong> (sin "Bearer ").</div>
-                    <input type="password" id="modal-token-inp" class="lg-inp lg-mono" placeholder="Pega el Bearer token aquí...">
-                    <button class="lg-btn lg-btn-2" onclick="saveModalToken()">Conectar con token</button>
-                </div>
-            </div>
         </div>
     </div>
 </div>
@@ -2135,7 +2124,7 @@ async function doModalLogin() {
     } catch(e) {
         console.error('Login error:', e);
         status.textContent = '⚠ Error de conexión: ' + e.message;
-        document.getElementById('modal-token-section').style.display = 'block';
+        var _tks = document.getElementById('modal-token-section'); if (_tks) _tks.style.display = 'block';
     }
     finally { btn.textContent = 'Ingresar'; btn.disabled = false; }
 }
