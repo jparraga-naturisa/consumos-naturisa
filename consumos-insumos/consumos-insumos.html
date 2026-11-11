@@ -39,23 +39,23 @@
         body { overflow: hidden; }
         .sidebar { position: fixed; top: 0; left: 0; bottom: 0; width: 175px; background: var(--primary); display: flex; flex-direction: column; z-index: 200; transition: width 0.22s ease; overflow: hidden; }
         .sb-logo { display: flex; align-items: center; gap: 9px; padding: 14px 16px 12px; border-bottom: 1px solid rgba(255,255,255,0.1); min-height: 64px; position: relative; }
-        .sb-logo .accent { color: var(--accent); font-size: 15px; font-weight: 800; }
+        .sb-logo .accent { color: var(--accent); font-size: 16px; font-weight: 800; }
         .sb-logo .sep { opacity: 0.35; margin: 0 3px; color: #fff; }
         .sb-app-switcher { position: relative; }
-        .sb-app-btn { background: none; border: none; color: rgba(255,255,255,0.75); font-size: 11px; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 5px; padding: 0; white-space: nowrap; }
+        .sb-app-btn { background: none; border: none; color: rgba(255,255,255,0.75); font-size: 12.5px; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 5px; padding: 0; white-space: nowrap; }
         .sb-app-btn:hover { color: #fff; }
         .sb-app-menu { display: none; position: absolute; top: calc(100% + 8px); left: 0; background: #1e2d45; border: 1px solid #2e4a6e; border-radius: 8px; box-shadow: 0 8px 24px rgba(0,0,0,.4); min-width: 200px; z-index: 9999; overflow: hidden; }
-        .sb-app-menu a { display: block; padding: 10px 16px; color: #e2e8f0; text-decoration: none; font-size: 13px; transition: background 0.12s; }
+        .sb-app-menu a { display: block; padding: 10px 16px; color: #e2e8f0; text-decoration: none; font-size: 14.5px; transition: background 0.12s; }
         .sb-app-menu a:hover { background: rgba(255,255,255,0.08); }
         .sb-app-menu a.active { background: #0f2744; font-weight: 700; }
 
         /* Toggle collapse button */
-        .sb-toggle { position: absolute; top: 50%; right: 10px; transform: translateY(-50%); width: 20px; height: 20px; border-radius: 50%; background: rgba(255,255,255,0.15); border: none; color: rgba(255,255,255,0.8); cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 11px; transition: background 0.15s; flex-shrink: 0; }
+        .sb-toggle { position: absolute; top: 50%; right: 10px; transform: translateY(-50%); width: 20px; height: 20px; border-radius: 50%; background: rgba(255,255,255,0.15); border: none; color: rgba(255,255,255,0.8); cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 12.5px; transition: background 0.15s; flex-shrink: 0; }
         .sb-toggle:hover { background: rgba(255,255,255,0.28); }
 
         /* Sidebar nav */
         .sb-nav { flex: 1; padding: 10px 0; overflow-y: auto; overflow-x: hidden; }
-        .sb-nav-item { display: flex; align-items: center; gap: 11px; width: 100%; padding: 10px 18px; background: none; border: none; border-left: 3px solid transparent; color: rgba(255,255,255,0.6); font-size: 13px; font-weight: 500; cursor: pointer; text-align: left; transition: color 0.15s, background 0.15s, border-color 0.15s; white-space: nowrap; }
+        .sb-nav-item { display: flex; align-items: center; gap: 11px; width: 100%; padding: 10px 18px; background: none; border: none; border-left: 3px solid transparent; color: rgba(255,255,255,0.6); font-size: 14.5px; font-weight: 500; cursor: pointer; text-align: left; transition: color 0.15s, background 0.15s, border-color 0.15s; white-space: nowrap; }
         .sb-nav-item:hover { background: rgba(255,255,255,0.07); color: rgba(255,255,255,0.9); }
         .sb-nav-item.active { background: rgba(255,255,255,0.1); color: #fff; border-left-color: var(--accent); font-weight: 700; }
         .sb-nav-icon { width: 18px; height: 18px; flex-shrink: 0; opacity: 0.85; }
@@ -79,13 +79,13 @@
 
         /* Sidebar footer (user) */
         .sb-footer { border-top: 1px solid rgba(255,255,255,0.1); padding: 12px 14px; position: relative; }
-        .hdr-user-btn { display: flex; align-items: center; gap: 7px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 18px; padding: 4px 8px 4px 4px; cursor: pointer; color: white; font-size: 10.5px; font-weight: 600; transition: background 0.15s; white-space: nowrap; width: 100%; overflow: hidden; }
+        .hdr-user-btn { display: flex; align-items: center; gap: 7px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 18px; padding: 4px 8px 4px 4px; cursor: pointer; color: white; font-size: 12px; font-weight: 600; transition: background 0.15s; white-space: nowrap; width: 100%; overflow: hidden; }
         .hdr-user-btn:hover { background: rgba(255,255,255,0.2); }
-        .hdr-user-av { width: 26px; height: 26px; border-radius: 50%; background: var(--accent); color: #0a2540; display: inline-flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 800; flex-shrink: 0; }
+        .hdr-user-av { width: 26px; height: 26px; border-radius: 50%; background: var(--accent); color: #0a2540; display: inline-flex; align-items: center; justify-content: center; font-size: 12.5px; font-weight: 800; flex-shrink: 0; }
         .hdr-user-dd { position: absolute; bottom: calc(100% + 6px); left: 14px; right: 14px; background: white; border-radius: 10px; box-shadow: var(--shadow-md), 0 8px 24px rgba(0,0,0,0.18); overflow: hidden; display: none; z-index: 9999; border: 1px solid var(--border); }
         .hdr-user-dd.open { display: block; }
-        .hdr-dd-head { padding: 10px 14px; font-size: 12.5px; font-weight: 700; color: var(--text); background: #fafafa; border-bottom: 1px solid var(--border); }
-        .hdr-dd-item { display: flex; align-items: center; gap: 9px; width: 100%; padding: 8px 14px; background: none; border: none; font-size: 12.5px; font-weight: 500; color: var(--text); cursor: pointer; text-align: left; transition: background 0.12s; }
+        .hdr-dd-head { padding: 10px 14px; font-size: 14px; font-weight: 700; color: var(--text); background: #fafafa; border-bottom: 1px solid var(--border); }
+        .hdr-dd-item { display: flex; align-items: center; gap: 9px; width: 100%; padding: 8px 14px; background: none; border: none; font-size: 14px; font-weight: 500; color: var(--text); cursor: pointer; text-align: left; transition: background 0.12s; }
         .hdr-dd-item:hover { background: #f5f5f7; }
         .hdr-dd-item.danger { color: #dc2626; }
         .hdr-dd-item.danger:hover { background: #fef2f2; }
@@ -94,66 +94,66 @@
         .hdr-dd-item.amber { color: #b45309; }
         .hdr-dd-item.amber:hover { background: #fef3c7; }
         .hdr-dd-sep { height: 1px; background: var(--border); margin: 4px 0; }
-        .hdr-dd-upload { display: flex; align-items: center; gap: 9px; width: 100%; padding: 8px 14px; font-size: 12.5px; font-weight: 500; color: var(--text); cursor: pointer; transition: background 0.12s; box-sizing: border-box; }
+        .hdr-dd-upload { display: flex; align-items: center; gap: 9px; width: 100%; padding: 8px 14px; font-size: 14px; font-weight: 500; color: var(--text); cursor: pointer; transition: background 0.12s; box-sizing: border-box; }
         .hdr-dd-upload:hover { background: #f5f5f7; }
 
         /* Topbar (thin, above main content) */
         .topbar { display: none; }
-        .sb-date { font-size: 9px; color: rgba(255,255,255,0.5); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-top: 1px; }
+        .sb-date { font-size: 10.5px; color: rgba(255,255,255,0.5); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-top: 1px; }
 
         /* Content wrapper */
         .content-wrap { position: fixed; left: 175px; top: 0; right: 0; bottom: 0; display: flex; flex-direction: column; overflow: hidden; transition: left 0.22s ease; }
 
         /* Filter panel (Linear style) */
         .fp-bar { display: flex; align-items: center; gap: 8px; padding: 0; background: transparent; flex-shrink: 0; }
-        .fp-btn { display: flex; align-items: center; gap: 6px; padding: 4px 10px; border: 1px solid var(--border); border-radius: 6px; background: white; font-size: 12px; font-weight: 600; color: var(--text); cursor: pointer; transition: background 0.12s; }
+        .fp-btn { display: flex; align-items: center; gap: 6px; padding: 4px 10px; border: 1px solid var(--border); border-radius: 6px; background: white; font-size: 13.5px; font-weight: 600; color: var(--text); cursor: pointer; transition: background 0.12s; }
         .fp-btn:hover { background: var(--bg); }
         .fp-btn.active { background: #eff6ff; border-color: #bfdbfe; color: #1d4ed8; }
-        .fp-badge { background: #1d4ed8; color: white; border-radius: 10px; font-size: 10px; font-weight: 700; padding: 0 5px; min-width: 16px; text-align: center; }
-        .fp-chip { display: flex; align-items: center; gap: 5px; padding: 3px 8px; background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 20px; font-size: 11.5px; font-weight: 600; color: #1e40af; }
-        .fp-chip-x { cursor: pointer; opacity: 0.6; font-size: 13px; line-height: 1; }
+        .fp-badge { background: #1d4ed8; color: white; border-radius: 10px; font-size: 11.5px; font-weight: 700; padding: 0 5px; min-width: 16px; text-align: center; }
+        .fp-chip { display: flex; align-items: center; gap: 5px; padding: 3px 8px; background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 20px; font-size: 13px; font-weight: 600; color: #1e40af; }
+        .fp-chip-x { cursor: pointer; opacity: 0.6; font-size: 14.5px; line-height: 1; }
         .fp-chip-x:hover { opacity: 1; }
         .fp-panel { position: fixed; z-index: 8000; background: white; border: 1px solid var(--border); border-radius: 10px; box-shadow: 0 8px 32px rgba(0,0,0,0.14); min-width: 400px; padding: 14px 16px 10px; display: none; }
         .fp-panel.open { display: block; }
-        .fp-panel-title { font-size: 11px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px; }
+        .fp-panel-title { font-size: 12.5px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px; }
         .fp-row { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
-        .fp-row select { height: 30px; padding: 0 8px; border: 1px solid var(--border); border-radius: 6px; font-size: 12.5px; background: white; cursor: pointer; }
-        .fp-label { font-size: 12px; color: var(--muted); min-width: 36px; }
+        .fp-row select { height: 30px; padding: 0 8px; border: 1px solid var(--border); border-radius: 6px; font-size: 14px; background: white; cursor: pointer; }
+        .fp-label { font-size: 13.5px; color: var(--muted); min-width: 36px; }
         .fp-actions { display: flex; align-items: center; justify-content: space-between; margin-top: 10px; padding-top: 8px; border-top: 1px solid var(--border); }
-        .fp-clear { font-size: 12px; color: var(--muted); background: none; border: none; cursor: pointer; }
+        .fp-clear { font-size: 13.5px; color: var(--muted); background: none; border: none; cursor: pointer; }
         .fp-clear:hover { color: var(--danger); }
 
         /* Login Bar */
-        .login-bar { background: #fffbeb; border-bottom: 1px solid #fde68a; padding: 6px 20px; display: flex; align-items: center; gap: 8px; font-size: 12.5px; flex-wrap: wrap; flex-shrink: 0; }
+        .login-bar { background: #fffbeb; border-bottom: 1px solid #fde68a; padding: 6px 20px; display: flex; align-items: center; gap: 8px; font-size: 14px; flex-wrap: wrap; flex-shrink: 0; }
         .login-bar.connected { background: #f0fdf4; border-color: #bbf7d0; }
-        .login-bar input[type="text"], .login-bar input[type="password"] { padding: 5px 10px; border: 1px solid #d1d5db; border-radius: 6px; font-size: 12.5px; width: 150px; }
-        .btn { padding: 5px 14px; border: none; border-radius: 6px; cursor: pointer; font-size: 12px; font-weight: 600; transition: opacity 0.15s; }
+        .login-bar input[type="text"], .login-bar input[type="password"] { padding: 5px 10px; border: 1px solid #d1d5db; border-radius: 6px; font-size: 14px; width: 150px; }
+        .btn { padding: 5px 14px; border: none; border-radius: 6px; cursor: pointer; font-size: 13.5px; font-weight: 600; transition: opacity 0.15s; }
         .btn:hover { opacity: 0.85; }
         .btn-primary { background: var(--primary); color: white; }
         .btn-danger { background: var(--danger); color: white; }
-        #login-status { font-size: 12px; color: #92400e; }
+        #login-status { font-size: 13.5px; color: #92400e; }
         #login-status.ok { color: #166534; font-weight: 600; }
-        .user-avatar { width: 26px; height: 26px; border-radius: 50%; background: var(--primary-light); color: white; display: inline-flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; }
+        .user-avatar { width: 26px; height: 26px; border-radius: 50%; background: var(--primary-light); color: white; display: inline-flex; align-items: center; justify-content: center; font-size: 13.5px; font-weight: 700; }
 
         /* Filtros: barra en linea dentro de .ap-filters (estilo AP1, igual que Combustible) */
         .filters { display: flex; flex-wrap: wrap; gap: 10px; align-items: flex-end; }
         .fg { display: flex; flex-direction: column; gap: 3px; }
-        .fg label { font-size: 9px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; }
-        .fg select, .fg input[type="date"] { height: 28px; padding: 0 9px; box-sizing: border-box; border: 1px solid var(--border); border-radius: var(--radius-sm); font-size: 12.5px; background: white; min-width: 130px; }
-        .tsm-btn { height:28px; padding:0 10px; box-sizing: border-box; border:1px solid var(--border); border-radius:var(--radius-sm); background:var(--card); cursor:pointer; font-size:12.5px; min-width:200px; max-width:260px; text-align:left; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; color:var(--text); }
+        .fg label { font-size: 10.5px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; }
+        .fg select, .fg input[type="date"] { height: 28px; padding: 0 9px; box-sizing: border-box; border: 1px solid var(--border); border-radius: var(--radius-sm); font-size: 14px; background: white; min-width: 130px; }
+        .tsm-btn { height:28px; padding:0 10px; box-sizing: border-box; border:1px solid var(--border); border-radius:var(--radius-sm); background:var(--card); cursor:pointer; font-size:14px; min-width:200px; max-width:260px; text-align:left; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; color:var(--text); }
         .tsm-dd { display:none; position:absolute; top:calc(100% + 4px); left:0; background:var(--card); border:1px solid var(--border); border-radius:var(--radius-sm); box-shadow:var(--shadow-md), 0 6px 18px rgba(0,0,0,.1); z-index:9999; min-width:240px; max-width:340px; }
-        .tsm-q { width:100%; padding:5px 8px; border:1px solid var(--border); border-radius:6px; font-size:13px; outline:none; background:var(--bg); color:var(--text); }
+        .tsm-q { width:100%; padding:5px 8px; border:1px solid var(--border); border-radius:6px; font-size:14.5px; outline:none; background:var(--bg); color:var(--text); }
         .tsm-list { max-height:175px; overflow-y:auto; padding:0 4px 4px; }
-        .tsm-opt { padding:5px 10px; cursor:pointer; font-size:13px; border-radius:6px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; display:flex; align-items:center; gap:7px; }
+        .tsm-opt { padding:5px 10px; cursor:pointer; font-size:14.5px; border-radius:6px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; display:flex; align-items:center; gap:7px; }
         .tsm-opt:hover { background:var(--bg); }
         .tsm-opt.tsm-active { background:#dbeafe; color:#1d4ed8; font-weight:600; }
-        .tsm-cb { width:14px;height:14px;border:1.5px solid #94a3b8;border-radius:3px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;font-size:10px;font-weight:700;color:#fff; }
+        .tsm-cb { width:14px;height:14px;border:1.5px solid #94a3b8;border-radius:3px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;font-size:11.5px;font-weight:700;color:#fff; }
         .toggle-group { display: flex; border: 1px solid var(--border); border-radius: var(--radius-sm); overflow: hidden; }
-        .toggle-btn { padding: 6px 14px; border: none; background: white; cursor: pointer; font-size: 12px; font-weight: 600; color: var(--muted); transition: background 0.15s; }
+        .toggle-btn { padding: 6px 14px; border: none; background: white; cursor: pointer; font-size: 13.5px; font-weight: 600; color: var(--muted); transition: background 0.15s; }
         .toggle-btn.active { background: var(--primary); color: white; }
-        .btn-apply { padding: 7px 18px; background: var(--primary); color: white; border: none; border-radius: var(--radius-sm); cursor: pointer; font-size: 12.5px; font-weight: 600; align-self: flex-end; }
+        .btn-apply { padding: 7px 18px; background: var(--primary); color: white; border: none; border-radius: var(--radius-sm); cursor: pointer; font-size: 14px; font-weight: 600; align-self: flex-end; }
         .btn-apply:hover { background: var(--primary-light); }
-        .nav-btn { padding: 5px 8px; border: 1px solid var(--border); border-radius: 6px; background: white; cursor: pointer; font-size: 11px; color: var(--muted); line-height: 1; transition: background 0.15s, color 0.15s; flex-shrink: 0; }
+        .nav-btn { padding: 5px 8px; border: 1px solid var(--border); border-radius: 6px; background: white; cursor: pointer; font-size: 12.5px; color: var(--muted); line-height: 1; transition: background 0.15s, color 0.15s; flex-shrink: 0; }
         .nav-btn:hover { background: var(--primary); color: white; border-color: var(--primary); }
         .nav-wrap { display: flex; align-items: center; gap: 3px; }
 
@@ -162,21 +162,21 @@
 
         /* KPI Cards */
         .kpi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px; margin-bottom: 12px; }
-        .kpi-inc-row { display:flex; align-items:center; gap:5px; font-size:10px; line-height:1.3; }
-        .kpi-inc-dot { font-size:7px; flex-shrink:0; }
+        .kpi-inc-row { display:flex; align-items:center; gap:5px; font-size:11.5px; line-height:1.3; }
+        .kpi-inc-dot { font-size:8px; flex-shrink:0; }
         .kpi-inc-n   { font-weight:700; min-width:16px; }
         .kpi-card { background: white; border-radius: var(--radius); padding: 10px 10px; box-shadow: var(--shadow-sm); border: 1px solid var(--border); border-left: 3px solid transparent; min-width: 0; overflow: hidden; }
         /* Tabs en el header */
         .hdr-tabs { display:flex;flex:1;overflow-x:auto;scrollbar-width:none;align-self:stretch;padding:0 12px; }
         .hdr-tabs::-webkit-scrollbar { display:none; }
-        .sap-tab { background:none;border:none;border-bottom:2.5px solid transparent;padding:0 16px;height:100%;font-size:12.5px;font-weight:500;color:rgba(255,255,255,0.6);cursor:pointer;white-space:nowrap;transition:color .15s,border-color .15s; }
+        .sap-tab { background:none;border:none;border-bottom:2.5px solid transparent;padding:0 16px;height:100%;font-size:14px;font-weight:500;color:rgba(255,255,255,0.6);cursor:pointer;white-space:nowrap;transition:color .15s,border-color .15s; }
         .sap-tab:hover { color:rgba(255,255,255,0.9); }
         .sap-tab-active { color:#fff;border-bottom-color:#00b4d8;font-weight:700; }
-        .sap-tbl { width:100%;border-collapse:collapse;font-size:12px; }
+        .sap-tbl { width:100%;border-collapse:collapse;font-size:13.5px; }
         .sap-tbl th { padding:7px 10px;text-align:left;font-weight:700;color:#334155;background:#f8fafc;border-bottom:1px solid var(--border);white-space:nowrap;position:sticky;top:0;z-index:2; }
         .sap-tbl td { padding:6px 10px;border-bottom:1px solid #f1f1f3; }
         /* Tabla resumen compacta para ver todas las sucursales */
-        .sap-tbl-compact { font-size:10px; }
+        .sap-tbl-compact { font-size:11.5px; }
         .sap-tbl-compact th { padding:2px 6px; white-space:nowrap; }
         .sap-tbl-compact td { padding:1px 6px; white-space:nowrap; }
         .sap-tbl tbody tr:not(.cic-hdr):hover td { background:#f8fafc; }
@@ -189,28 +189,28 @@
         .kpi-card.green  { border-left-color: var(--success); }
         .kpi-card.orange { border-left-color: var(--warning); }
         .kpi-card.cyan   { border-left-color: var(--accent); }
-        .kpi-label { font-size: 10px; color: var(--muted); font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .kpi-label { font-size: 11.5px; color: var(--muted); font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
         .kpi-value { font-size: 21px; font-weight: 700; color: var(--text); line-height: 1.1; letter-spacing: -0.2px; }
-        .kpi-sub { font-size: 10px; color: var(--muted); margin-top: 4px; }
+        .kpi-sub { font-size: 11.5px; color: var(--muted); margin-top: 4px; }
 
         /* Charts */
         .charts-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin-bottom: 12px; align-items: start; }
         .charts-grid-2 { display: grid; grid-template-columns: 1fr; gap: 12px; margin-bottom: 12px; align-items: start; }
         .chart-card { background: white; border-radius: var(--radius); padding: 14px 16px; box-shadow: var(--shadow-sm); border: 1px solid var(--border); min-width: 0; }
-        .chart-title { font-size: 13px; font-weight: 600; color: var(--text); margin-bottom: 10px; display: flex; align-items: center; justify-content: space-between; }
-        .chart-sub { font-size: 11px; font-weight: 400; color: var(--muted); }
+        .chart-title { font-size: 14.5px; font-weight: 600; color: var(--text); margin-bottom: 10px; display: flex; align-items: center; justify-content: space-between; }
+        .chart-sub { font-size: 12.5px; font-weight: 400; color: var(--muted); }
         .chart-scroll { overflow-y: auto; max-height: 420px; }
 
         /* Table */
         .table-card { background: white; border-radius: var(--radius); padding: 12px 14px; box-shadow: var(--shadow-sm); border: 1px solid var(--border); margin-bottom: 16px; }
         .table-wrapper { overflow-x: auto; overflow-y: auto; }
-        table { width: 100%; border-collapse: collapse; font-size: 13px; }
-        th { background: #f8fafc; padding: 8px 12px; text-align: left; font-weight: 700; font-size: 11px; text-transform: uppercase; letter-spacing: 0.4px; color: #334155; border-bottom: 1px solid var(--border); white-space: nowrap; }
+        table { width: 100%; border-collapse: collapse; font-size: 14.5px; }
+        th { background: #f8fafc; padding: 8px 12px; text-align: left; font-weight: 700; font-size: 12.5px; text-transform: uppercase; letter-spacing: 0.4px; color: #334155; border-bottom: 1px solid var(--border); white-space: nowrap; }
         td { padding: 8px 12px; border-bottom: 1px solid #f1f1f3; }
         tbody tr:hover td { background: #f8fafc; }
         tbody tr.row-navy:hover td { background: inherit; }
         tfoot tr:hover td { background: inherit; }
-        .badge { padding: 2px 8px; border-radius: 20px; font-size: 11px; font-weight: 600; white-space: nowrap; }
+        .badge { padding: 2px 8px; border-radius: 20px; font-size: 12.5px; font-weight: 600; white-space: nowrap; }
         .badge-consumo     { background: #d1fae5; color: #065f46; }
         .badge-planificado { background: #dbeafe; color: #1e40af; }
         .badge-tolva       { background: #fef3c7; color: #92400e; }
@@ -223,7 +223,7 @@
         .pb-fill { height: 100%; border-radius: 4px; }
 
         /* States */
-        .loading { text-align: center; padding: 40px; color: var(--muted); font-size: 14px; }
+        .loading { text-align: center; padding: 40px; color: var(--muted); font-size: 15.5px; }
         .spinner { display: inline-block; width: 20px; height: 20px; border: 2.5px solid #e5e5ea; border-top-color: var(--primary); border-radius: 50%; animation: spin 0.7s linear infinite; margin-right: 8px; vertical-align: middle; }
         @keyframes spin { to { transform: rotate(360deg); } }
         .empty-state { text-align: center; padding: 48px 20px; color: var(--muted); }
@@ -257,7 +257,7 @@
             background: transparent !important;
             border: none !important;
             box-shadow: none !important;
-            font-size: 10px;
+            font-size: 11.5px;
             font-weight: 700;
             color: #fff;
             text-shadow: 0 0 3px rgba(0,0,0,0.9), 0 0 6px rgba(0,0,0,0.7);
@@ -272,7 +272,7 @@
         .mapa-multi-popup .leaflet-popup-content-wrapper { padding: 0 !important; border-radius: 10px !important; overflow: hidden !important; box-shadow: 0 4px 20px rgba(0,0,0,0.35) !important; }
         .mapa-multi-popup .leaflet-popup-content { margin: 0 !important; }
         .mapa-multi-popup .leaflet-popup-tip-container { display: none !important; }
-        .mapa-multi-popup .leaflet-popup-close-button { background:#dc2626 !important; color:#fff !important; font-size:14px !important; font-weight:700 !important; width:22px !important; height:22px !important; line-height:22px !important; text-align:center !important; border-radius:4px !important; top:9px !important; right:8px !important; transform:none !important; padding:0 !important; }
+        .mapa-multi-popup .leaflet-popup-close-button { background:#dc2626 !important; color:#fff !important; font-size:15.5px !important; font-weight:700 !important; width:22px !important; height:22px !important; line-height:22px !important; text-align:center !important; border-radius:4px !important; top:9px !important; right:8px !important; transform:none !important; padding:0 !important; }
         /* ══ Tema AP1 Pro: barra superior navy, toolbar, paneles tipo ventana y dock ══ */
         :root { --ap-navy: #1b3c5e; --ap-navy-2: #234d76; --ap-head: #1d3f62; --ap-line: #d3d9e0; --ap-ph: #f1f3f5; --ap-bg: #e9edf1; }
         body { font-family: 'Segoe UI', Roboto, -apple-system, sans-serif; background: var(--ap-bg); }
@@ -283,7 +283,7 @@
         .ap-brand { display: flex; align-items: center; gap: 6px; color: #fff; font-size: 22px; font-weight: 700; letter-spacing: -.5px; }
         .ap-top .sb-nav { display: flex; flex-direction: row; align-items: stretch; padding: 0 0 0 4px; overflow-x: auto; overflow-y: hidden; scrollbar-width: none; flex: 1; min-width: 0; }
         .ap-top .sb-nav::-webkit-scrollbar { display: none; }
-        .ap-top .sb-nav-item { width: auto; padding: 0 9px; gap: 6px; border-left: none; border-bottom: 3px solid transparent; border-top: 3px solid transparent; color: #fff; font-size: 13.5px; font-weight: 500; opacity: .82; }
+        .ap-top .sb-nav-item { width: auto; padding: 0 9px; gap: 6px; border-left: none; border-bottom: 3px solid transparent; border-top: 3px solid transparent; color: #fff; font-size: 15px; font-weight: 500; opacity: .82; }
         .ap-top .sb-nav-item:hover { background: rgba(255,255,255,.08); opacity: 1; }
         .ap-top .sb-nav-item.active { background: rgba(255,255,255,.1); border-left: none; border-bottom-color: var(--accent); opacity: 1; font-weight: 600; }
         .ap-top .sb-nav-icon { width: 16px; height: 16px; opacity: 1; }
@@ -292,15 +292,15 @@
         .ap-app::before, .ap-top .sb-footer::before { content: ''; position: absolute; inset: 0; background: var(--ap-navy-2); clip-path: polygon(16px 0, 100% 0, 100% 100%, 0 100%); }
         .ap-top .sb-footer::before { background: #eef1f4; }
         .ap-app > svg, .ap-app > .sb-app-btn, .ap-top .hdr-user-btn { position: relative; z-index: 1; }
-        .ap-app .sb-app-btn { color: #fff; font-size: 15px; font-weight: 700; gap: 8px; }
+        .ap-app .sb-app-btn { color: #fff; font-size: 16px; font-weight: 700; gap: 8px; }
         .ap-app-txt { display: flex; flex-direction: column; align-items: flex-start; line-height: 1.05; }
-        .ap-app-name { font-size: 15px; font-weight: 700; }
-        .ap-top .sb-date { font-size: 10px; font-weight: 500; color: rgba(255,255,255,.65); margin-top: 2px; }
+        .ap-app-name { font-size: 16px; font-weight: 700; }
+        .ap-top .sb-date { font-size: 11.5px; font-weight: 500; color: rgba(255,255,255,.65); margin-top: 2px; }
         .ap-app .sb-app-menu { left: auto; right: 0; top: calc(100% + 4px); }
         .ap-top .sb-footer { border-top: none; padding: 0 14px 0 28px; display: flex; align-items: center; margin-left: -16px; position: relative; }
-        .ap-top .hdr-user-btn { background: none; border: none; color: #334155; font-size: 13px; font-weight: 600; gap: 8px; padding: 0; width: auto; max-width: 200px; border-radius: 0; }
+        .ap-top .hdr-user-btn { background: none; border: none; color: #334155; font-size: 14.5px; font-weight: 600; gap: 8px; padding: 0; width: auto; max-width: 200px; border-radius: 0; }
         .ap-top .hdr-user-btn:hover { background: none; color: #0f172a; }
-        .ap-top .hdr-user-av { width: 32px; height: 32px; background: #9aa5b1; color: #fff; font-size: 13px; }
+        .ap-top .hdr-user-av { width: 32px; height: 32px; background: #9aa5b1; color: #fff; font-size: 14.5px; }
         .ap-top .hdr-user-dd { position: fixed; bottom: auto; top: 54px; left: auto; right: 8px; min-width: 240px; }
         body.sb-collapsed .ap-top .sb-nav-label { opacity: 1; width: auto; display: none; }
         body.sb-collapsed .ap-top .sb-nav-item { padding: 0 14px; border-right: none; }
@@ -322,17 +322,17 @@
         /* Panel tipo ventana */
         .ap-panel { background: #fff !important; border: 1px solid #c9d1da !important; border-radius: 2px !important; box-shadow: 0 1px 2px rgba(15,23,42,.08) !important; padding: 0 !important; margin-bottom: 0 !important; display: flex !important; flex-direction: column; overflow: hidden; min-height: 0; }
         #sap-results > .ap-panel { flex: 1; }
-        .ap-panel > .ap-ph { flex-shrink: 0; display: flex !important; align-items: center !important; gap: 8px; height: 36px; padding: 0 6px 0 12px !important; margin: 0 !important; background: var(--ap-ph) !important; border-bottom: 1px solid var(--ap-line) !important; font-size: 15px !important; font-weight: 600 !important; color: #1f2f44 !important; }
-        .ap-ph > span:first-child { font-size: 15px !important; font-weight: 600 !important; color: #1f2f44 !important; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-        .ap-ph .chart-sub { font-size: 11.5px; }
-        .ap-ph button { font-size: 11.5px !important; padding: 3px 10px !important; border-radius: 3px !important; }
+        .ap-panel > .ap-ph { flex-shrink: 0; display: flex !important; align-items: center !important; gap: 8px; height: 36px; padding: 0 6px 0 12px !important; margin: 0 !important; background: var(--ap-ph) !important; border-bottom: 1px solid var(--ap-line) !important; font-size: 16px !important; font-weight: 600 !important; color: #1f2f44 !important; }
+        .ap-ph > span:first-child { font-size: 16px !important; font-weight: 600 !important; color: #1f2f44 !important; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .ap-ph .chart-sub { font-size: 13px; }
+        .ap-ph button { font-size: 13px !important; padding: 3px 10px !important; border-radius: 3px !important; }
         .ap-panel > div[style*="position:relative"] { margin: 6px 10px 10px; }
         .ap-panel .chart-card { border-radius: 2px; box-shadow: none; }
         .kpi-card.ap-panel { border-left: 1px solid #c9d1da !important; }
 
         /* Tablas estilo AP1 */
-        .ap-panel .sap-tbl-compact { font-size: 12.5px; }
-        .ap-panel .sap-tbl-compact th { font-size: 12.5px; padding: 6px 8px; }
+        .ap-panel .sap-tbl-compact { font-size: 14px; }
+        .ap-panel .sap-tbl-compact th { font-size: 14px; padding: 6px 8px; }
         .ap-panel .sap-tbl-compact td { padding: 3px 8px; }
         .ap-panel .sap-mat-tbl th, .ap-panel .sap-mat-tbl td { padding-left: 5px; padding-right: 5px; }
         /* Columna Sucursal fija al desplazarse horizontalmente (muchos combustibles) */
@@ -341,8 +341,8 @@
         .sap-mat-tbl tbody td:first-child { background: #fff; }
         .sap-mat-tbl tfoot td:first-child { background: #f5f5f7; }
         .sap-mat-tbl thead tr:first-child th:first-child { z-index: 3; }
-        .ap-panel .sap-tbl-compact tfoot td { font-size: 13px !important; padding-top: 7px !important; padding-bottom: 7px !important; }
-        .ap-panel table th { background: var(--ap-head) !important; color: #fff !important; font-size: 12px; font-weight: 700; text-transform: none; letter-spacing: 0; text-align: center !important; border-bottom: none !important; border-right: 1px solid rgba(255,255,255,.16); padding-top: 7px; padding-bottom: 7px; }
+        .ap-panel .sap-tbl-compact tfoot td { font-size: 14.5px !important; padding-top: 7px !important; padding-bottom: 7px !important; }
+        .ap-panel table th { background: var(--ap-head) !important; color: #fff !important; font-size: 13.5px; font-weight: 700; text-transform: none; letter-spacing: 0; text-align: center !important; border-bottom: none !important; border-right: 1px solid rgba(255,255,255,.16); padding-top: 7px; padding-bottom: 7px; }
         .ap-panel table th * { color: inherit !important; }
         .ap-panel table th:first-child { text-align: left !important; }
         .ap-panel table tbody td { border-bottom: 1px solid #e8ebef; border-right: 1px solid #edf0f3; }
@@ -356,12 +356,12 @@
         .ap-f-right { display: flex; align-items: center; gap: 12px; height: 30px; margin-left: auto; }
         .ap-filters .filters { max-width: none; gap: 6px 14px; align-items: flex-end; }
         .ap-filters .fg { gap: 2px; }
-        .ap-filters .fg label { font-size: 12px; font-weight: 600; color: #1f2f44; text-transform: none; letter-spacing: 0; }
-        .ap-filters .fg select, .ap-filters .fg input[type="date"], .ap-filters .tsm-btn { height: 30px !important; min-width: 200px !important; max-width: 280px; padding: 0 32px 0 10px !important; border: 1px solid #b9c3cd !important; border-radius: 4px !important; font-size: 13px !important; color: #334155; background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23334155' stroke-width='2.2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E") no-repeat right 10px center / 14px !important; -webkit-appearance: none; appearance: none; cursor: pointer; }
+        .ap-filters .fg label { font-size: 13.5px; font-weight: 600; color: #1f2f44; text-transform: none; letter-spacing: 0; }
+        .ap-filters .fg select, .ap-filters .fg input[type="date"], .ap-filters .tsm-btn { height: 30px !important; min-width: 200px !important; max-width: 280px; padding: 0 32px 0 10px !important; border: 1px solid #b9c3cd !important; border-radius: 4px !important; font-size: 14.5px !important; color: #334155; background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23334155' stroke-width='2.2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E") no-repeat right 10px center / 14px !important; -webkit-appearance: none; appearance: none; cursor: pointer; }
         .ap-filters .fg input[type="date"] { background-image: none !important; padding-right: 10px !important; }
         .ap-filters .fg select:focus, .ap-filters .fg input:focus, .ap-filters .tsm-btn:focus { outline: none; border-color: var(--ap-navy) !important; box-shadow: 0 0 0 2px rgba(27,60,94,.15); }
         .ap-filters .fg > div > div[style*="border:1px solid #cbd5e1"] { height: 30px; border-color: #b9c3cd !important; border-radius: 4px !important; }
-        .ap-filters .fg > div > div > button { height: 100%; padding: 0 12px !important; font-size: 12px !important; }
+        .ap-filters .fg > div > div > button { height: 100%; padding: 0 12px !important; font-size: 13.5px !important; }
         #sap-tend-metric-fg { margin-left: 0 !important; padding-left: 0 !important; border-left: none !important; }
         .ap-f-right .ap-sq { width: 32px; height: 30px; }
         .ap-sq svg { width: 15px; height: 15px; }
@@ -390,22 +390,22 @@
         .lg-head { background: #1b3c5e; padding: 26px 24px 20px; text-align: center; color: #fff; border-bottom: 3px solid #00b4d8; }
         .lg-head svg { display: block; margin: 0 auto 6px; }
         .lg-brand { font-size: 26px; font-weight: 700; letter-spacing: -.5px; line-height: 1.1; }
-        .lg-app { font-size: 13px; color: rgba(255,255,255,.75); margin-top: 4px; }
+        .lg-app { font-size: 14.5px; color: rgba(255,255,255,.75); margin-top: 4px; }
         .lg-body { padding: 22px 26px 18px; }
-        .lg-lbl { display: block; font-size: 12px; font-weight: 600; color: #1f2f44; margin: 0 0 4px; }
-        .lg-inp { display: block; width: 100%; height: 38px; padding: 0 12px; margin-bottom: 14px; border: 1px solid #b9c3cd; border-radius: 4px; font-size: 14px; color: #1f2f44; background: #fff; box-sizing: border-box; outline: none; font-family: inherit; }
+        .lg-lbl { display: block; font-size: 13.5px; font-weight: 600; color: #1f2f44; margin: 0 0 4px; }
+        .lg-inp { display: block; width: 100%; height: 38px; padding: 0 12px; margin-bottom: 14px; border: 1px solid #b9c3cd; border-radius: 4px; font-size: 15.5px; color: #1f2f44; background: #fff; box-sizing: border-box; outline: none; font-family: inherit; }
         .lg-inp:focus { border-color: #1b3c5e; box-shadow: 0 0 0 2px rgba(27,60,94,.15); }
-        .lg-mono { font-family: monospace; font-size: 12px; }
+        .lg-mono { font-family: monospace; font-size: 13.5px; }
         .lg-btn { display: block; width: 100%; height: 40px; margin-top: 4px; border: none; border-radius: 4px; background: #1b3c5e; color: #fff; font-size: 14.5px; font-weight: 700; cursor: pointer; font-family: inherit; }
         .lg-btn:hover { background: #234d76; }
         .lg-btn:disabled { opacity: .7; cursor: wait; }
-        .lg-btn-2 { background: #0f766e; font-size: 13px; height: 36px; }
+        .lg-btn-2 { background: #0f766e; font-size: 14.5px; height: 36px; }
         .lg-btn-2:hover { background: #0d6660; }
-        .lg-status { min-height: 18px; margin-top: 10px; text-align: center; font-size: 13px; color: #dc2626; }
+        .lg-status { min-height: 18px; margin-top: 10px; text-align: center; font-size: 14.5px; color: #dc2626; }
         .lg-tok { margin-top: 8px; padding-top: 12px; border-top: 1px solid #e8ebef; text-align: center; }
-        .lg-tok-link { border: none; background: none; color: #64748b; font-size: 11.5px; cursor: pointer; font-family: inherit; }
+        .lg-tok-link { border: none; background: none; color: #64748b; font-size: 13px; cursor: pointer; font-family: inherit; }
         .lg-tok-link:hover { color: #1b3c5e; }
-        .lg-tok-help { font-size: 11px; color: #64748b; line-height: 1.5; margin: 8px 0; text-align: left; }
+        .lg-tok-help { font-size: 12.5px; color: #64748b; line-height: 1.5; margin: 8px 0; text-align: left; }
     </style>
 </head>
 <body>
@@ -415,17 +415,17 @@
   <div style="background:#fff;border-radius:12px;width:100%;max-width:780px;max-height:88vh;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 12px 32px rgba(0,0,0,0.2)">
     <div style="display:flex;justify-content:space-between;align-items:center;padding:12px 18px;border-bottom:1px solid #e5e5ea;flex-shrink:0;background:#1e3a5f;border-radius:12px 12px 0 0">
       <div>
-        <div style="color:#fff;font-size:14px;font-weight:700">Hectáreas Manuales — Ene a May 2026</div>
-        <div style="color:#93c5fd;font-size:11px;margin-top:2px">Ingresa las Ha reales por sucursal y mes. Tienen prioridad sobre el cálculo automático.</div>
+        <div style="color:#fff;font-size:15.5px;font-weight:700">Hectáreas Manuales — Ene a May 2026</div>
+        <div style="color:#93c5fd;font-size:12.5px;margin-top:2px">Ingresa las Ha reales por sucursal y mes. Tienen prioridad sobre el cálculo automático.</div>
       </div>
-      <button onclick="sapCloseManualHaModal()" style="background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.3);color:#fff;border-radius:7px;padding:5px 12px;font-size:12px;cursor:pointer;font-weight:600">Cerrar</button>
+      <button onclick="sapCloseManualHaModal()" style="background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.3);color:#fff;border-radius:7px;padding:5px 12px;font-size:13.5px;cursor:pointer;font-weight:600">Cerrar</button>
     </div>
     <div style="overflow-y:auto;flex:1;padding:0">
       <div id="manual-ha-body" style="padding:0"></div>
     </div>
     <div style="padding:10px 18px;border-top:1px solid #e5e5ea;display:flex;justify-content:flex-end;gap:8px;flex-shrink:0">
-      <button onclick="sapClearManualHa()" style="padding:7px 16px;border:1px solid #e5e5ea;border-radius:7px;font-size:12.5px;cursor:pointer;background:#fff;color:#64748b;font-weight:600">Limpiar todo</button>
-      <button onclick="sapSaveManualHa()" style="padding:7px 20px;border:none;border-radius:7px;font-size:12.5px;cursor:pointer;background:#1e3a5f;color:#fff;font-weight:700">Guardar</button>
+      <button onclick="sapClearManualHa()" style="padding:7px 16px;border:1px solid #e5e5ea;border-radius:7px;font-size:14px;cursor:pointer;background:#fff;color:#64748b;font-weight:600">Limpiar todo</button>
+      <button onclick="sapSaveManualHa()" style="padding:7px 20px;border:none;border-radius:7px;font-size:14px;cursor:pointer;background:#1e3a5f;color:#fff;font-weight:700">Guardar</button>
     </div>
   </div>
 </div>
@@ -435,10 +435,10 @@
   <div style="background:#fff;border-radius:12px;width:100%;max-width:1100px;max-height:90vh;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 12px 32px rgba(0,0,0,0.2)">
     <div style="display:flex;justify-content:space-between;align-items:center;padding:12px 18px;border-bottom:1px solid #e5e5ea;flex-shrink:0;background:#1e3a5f;border-radius:12px 12px 0 0">
       <div>
-        <div style="color:#fff;font-size:14px;font-weight:700">Historial de Hectáreas por Sucursal</div>
-        <div style="color:#93c5fd;font-size:11px;margin-top:2px">Meses pasados: Ha fija (manual). Mes actual: Ha activa en tiempo real.</div>
+        <div style="color:#fff;font-size:15.5px;font-weight:700">Historial de Hectáreas por Sucursal</div>
+        <div style="color:#93c5fd;font-size:12.5px;margin-top:2px">Meses pasados: Ha fija (manual). Mes actual: Ha activa en tiempo real.</div>
       </div>
-      <button onclick="document.getElementById('ha-hist-modal').style.display='none'" style="background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.3);color:#fff;border-radius:7px;padding:5px 12px;font-size:12px;cursor:pointer;font-weight:600">Cerrar</button>
+      <button onclick="document.getElementById('ha-hist-modal').style.display='none'" style="background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.3);color:#fff;border-radius:7px;padding:5px 12px;font-size:13.5px;cursor:pointer;font-weight:600">Cerrar</button>
     </div>
     <div id="ha-hist-body" style="overflow:auto;flex:1"></div>
   </div>
@@ -448,8 +448,8 @@
 <div id="sap-mat-modal" onclick="if(event.target===this)this.style.display='none'" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.4);z-index:9500;align-items:center;justify-content:center;padding:20px">
   <div style="background:var(--bg,#fff);border:1px solid var(--border,#e5e5ea);border-radius:14px;width:100%;max-width:900px;max-height:90vh;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 12px 32px rgba(0,0,0,0.2)">
     <div style="display:flex;justify-content:space-between;align-items:center;padding:14px 18px;border-bottom:1px solid var(--border,#e5e5ea);flex-shrink:0">
-      <div id="sap-mat-modal-title" style="font-size:14px;font-weight:700;flex:1">Materiales</div>
-      <div id="sap-mat-modal-period" style="font-size:12px;font-weight:600;color:#1e3a5f;background:#e0f2fe;padding:3px 10px;border-radius:20px;margin-right:12px"></div>
+      <div id="sap-mat-modal-title" style="font-size:15.5px;font-weight:700;flex:1">Materiales</div>
+      <div id="sap-mat-modal-period" style="font-size:13.5px;font-weight:600;color:#1e3a5f;background:#e0f2fe;padding:3px 10px;border-radius:20px;margin-right:12px"></div>
       <button onclick="document.getElementById('sap-mat-modal').style.display='none'" style="background:none;border:none;font-size:20px;cursor:pointer;color:var(--text-muted,#64748b);line-height:1;padding:0 4px">&times;</button>
     </div>
     <div id="sap-mat-modal-body" style="overflow-y:auto;flex:1;padding:0"></div>
@@ -561,11 +561,11 @@
     <button class="btn btn-danger" id="btn-logout" onclick="doLogout()" style="display:none;margin-left:auto;">Cerrar sesión</button>
 </div>
 <!-- Token Fallback -->
-<div id="token-fallback" style="display:none;background:#fef9c3;border-bottom:1px solid #fde047;padding:7px 24px;align-items:center;gap:10px;font-size:12px;flex-wrap:wrap;">
+<div id="token-fallback" style="display:none;background:#fef9c3;border-bottom:1px solid #fde047;padding:7px 24px;align-items:center;gap:10px;font-size:13.5px;flex-wrap:wrap;">
     <span>🔑 <strong>Login bloqueado por CORS.</strong> Copia el Bearer token desde DevTools → Network → cualquier request → Headers → Authorization:</span>
-    <input type="password" id="inp-token" placeholder="Pega el Bearer token aquí..." style="flex:1;min-width:200px;max-width:500px;padding:4px 10px;border:1px solid #d1d5db;border-radius:5px;font-size:12px;font-family:monospace;">
-    <button class="btn btn-primary" onclick="saveManualToken()" style="font-size:12px">Conectar con token</button>
-    <button onclick="document.getElementById('token-fallback').style.display='none'" style="background:none;border:none;cursor:pointer;font-size:16px;color:#666">✕</button>
+    <input type="password" id="inp-token" placeholder="Pega el Bearer token aquí..." style="flex:1;min-width:200px;max-width:500px;padding:4px 10px;border:1px solid #d1d5db;border-radius:5px;font-size:13.5px;font-family:monospace;">
+    <button class="btn btn-primary" onclick="saveManualToken()" style="font-size:13.5px">Conectar con token</button>
+    <button onclick="document.getElementById('token-fallback').style.display='none'" style="background:none;border:none;cursor:pointer;font-size:17px;color:#666">✕</button>
 </div>
 
 <!-- ── PANTALLA: Consumos SAP ─────────────────────────────── -->
@@ -701,8 +701,8 @@
             <label>Vista</label>
             <div style="display:flex;gap:4px;align-items:center">
                 <div style="display:flex;border:1px solid #cbd5e1;border-radius:6px;overflow:hidden">
-                    <button id="tend-view-sub-btn" onclick="_sapTendSetView('sub')" style="padding:4px 10px;font-size:11px;font-weight:600;border:none;cursor:pointer;background:#1e3a5f;color:#fff">Por Sucursal</button>
-                    <button id="tend-view-mat-btn" onclick="_sapTendSetView('mat')" style="padding:4px 10px;font-size:11px;font-weight:600;border:none;cursor:pointer;background:#e2e8f0;color:#475569">Por Material</button>
+                    <button id="tend-view-sub-btn" onclick="_sapTendSetView('sub')" style="padding:4px 10px;font-size:12.5px;font-weight:600;border:none;cursor:pointer;background:#1e3a5f;color:#fff">Por Sucursal</button>
+                    <button id="tend-view-mat-btn" onclick="_sapTendSetView('mat')" style="padding:4px 10px;font-size:12.5px;font-weight:600;border:none;cursor:pointer;background:#e2e8f0;color:#475569">Por Material</button>
                 </div>
             </div>
         </div>
@@ -711,11 +711,11 @@
             <label>Métrica</label>
             <div style="display:flex;align-items:center;gap:8px">
                 <div style="display:flex;border:1px solid #cbd5e1;border-radius:6px;overflow:hidden">
-                    <button data-tend-btn="total" onclick="_sapTendChangeMetric('total')" style="padding:4px 10px;font-size:11px;font-weight:600;border:none;cursor:pointer;background:#e2e8f0;color:#475569">$ Total</button>
-                    <button data-tend-btn="ha" onclick="_sapTendChangeMetric('ha')" style="padding:4px 10px;font-size:11px;font-weight:600;border:none;cursor:pointer;background:#e2e8f0;color:#475569">$/Ha</button>
-                    <button data-tend-btn="hadía" onclick="_sapTendChangeMetric('hadía')" style="padding:4px 10px;font-size:11px;font-weight:600;border:none;cursor:pointer;background:#1e3a5f;color:#fff">$/Ha/Día</button>
+                    <button data-tend-btn="total" onclick="_sapTendChangeMetric('total')" style="padding:4px 10px;font-size:12.5px;font-weight:600;border:none;cursor:pointer;background:#e2e8f0;color:#475569">$ Total</button>
+                    <button data-tend-btn="ha" onclick="_sapTendChangeMetric('ha')" style="padding:4px 10px;font-size:12.5px;font-weight:600;border:none;cursor:pointer;background:#e2e8f0;color:#475569">$/Ha</button>
+                    <button data-tend-btn="hadía" onclick="_sapTendChangeMetric('hadía')" style="padding:4px 10px;font-size:12.5px;font-weight:600;border:none;cursor:pointer;background:#1e3a5f;color:#fff">$/Ha/Día</button>
                 </div>
-                <span id="tend-budget-lbl" style="font-size:11px;color:var(--muted)">Presupuesto: <b>$2.67</b>&nbsp;<span style="color:#dc2626;font-weight:700">■</span> sobre presupuesto</span>
+                <span id="tend-budget-lbl" style="font-size:12.5px;color:var(--muted)">Presupuesto: <b>$2.67</b>&nbsp;<span style="color:#dc2626;font-weight:700">■</span> sobre presupuesto</span>
             </div>
         </div>
         <!-- Filtros exclusivos de la pestaña Por Material (ocultos en otras pestañas) -->
@@ -1232,7 +1232,9 @@ function sapPopulateCicSub() {
     var valid = {};
     opts.forEach(function(o) { valid[o.camp] = true; });
     Object.keys(window._cicSubSel).forEach(function(k) { if (!valid[k]) delete window._cicSubSel[k]; });
-    if (Object.keys(window._cicSubSel).length === 0 && opts.length) window._cicSubSel[opts[0].camp] = true;
+    // Auto-seleccionar la primera sucursal solo al cargar; luego se respeta si el usuario desmarca todas
+    if (!window._cicSubAutoHecho && Object.keys(window._cicSubSel).length === 0 && opts.length) window._cicSubSel[opts[0].camp] = true;
+    if (opts.length) window._cicSubAutoHecho = true;
     window._cicSubOpts = opts;
     _cicSubFilter('');
     _cicSubUpdateBtn();
@@ -1254,7 +1256,7 @@ function _cicSubUpdateBtn() {
     var btn = document.getElementById('sap-cic-sub-btn');
     var inp = document.getElementById('sap-cic-sub');
     var sel = Object.keys(window._cicSubSel);
-    if (btn) btn.textContent = sel.length === 0 ? '— Todas —' : sel.length === 1
+    if (btn) btn.textContent = sel.length === 0 ? '— Seleccionar —' : sel.length === 1
         ? (window._cicSubOpts.find(function(o){return o.camp===sel[0];})||{}).name||sel[0]
         : sel.length + ' sucursales';
     if (inp) inp.value = sel.join(',');
@@ -1298,6 +1300,15 @@ function _cicCycleFilter(q) {
     }).join('');
 }
 
+// Al desmarcar una sucursal o piscina se desmarcan también sus piscinas y ciclos
+function _cicQuitarDe(pertenece) {
+    _sapCycles.forEach(function(c) {
+        if (!pertenece(c)) return;
+        delete window._cicCycleSel[String(c.idCycle)];
+        if (c.poolName) delete window._cicPoolSel[c.poolName];
+    });
+}
+
 function sapPopulateCicPools() {
     var subSel  = window._cicSubSel;
     var nSub    = Object.keys(subSel).length;
@@ -1309,10 +1320,17 @@ function sapPopulateCicPools() {
     var valid = {};
     pools.forEach(function(p) { valid[p] = true; });
     Object.keys(window._cicPoolSel).forEach(function(p) { if (!valid[p]) delete window._cicPoolSel[p]; });
-    // Auto-seleccionar primera piscina solo si hay 1 sucursal y no hay selección
-    if (Object.keys(window._cicPoolSel).length === 0 && pools.length > 0 && nSub <= 1) {
-        window._cicPoolSel[pools[0]] = true;
-    }
+    // Auto-seleccionar la primera piscina de cada sucursal recién marcada; lo demás se respeta
+    // (si el usuario desmarcó todas las piscinas, quedan en 0)
+    var prevSubs = window._cicPoolAutoSubs || {};
+    Object.keys(subSel).forEach(function(camp) {
+        if (prevSubs[camp]) return;
+        var primera = pools.filter(function(p) {
+            return _sapCycles.some(function(c) { return c.poolName === p && _sapCamp(c) === camp; });
+        })[0];
+        if (primera) window._cicPoolSel[primera] = true;
+    });
+    window._cicPoolAutoSubs = Object.assign({}, subSel);
     window._cicPoolOpts = pools;
     _cicPoolFilter((document.getElementById('sap-cic-pool-q')||{}).value||'');
     _cicPoolUpdateBtn();
@@ -1323,7 +1341,7 @@ function _cicPoolUpdateBtn() {
     var btn = document.getElementById('sap-cic-pool-btn');
     var inp = document.getElementById('sap-cic-pool');
     var sel = Object.keys(window._cicPoolSel);
-    if (btn) btn.textContent = sel.length===0 ? '— Todas —' : sel.length===1 ? sel[0] : sel.length+' piscinas';
+    if (btn) btn.textContent = sel.length===0 ? '— Seleccionar —' : sel.length===1 ? sel[0] : sel.length+' piscinas';
     if (inp) inp.value = sel.join(',');
 }
 
@@ -1353,13 +1371,16 @@ function sapPopulateCicCycles() {
     var valid = {};
     cycles.forEach(function(c) { valid[String(c.idCycle)] = true; });
     Object.keys(window._cicCycleSel).forEach(function(k) { if (!valid[k]) delete window._cicCycleSel[k]; });
-    // Auto-seleccionar el ciclo más reciente por piscina
-    if (Object.keys(window._cicCycleSel).length === 0 && cycles.length > 0 && nPool > 0) {
-        var seenPool = {};
-        cycles.forEach(function(c) {
-            if (!seenPool[c.poolName||'']) { seenPool[c.poolName||''] = true; window._cicCycleSel[String(c.idCycle)] = true; }
-        });
-    }
+    // Auto-seleccionar el ciclo más reciente de cada piscina recién marcada; lo demás se respeta
+    // (si el usuario desmarcó todos los ciclos, quedan en 0 y puede buscar cuál marcar)
+    var prevPools = window._cicCycleAutoPools || {};
+    var seenPool = {};
+    cycles.forEach(function(c) {   // vienen ordenados del más reciente al más antiguo
+        var p = c.poolName || '';
+        if (!poolSel[p] || prevPools[p] || seenPool[p]) return;
+        seenPool[p] = true; window._cicCycleSel[String(c.idCycle)] = true;
+    });
+    window._cicCycleAutoPools = Object.assign({}, poolSel);
     window._cicCycleOpts = cycles.map(function(c) {
         return { k: String(c.idCycle), lbl: c.cycleCode||c.idCycle };
     });
@@ -1371,7 +1392,7 @@ function _cicCycleUpdateBtn() {
     var btn = document.getElementById('sap-cic-cycle-btn');
     var inp = document.getElementById('sap-cic-cycle');
     var sel = Object.keys(window._cicCycleSel);
-    if (btn) btn.textContent = sel.length===0 ? '— Todos —' : sel.length===1
+    if (btn) btn.textContent = sel.length===0 ? '— Seleccionar —' : sel.length===1
         ? (_sapCycles.find(function(c){return String(c.idCycle)===sel[0];})||{}).cycleCode||sel[0]
         : sel.length+' ciclos';
     if (inp) inp.value = sel.join(',');
@@ -1933,30 +1954,30 @@ function _fpcPanelHtml() {
     var allPools = _fpcGetPools(campFilter);
     var poolItems = allPools.map(function(p) {
         var sel = selPools.indexOf(p)>=0;
-        return '<div class="tsm-opt'+(sel?' tsm-active':'')+'" onclick="event.stopPropagation();_fpcTogglePool(\''+p.replace(/'/g,"\\'")+'\')" style="font-size:11px">' +
+        return '<div class="tsm-opt'+(sel?' tsm-active':'')+'" onclick="event.stopPropagation();_fpcTogglePool(\''+p.replace(/'/g,"\\'")+'\')" style="font-size:12.5px">' +
             '<span class="tsm-cb" style="'+(sel?'background:#1d4ed8;border-color:#1d4ed8':'')+'">'+( sel?'✓':'' )+'</span> '+p+'</div>';
     }).join('');
     // Cycles
     var cycItems = cycs.map(function(c) {
         var sel = selCycs.indexOf(c.id)>=0;
-        return '<div class="tsm-opt'+(sel?' tsm-active':'')+'" onclick="event.stopPropagation();_fpcToggleCycle(\''+c.id+'\')" style="font-size:11px">' +
+        return '<div class="tsm-opt'+(sel?' tsm-active':'')+'" onclick="event.stopPropagation();_fpcToggleCycle(\''+c.id+'\')" style="font-size:12.5px">' +
             '<span class="tsm-cb" style="'+(sel?'background:#1d4ed8;border-color:#1d4ed8':'')+'">'+( sel?'✓':'' )+'</span> '+c.code+'</div>';
     }).join('');
 
     return '<div class="fp-row" style="flex-direction:column;align-items:flex-start;gap:4px">' +
             '<span class="fp-label">Sucursal</span>' +
-            '<select style="width:100%;height:28px;padding:0 8px;border:1px solid var(--border);border-radius:6px;font-size:12px" onchange="_fpcSetSub(this.value)">' +
+            '<select style="width:100%;height:28px;padding:0 8px;border:1px solid var(--border);border-radius:6px;font-size:13.5px" onchange="_fpcSetSub(this.value)">' +
                 '<option value="">Todas</option>' + campOpts +
             '</select>' +
         '</div>' +
         '<div class="fp-row" style="flex-direction:column;align-items:flex-start;gap:4px;margin-top:6px">' +
             '<span class="fp-label">Piscinas <span style="color:#94a3b8;font-weight:400">('+selPools.length+' sel.)</span></span>' +
-            '<input type="text" placeholder="Buscar piscina..." oninput="_fpcSearchPool(this.value)" style="width:100%;height:26px;padding:0 8px;border:1px solid var(--border);border-radius:6px;font-size:11px;margin-bottom:2px">' +
+            '<input type="text" placeholder="Buscar piscina..." oninput="_fpcSearchPool(this.value)" style="width:100%;height:26px;padding:0 8px;border:1px solid var(--border);border-radius:6px;font-size:12.5px;margin-bottom:2px">' +
             '<div id="fpc-pool-list" class="tsm-list" style="max-height:110px;overflow-y:auto;width:100%;border:1px solid var(--border);border-radius:6px">' + poolItems + '</div>' +
         '</div>' +
         '<div class="fp-row" style="flex-direction:column;align-items:flex-start;gap:4px;margin-top:6px">' +
             '<span class="fp-label">Ciclos <span style="color:#94a3b8;font-weight:400">('+selCycs.length+' sel.)</span></span>' +
-            '<input type="text" placeholder="Buscar ciclo..." oninput="_fpcSearchCycle(this.value)" style="width:100%;height:26px;padding:0 8px;border:1px solid var(--border);border-radius:6px;font-size:11px;margin-bottom:2px">' +
+            '<input type="text" placeholder="Buscar ciclo..." oninput="_fpcSearchCycle(this.value)" style="width:100%;height:26px;padding:0 8px;border:1px solid var(--border);border-radius:6px;font-size:12.5px;margin-bottom:2px">' +
             '<div id="fpc-cycle-list" class="tsm-list" style="max-height:110px;overflow-y:auto;width:100%;border:1px solid var(--border);border-radius:6px">' + cycItems + '</div>' +
         '</div>';
 }
@@ -2261,11 +2282,11 @@ function sapSubirNuevoExcel(input) {
             if (!rows.length) { alert('El archivo no contiene filas de almacén tipo 02.'); return; }
 
             statusEl.style.display = '';
-            statusEl.innerHTML = '<div style="display:flex;align-items:center;gap:8px;font-size:12px;color:#1e40af"><span class="spinner" style="width:14px;height:14px;border-width:2px"></span>Guardando ' + rows.length + ' filas…</div>';
+            statusEl.innerHTML = '<div style="display:flex;align-items:center;gap:8px;font-size:13.5px;color:#1e40af"><span class="spinner" style="width:14px;height:14px;border-width:2px"></span>Guardando ' + rows.length + ' filas…</div>';
 
             await _sapSyncD1(rows);
 
-            statusEl.innerHTML = '<div style="display:flex;align-items:center;gap:8px;font-size:12px;color:#1e40af"><span class="spinner" style="width:14px;height:14px;border-width:2px"></span>Actualizando datos…</div>';
+            statusEl.innerHTML = '<div style="display:flex;align-items:center;gap:8px;font-size:13.5px;color:#1e40af"><span class="spinner" style="width:14px;height:14px;border-width:2px"></span>Actualizando datos…</div>';
             await sapCargarExcelDesdeD1();
 
             statusEl.style.display = 'none';
@@ -2355,7 +2376,7 @@ async function sapCargarCiclos(force) {
     const progressEl = document.getElementById('sap-progress');
     progressEl.style.display = '';
     const setP = function(msg) {
-        progressEl.innerHTML = '<div style="display:flex;align-items:center;gap:8px;font-size:12px;color:#1e40af"><span class="spinner" style="width:14px;height:14px;border-width:2px"></span>' + msg + '</div>';
+        progressEl.innerHTML = '<div style="display:flex;align-items:center;gap:8px;font-size:13.5px;color:#1e40af"><span class="spinner" style="width:14px;height:14px;border-width:2px"></span>' + msg + '</div>';
     };
     const subById      = Object.fromEntries(sapAllSubs().map(function(s) { return [String(s.id), s.name]; }));
     const subClusterById = Object.fromEntries(sapAllSubs().map(function(s) { return [String(s.id), s.cluster || null]; }));
@@ -2405,7 +2426,8 @@ async function sapCargarCiclos(force) {
                 _subCluster:          subClusterById[String(sid)] || null,
                 ps:                   parseFloat(c.tamano_piscina) || 0,
                 startDate:            c.fecha_inicio || c.fecha_siembra || null,
-                totalDays:            parseFloat(c.dias_ciclo) || 0,
+                sowDate:              c.fecha_siembra || null,
+                totalDays:           parseFloat(c.dias_ciclo) || 0,
                 dryDays:              parseFloat(c.dias_secos) || 0,
                 active:               (c.estado || '').toUpperCase() === 'ACTIVO',
                 use:                  (c.uso_ciclo || '').toUpperCase()
@@ -2435,11 +2457,11 @@ document.addEventListener('click', function(e) {
     if (opt && opt.closest('#sap-cic-sub-list')) {
         var code = opt.getAttribute('data-v') || '';
         if (window._cicSubSel[code]) {
-            if (Object.keys(window._cicSubSel).length > 1) delete window._cicSubSel[code];
+            delete window._cicSubSel[code];
+            _cicQuitarDe(function(c) { return _sapCamp(c) === code; });
         } else {
             window._cicSubSel[code] = true;
         }
-        window._cicPoolSel = {}; window._cicCycleSel = {};
         sapPopulateCicSub();   // reconstruye lista + encadena pools y ciclos
         updateSapResults();
         return;
@@ -2448,11 +2470,11 @@ document.addEventListener('click', function(e) {
     if (opt && opt.closest('#sap-cic-pool-list')) {
         var code = opt.getAttribute('data-v') || '';
         if (window._cicPoolSel[code]) {
-            if (Object.keys(window._cicPoolSel).length > 1) delete window._cicPoolSel[code];
+            delete window._cicPoolSel[code];
+            _cicQuitarDe(function(c) { return c.poolName === code; });
         } else {
             window._cicPoolSel[code] = true;
         }
-        window._cicCycleSel = {};
         window._cicShowAllCycs = false;
         sapPopulateCicPools();  // reconstruye lista con checkboxes actualizados
         updateSapResults();
@@ -2462,7 +2484,7 @@ document.addEventListener('click', function(e) {
     if (opt && opt.closest('#sap-cic-cycle-list')) {
         var code = opt.getAttribute('data-v') || '';
         if (window._cicCycleSel[code]) {
-            if (Object.keys(window._cicCycleSel).length > 1) delete window._cicCycleSel[code];
+            delete window._cicCycleSel[code];
         } else {
             window._cicCycleSel[code] = true;
         }
@@ -2564,8 +2586,8 @@ function sapUpdateStatus() {
         var m = /^(\d{4})-(\d{2})-(\d{2})/.exec(lastF);
         var txt = m ? m[3] + '/' + m[2] + '/' + m[1] : (_sapExcelMeta && _sapExcelMeta.savedAt ? _sapExcelMeta.savedAt.replace('Actualizado hasta ', '') : '');
         _upd.style.display = txt ? 'flex' : 'none';
-        _upd.innerHTML = '<span style="font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#94a3b8">Actualizado</span>' +
-            '<span style="font-size:12px;font-weight:600;color:#475569">' + txt + '</span>';
+        _upd.innerHTML = '<span style="font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#94a3b8">Actualizado</span>' +
+            '<span style="font-size:13.5px;font-weight:600;color:#475569">' + txt + '</span>';
     }
 
     const el = document.getElementById('sap-status-bar');
@@ -2659,16 +2681,16 @@ function _sapBuildKpiHtml(imp, ha, dias, subLabel, diasCiclo) {
                 '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="' + color + '" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">' + icon + '</svg>' +
             '</div>' +
             '<div style="min-width:0;flex:1">' +
-                '<div class="kpi-label" style="font-size:9px">' + label + '</div>' +
-                '<div class="kpi-value" style="font-size:13px">' + value + '</div>' +
-                (sub ? '<div class="kpi-sub" style="font-size:9px">' + sub + '</div>' : '') +
+                '<div class="kpi-label" style="font-size:10.5px">' + label + '</div>' +
+                '<div class="kpi-value" style="font-size:14.5px">' + value + '</div>' +
+                (sub ? '<div class="kpi-sub" style="font-size:10.5px">' + sub + '</div>' : '') +
             '</div>' +
         '</div>';
     };
     var banner = subLabel
-        ? '<div style="grid-column:1/-1;background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;padding:7px 14px;font-size:12px;font-weight:700;color:#1e40af;display:flex;justify-content:space-between;align-items:center">' +
+        ? '<div style="grid-column:1/-1;background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;padding:7px 14px;font-size:13.5px;font-weight:700;color:#1e40af;display:flex;justify-content:space-between;align-items:center">' +
               '<span>' + subLabel + '</span>' +
-              '<span style="cursor:pointer;font-size:11px;font-weight:600;color:#6b7280" onclick="sapClearResumenRow()">✕ Ver total</span>' +
+              '<span style="cursor:pointer;font-size:12.5px;font-weight:600;color:#6b7280" onclick="sapClearResumenRow()">✕ Ver total</span>' +
           '</div>'
         : '';
     var iconDollar = '<line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>';
@@ -2812,6 +2834,16 @@ function updateSapResults() {
         return;
     }
     if (!_sapExcelRows.length) { _sapRenderCyclesOnly(activeCycles, resultsDiv); return; }
+    // Por Ciclo: si un filtro quedó en 0 no se muestra nada hasta que el usuario marque
+    if (isCiclo) {
+        var _falta = !Object.keys(window._cicSubSel   || {}).length ? 'una sucursal'
+                   :  Object.keys(window._cicCycleSel || {}).length ? ''
+                   : !Object.keys(window._cicPoolSel  || {}).length ? 'una piscina' : 'un ciclo';
+        if (_falta) {
+            resultsDiv.innerHTML = '<div class="empty-state"><div class="empty-icon">🔍</div><div>Selecciona ' + _falta + ' para ver sus consumos.</div></div>';
+            return;
+        }
+    }
     if (!activeCycles.length) {
         resultsDiv.innerHTML = '<div class="empty-state"><div class="empty-icon">🔍</div><div>Ningun ciclo coincide con los filtros &mdash; ajusta la seleccion o carga mas ciclos.</div></div>';
         return;
@@ -3005,9 +3037,9 @@ function updateSapResults() {
             : '<td style="color:transparent;border-top:none">·</td>';
         lastFecha = i.fecha;
         trows += '<tr>' + fechaCell +
-            '<td><span style="display:block;font-size:10px;color:var(--muted);line-height:1.2">' + i.matCode + '</span>' +
-                '<span style="font-weight:500;font-size:13px">' + i.desc + '</span></td>' +
-            '<td style="font-size:11px;color:var(--muted)">' + alm + '</td>' +
+            '<td><span style="display:block;font-size:11.5px;color:var(--muted);line-height:1.2">' + i.matCode + '</span>' +
+                '<span style="font-weight:500;font-size:14.5px">' + i.desc + '</span></td>' +
+            '<td style="font-size:12.5px;color:var(--muted)">' + alm + '</td>' +
             '<td style="text-align:right;font-weight:600">' + fmt2(i.cantidad) + '</td>' +
             '<td style="text-align:right;font-weight:600;color:#065f46">$' + fmt2(i.importe) + '</td></tr>';
     });
@@ -3119,22 +3151,34 @@ function _sapRenderCyclesOnly(cycles, resultsDiv) {
     }
     let rows = '';
     cycles.forEach(function(c) {
-        rows += '<tr><td style="font-size:12px;color:var(--muted)">' + c.cycleCode + '</td>' +
+        rows += '<tr><td style="font-size:13.5px;color:var(--muted)">' + c.cycleCode + '</td>' +
             '<td style="font-weight:600">' + c.poolName + '</td>' +
-            '<td><code style="font-size:11px;background:#f1f5f9;padding:2px 6px;border-radius:4px;color:#334155">' + c.controlOrderDocument + '</code></td>' +
-            '<td style="font-size:12px">' + c._subName + '</td></tr>';
+            '<td><code style="font-size:12.5px;background:#f1f5f9;padding:2px 6px;border-radius:4px;color:#334155">' + c.controlOrderDocument + '</code></td>' +
+            '<td style="font-size:13.5px">' + c._subName + '</td></tr>';
     });
-    resultsDiv.innerHTML = '<div class="table-card"><div class="chart-title">' + cycles.length + ' ciclos AP1 2026 <span style="font-size:12px;font-weight:400;color:var(--muted)">— Sube el Excel SAP para ver los consumos</span></div>' +
+    resultsDiv.innerHTML = '<div class="table-card"><div class="chart-title">' + cycles.length + ' ciclos AP1 2026 <span style="font-size:13.5px;font-weight:400;color:var(--muted)">— Sube el Excel SAP para ver los consumos</span></div>' +
         '<div class="table-wrapper"><table><thead><tr><th>Ciclo</th><th>Piscina</th><th>Orden de Control</th><th>Sucursal</th></tr></thead><tbody>' + rows + '</tbody></table></div></div>';
 }
 
 // ── Helpers compartidos ───────────────────────────────────────────────────────
 function _sapCamp(ciclo) { return (ciclo.cycleCode || '').split('-')[0] || ciclo._subName; }
 function _sapFmt2(n) { return Math.abs(n).toLocaleString('es-EC',{minimumFractionDigits:2,maximumFractionDigits:2}); }
-// Días del ciclo: si elapsed>=totalDays el ciclo completó → usar totalDays; si no → días transcurridos (ciclo activo)
+// Inicio del ciclo como en AP1 = siembra − días secos (fecha_inicio en D1 viene igual a la siembra).
+// Devuelve la fecha a medianoche UTC, igual que new Date('AAAA-MM-DD') de las fechas de consumo.
+function _cycleInicio(c) {
+    var s = c.sowDate || c.startDate;
+    if (!s) return null;
+    var d = new Date(String(s).slice(0, 10));
+    if (isNaN(d)) return null;
+    if (c.dryDays > 0) d.setUTCDate(d.getUTCDate() - c.dryDays);
+    return d;
+}
+// Días del ciclo desde el inicio: si elapsed>=totalDays el ciclo completó → usar totalDays; si no → días transcurridos (ciclo activo)
 function _cycleDias(c) {
-    if (c.startDate) {
-        var elapsed = Math.floor((Date.now() - new Date(c.startDate)) / 86400000) + 1;
+    var ini = _cycleInicio(c);
+    if (ini) {
+        var hoy = new Date(); hoy = Date.UTC(hoy.getFullYear(), hoy.getMonth(), hoy.getDate());
+        var elapsed = Math.round((hoy - ini) / 86400000) + 1;
         if (c.totalDays > 0 && elapsed >= c.totalDays) return c.totalDays;
         if (elapsed >= 0) return elapsed;
     }
@@ -3223,10 +3267,10 @@ function _sapRenderResumen(filteredRows, diasMes, el, kpiHtml) {
     var fpHtml = fpBar ? fpBar.outerHTML.replace(' id="fp-action-bar"', ' id="fp-action-bar-inner" style="border:none;padding:0;background:transparent"') : '';
     // html acumula solo el contenido interno (sin el table-card wrapper)
     var html = '<div style="display:flex;justify-content:space-between;align-items:center;padding-bottom:6px;margin-bottom:4px;border-bottom:1px solid var(--border);flex-shrink:0">' +
-            '<span style="color:var(--text);font-size:14px;font-weight:700">Resumen por Sucursal' + titleSuffix + '</span>' +
+            '<span style="color:var(--text);font-size:15.5px;font-weight:700">Resumen por Sucursal' + titleSuffix + '</span>' +
             '<div style="display:flex;gap:8px;align-items:center">' +
             '<div id="fp-action-bar-slot"></div>' +
-            '<button style="font-size:11.5px;padding:5px 12px;background:#f5f5f7;color:#1e3a5f;border:1px solid var(--border);border-radius:7px;cursor:pointer;font-weight:600;transition:background .15s;white-space:nowrap" onmouseover="this.style.background=\'#e5e5ea\'" onmouseout="this.style.background=\'#f5f5f7\'" onclick="_sapToggleResumenGrupo()">' + btnLabel + '</button>' +
+            '<button style="font-size:13px;padding:5px 12px;background:#f5f5f7;color:#1e3a5f;border:1px solid var(--border);border-radius:7px;cursor:pointer;font-weight:600;transition:background .15s;white-space:nowrap" onmouseover="this.style.background=\'#e5e5ea\'" onmouseout="this.style.background=\'#f5f5f7\'" onclick="_sapToggleResumenGrupo()">' + btnLabel + '</button>' +
             '</div>' +
         '</div>' +
         '<div class="table-wrapper" style="margin-top:0;flex:1;min-height:0"><table class="sap-tbl sap-tbl-compact"><thead><tr>' +
@@ -3305,7 +3349,7 @@ function _sapRenderResumen(filteredRows, diasMes, el, kpiHtml) {
     html += '</tbody>' +
         '<tfoot>' +
             '<tr style="background:#f5f5f7;border-top:2px solid var(--primary)">' +
-                '<td colspan="' + (_sapResumenGrupo?2:1) + '" style="font-weight:800;font-size:10px;padding:2px 6px;color:var(--text)">TOTAL</td>' +
+                '<td colspan="' + (_sapResumenGrupo?2:1) + '" style="font-weight:800;font-size:11.5px;padding:2px 6px;color:var(--text)">TOTAL</td>' +
                 '<td class="num" style="font-weight:800;color:var(--text)">' + _sapFmt2(grandHa) + '</td>' +
                 '<td class="num" style="font-weight:800;color:var(--text)">$' + _sapFmt2(grandCosto) + '</td>' +
                 '<td class="num" style="font-weight:800;color:var(--text)">' + (grandCostoHa!==null?'$'+_sapFmt2(grandCostoHa):'—') + '</td>' +
@@ -3326,7 +3370,7 @@ function _sapRenderResumen(filteredRows, diasMes, el, kpiHtml) {
             '<div style="flex:1 1 0;min-width:0;display:flex;flex-direction:column;gap:8px;overflow:hidden">' +
                 '<div id="sap-kpi-container" style="flex-shrink:0">' + (kpiHtml || '') + '</div>' +
                 '<div class="table-card" style="margin-bottom:0;flex:1;min-height:0;display:flex;flex-direction:column;overflow:hidden;padding:10px 14px">' +
-                    '<div class="chart-title" style="flex-shrink:0;font-size:12px;margin-bottom:6px">$/Ha/Día por Sucursal</div>' +
+                    '<div class="chart-title" style="flex-shrink:0;font-size:13.5px;margin-bottom:6px">$/Ha/Día por Sucursal</div>' +
                     '<div style="position:relative;flex:1;min-height:0">' +
                         '<canvas id="sap-resumen-chart"></canvas>' +
                     '</div>' +
@@ -3432,7 +3476,7 @@ function _sapRenderResumen(filteredRows, diasMes, el, kpiHtml) {
                     labels: {
                         filter: function(item) { return item.datasetIndex === 1; },
                         boxWidth: 24, boxHeight: 2, padding: 8,
-                        font: { size: 11, weight: '700' }, color: '#dc2626'
+                        font: { size: 12.5, weight: '700' }, color: '#dc2626'
                     }
                 },
                 tooltip: {
@@ -3449,17 +3493,17 @@ function _sapRenderResumen(filteredRows, diasMes, el, kpiHtml) {
                     align: 'end',
                     offset: 4,
                     rotation: -90,
-                    font: { size: 11, weight: '400' },
+                    font: { size: 12.5, weight: '400' },
                     color: '#000000',
                     formatter: function(v) { return '$' + v.toFixed(2); }
                 }
             },
             scales: {
-                x: { ticks: { font: { size: 10, weight: '900' }, maxRotation: 35, minRotation: 25 } },
+                x: { ticks: { font: { size: 11.5, weight: '900' }, maxRotation: 35, minRotation: 25 } },
                 y: {
                     grid: { color: '#f1f5f9' },
                     ticks: {
-                        font: { size: 11, weight: '700' },
+                        font: { size: 12.5, weight: '700' },
                         callback: function(v) { return '$' + v.toFixed(2); }
                     }
                 }
@@ -3506,11 +3550,11 @@ function _sapRenderPorMaterial(filteredRows, diasMes, el, kpiHtml) {
     // ─── Tabla ────────────────────────────────────────────────────────────────
     var html =
         '<div style="display:flex;justify-content:space-between;align-items:center;padding-bottom:6px;margin-bottom:4px;border-bottom:1px solid var(--border);flex-shrink:0">' +
-            '<span style="color:var(--text);font-size:14px;font-weight:700">Consumos por Material</span>' +
+            '<span style="color:var(--text);font-size:15.5px;font-weight:700">Consumos por Material</span>' +
             '<div id="fp-action-bar-slot"></div>' +
         '</div>' +
         '<div class="table-wrapper" style="flex:1;overflow-y:auto;min-height:0;margin-top:0">' +
-        '<table class="sap-tbl sap-tbl-compact" style="font-size:8px"><thead style="position:sticky;top:0;z-index:2"><tr>' +
+        '<table class="sap-tbl sap-tbl-compact"><thead style="position:sticky;top:0;z-index:2"><tr>' +
         '<th style="padding:2px 6px">Material</th>' +
         '<th style="padding:2px 6px">UM</th>' +
         '<th class="num" style="padding:2px 6px">Cantidad</th>' +
@@ -3534,7 +3578,7 @@ function _sapRenderPorMaterial(filteredRows, diasMes, el, kpiHtml) {
     html += '</tbody>' +
         '<tfoot style="position:sticky;bottom:0;z-index:2">' +
             '<tr style="background:#f5f5f7;border-top:2px solid var(--primary)">' +
-                '<td colspan="2" style="font-weight:800;font-size:10px;padding:2px 6px;color:var(--text)">TOTAL</td>' +
+                '<td colspan="2" style="font-weight:800;font-size:11.5px;padding:2px 6px;color:var(--text)">TOTAL</td>' +
                 '<td class="num" style="font-weight:800;color:var(--text)">' + _sapFmt2(grandCant) + '</td>' +
                 '<td class="num" style="font-weight:800;color:var(--text)">$' + _sapFmt2(grandCosto) + '</td>' +
                 '<td class="num" style="font-weight:800;color:var(--text)">' + (totalHa > 0 ? '$' + _sapFmt2(grandCosto / totalHa) : '—') + '</td>' +
@@ -3545,7 +3589,7 @@ function _sapRenderPorMaterial(filteredRows, diasMes, el, kpiHtml) {
 
     // ─── Layout: tabla izquierda + card+gráfico derecha ───────────────────────
     var canvasId = 'sap-mat-chart';
-    var chartHeight = Math.max(190, rows.length * 15.2);
+    var chartHeight = Math.max(190, rows.length * 20);
 
     el.innerHTML =
         '<div style="display:flex;gap:12px;align-items:flex-start;flex:1;min-height:0;overflow-y:auto">' +
@@ -3553,7 +3597,7 @@ function _sapRenderPorMaterial(filteredRows, diasMes, el, kpiHtml) {
             '<div style="flex:1 1 0;min-width:0;display:flex;flex-direction:column;gap:8px">' +
                 '<div id="sap-kpi-container">' + (kpiHtml || '') + '</div>' +
                 '<div class="table-card" style="margin-bottom:0;display:flex;flex-direction:column;padding:10px 14px">' +
-                    '<div class="chart-title" style="flex-shrink:0;font-size:12px;margin-bottom:6px">$/Ha/D&iacute;a por Material</div>' +
+                    '<div class="chart-title" style="flex-shrink:0;font-size:13.5px;margin-bottom:6px">$/Ha/D&iacute;a por Material</div>' +
                     '<div style="position:relative;height:' + chartHeight + 'px">' +
                         '<canvas id="' + canvasId + '"></canvas>' +
                     '</div>' +
@@ -3600,7 +3644,7 @@ function _sapRenderPorMaterial(filteredRows, diasMes, el, kpiHtml) {
                 borderRadius: 3, borderSkipped: false,
                 datalabels: {
                     anchor: 'end', align: 'end', offset: 2,
-                    font: { size: 9, weight: '700' }, color: '#1e3a5f',
+                    font: { size: 12, weight: '700' }, color: '#1e3a5f',
                     display: function(ctx) { return ctx.dataset.data[ctx.dataIndex] >= 0.005; },
                     formatter: function(v) { return '$' + v.toFixed(2); }
                 }
@@ -3620,11 +3664,11 @@ function _sapRenderPorMaterial(filteredRows, diasMes, el, kpiHtml) {
             scales: {
                 x: {
                     grid: { color: '#f1f5f9' },
-                    ticks: { font: { size: 9 }, callback: function(v) { return '$' + v.toFixed(2); } }
+                    ticks: { font: { size: 12 }, callback: function(v) { return '$' + v.toFixed(2); } }
                 },
                 y: {
                     ticks: {
-                        font: { size: 8 },
+                        font: { size: 12 },
                         autoSkip: false,
                         callback: function(val, index) { return chartRows[index] ? chartRows[index].desc : val; }
                     }
@@ -3646,10 +3690,33 @@ function sapToggleCicMats(tbodyId, hdrTr) {
     if (arr) arr.textContent = open ? '▼' : '▶';
 }
 
-function sapShowMatDetail(key) {
+// Expande todos los ciclos con las fechas de cada material, o contrae todo
+function sapCicExpandirTodo(btn) {
+    var expandir = btn.dataset.abierto !== '1';
+    var tbl = btn.closest('.table-card').querySelector('table');
+    // Al contraer, los ciclos se cierran solo si hay varios (igual que al cargar la vista)
+    var verCiclos = expandir || tbl.querySelectorAll('tr.cic-hdr').length === 1;
+    tbl.querySelectorAll('tbody[id^="cic-mats-"]').forEach(function(tb) {
+        if ((tb.style.display !== 'none') !== verCiclos) sapToggleCicMats(tb.id, null);
+    });
+    tbl.querySelectorAll('tr[data-dk]').forEach(function(tr) {
+        var abierto = tr.querySelector('.mf-arr').textContent === '▼';
+        if (abierto !== expandir) sapToggleMatFechas(tr);
+    });
+    btn.dataset.abierto = expandir ? '1' : '';
+    btn.textContent = expandir ? '⊟ Contraer todo' : '⊞ Expandir todo';
+}
+
+// Despliega debajo de la fila del material las fechas en que se dio el consumo
+function sapToggleMatFechas(tr) {
+    var key = tr.dataset.dk;
+    var arr = tr.querySelector('.mf-arr');
+    var abiertas = tr.parentNode.querySelectorAll('tr.mat-fecha');
+    var estaba = false;
+    abiertas.forEach(function(x) { if (x.dataset.of === key) { x.remove(); estaba = true; } });
+    if (estaba) { if (arr) arr.textContent = '▶'; return; }
     var d = _sapCicloDetail[key];
     if (!d) return;
-    // Agrupar por fecha
     var byDate = {};
     d.rows.forEach(function(r) {
         var f = r.f || '—';
@@ -3658,59 +3725,30 @@ function sapShowMatDetail(key) {
         byDate[f].importe += r.i || 0;
     });
     var dates = Object.keys(byDate).sort();
-    var startDate = dates[0] && dates[0] !== '—' ? new Date(dates[0]) : null;
-    var totalCosto = d.rows.reduce(function(s,r) { return s + (r.i||0); }, 0);
+    // Día del ciclo contado desde el inicio de AP1; sin siembra, desde el primer consumo
+    var inicio = _cycleInicio(d.ciclo) || (dates[0] && dates[0] !== '—' ? new Date(dates[0]) : null);
     var ps = d.ciclo.ps || 0;
-
-    var rows = dates.map(function(f) {
-        var diasCiclo = '—';
-        if (startDate && f !== '—') {
-            var diff = Math.round((new Date(f) - startDate) / 86400000) + 1;
-            diasCiclo = diff + ' días';
+    var html = dates.map(function(f) {
+        var dia = '';
+        if (inicio && f !== '—') {
+            var n = Math.round((new Date(f) - inicio) / 86400000) + 1;
+            dia = n >= 1 ? 'día ' + n : (1 - n) + (n === 0 ? ' día' : ' días') + ' antes del inicio';
         }
-        return { f: f, cant: byDate[f].cant, imp: byDate[f].importe, dias: diasCiclo };
-    });
-
-    var tbody = rows.map(function(r) {
-        return '<tr>' +
-            '<td style="padding:7px 12px;font-size:12px">' + r.f + '</td>' +
-            '<td style="padding:7px 12px;font-size:12px;text-align:right">' + _sapFmt2(r.cant) + '</td>' +
-            '<td style="padding:7px 12px;font-size:12px;text-align:right;color:#065f46">$' + _sapFmt2(r.imp) + '</td>' +
-            '<td style="padding:7px 12px;font-size:12px;text-align:center;color:#1e3a5f;font-weight:600">' + r.dias + '</td>' +
+        var x = byDate[f];
+        return '<tr class="mat-fecha" style="background:#f8fafc">' +
+            '<td style="padding:1px 4px 1px 34px;font-size:13px;color:#334155">' + f +
+                (dia ? ' <span style="color:#64748b;font-size:12.5px">&nbsp;·&nbsp; ' + dia + '</span>' : '') + '</td>' +
+            '<td></td>' +
+            '<td class="num" style="padding:1px 4px;font-size:13px;color:#334155">' + _sapFmt2(x.cant) + '</td>' +
+            '<td class="num" style="padding:1px 4px;font-size:13px;color:#065f46">$' + _sapFmt2(x.importe) + '</td>' +
+            '<td class="num" style="padding:1px 4px;font-size:13px;color:#334155">' + (ps > 0 ? '$' + _sapFmt2(x.importe / ps) : '—') + '</td>' +
+            '<td></td>' +
         '</tr>';
     }).join('');
-
-    var html =
-        '<div style="position:fixed;inset:0;background:rgba(0,0,0,0.45);z-index:8000;display:flex;align-items:center;justify-content:center" onclick="if(event.target===this)this.remove()">' +
-        '<div style="background:white;border-radius:12px;width:680px;max-width:95vw;max-height:85vh;display:flex;flex-direction:column;box-shadow:0 24px 64px rgba(0,0,0,0.3)">' +
-            '<div style="background:#1e3a5f;border-radius:12px 12px 0 0;padding:14px 20px;display:flex;align-items:center;justify-content:space-between">' +
-                '<div>' +
-                    '<div style="color:#fff;font-weight:800;font-size:14px">' + d.mat.desc + '</div>' +
-                    '<div style="color:#93c5fd;font-size:11px;margin-top:2px">' + d.ciclo.cycleCode + ' · ' + _sapFmt2(ps) + ' Ha · Total: $' + _sapFmt2(totalCosto) + '</div>' +
-                '</div>' +
-                '<button onclick="this.closest(\'[style*=fixed]\').remove()" style="background:none;border:none;color:white;font-size:20px;cursor:pointer;line-height:1">×</button>' +
-            '</div>' +
-            '<div style="overflow-y:auto;flex:1">' +
-            '<table style="width:100%;border-collapse:collapse">' +
-            '<thead><tr style="background:#f8fafc;position:sticky;top:0">' +
-                '<th style="padding:8px 12px;text-align:left;font-size:11px;color:#64748b;font-weight:700;text-transform:uppercase;border-bottom:2px solid #e2e8f0">Fecha</th>' +
-                '<th style="padding:8px 12px;text-align:right;font-size:11px;color:#64748b;font-weight:700;text-transform:uppercase;border-bottom:2px solid #e2e8f0">Cantidad</th>' +
-                '<th style="padding:8px 12px;text-align:right;font-size:11px;color:#64748b;font-weight:700;text-transform:uppercase;border-bottom:2px solid #e2e8f0">Valor $</th>' +
-                '<th style="padding:8px 12px;text-align:center;font-size:11px;color:#64748b;font-weight:700;text-transform:uppercase;border-bottom:2px solid #e2e8f0">Días ciclo</th>' +
-            '</tr></thead>' +
-            '<tbody>' + tbody + '</tbody>' +
-            '<tfoot><tr style="background:#f0fdf4;border-top:2px solid #e2e8f0">' +
-                '<td style="padding:8px 12px;font-weight:700;font-size:12px">TOTAL</td>' +
-                '<td></td>' +
-                '<td style="padding:8px 12px;font-weight:800;font-size:13px;text-align:right;color:#065f46">$' + _sapFmt2(totalCosto) + '</td>' +
-                '<td style="padding:8px 12px;text-align:center;font-size:12px;color:#1e3a5f;font-weight:700">' + (_cycleDias(d.ciclo) || '—') + ' días</td>' +
-            '</tr></tfoot>' +
-            '</table></div>' +
-        '</div></div>';
-
-    var overlay = document.createElement('div');
-    overlay.innerHTML = html;
-    document.body.appendChild(overlay.firstElementChild);
+    tr.insertAdjacentHTML('afterend', html);
+    var k = tr.nextElementSibling;
+    for (var i = 0; i < dates.length; i++, k = k.nextElementSibling) k.dataset.of = key;
+    if (arr) arr.textContent = '▼';
 }
 
 function _sapRenderPorCiclo(filteredRows, el, kpiHtml) {
@@ -3761,11 +3799,12 @@ function _sapRenderPorCiclo(filteredRows, el, kpiHtml) {
 
     var html =
         '<div style="display:flex;justify-content:space-between;align-items:center;padding-bottom:6px;margin-bottom:4px;border-bottom:1px solid var(--border);flex-shrink:0">' +
-            '<span style="color:var(--text);font-size:14px;font-weight:700">Consumos por Ciclo</span>' +
+            '<span style="color:var(--text);font-size:15.5px;font-weight:700">Consumos por Ciclo</span>' +
             '<div id="fpc-action-bar-slot"></div>' +
+            '<button id="cic-todo-btn" onclick="sapCicExpandirTodo(this)" style="margin-left:auto;font-size:13px;padding:5px 12px;background:#f5f5f7;color:#1e3a5f;border:1px solid var(--border);border-radius:7px;cursor:pointer;font-weight:600;white-space:nowrap">⊞ Expandir todo</button>' +
         '</div>' +
         '<div class="table-wrapper" style="flex:1;overflow-y:auto;min-height:0;margin-top:0">' +
-        '<table class="sap-tbl sap-tbl-compact" style="font-size:9px"><thead style="position:sticky;top:0;z-index:2"><tr>' +
+        '<table class="sap-tbl sap-tbl-compact"><thead style="position:sticky;top:0;z-index:2"><tr>' +
         '<th style="padding:2px 4px">Material</th>' +
         '<th style="padding:2px 4px">UM</th>' +
         '<th class="num" style="padding:2px 4px">Cantidad</th>' +
@@ -3782,7 +3821,7 @@ function _sapRenderPorCiclo(filteredRows, el, kpiHtml) {
         // Fila cabecera del ciclo (clickable para expandir/contraer)
         html += '<tbody>' +
             '<tr class="cic-hdr" style="background:#dbeafe;cursor:pointer" onclick="sapToggleCicMats(\'' + tbodyId + '\',this)">' +
-            '<td colspan="2" style="font-weight:800;font-size:10px;color:#1e3a5f;padding:3px 6px">' +
+            '<td colspan="2" style="font-weight:800;font-size:14px;color:#1e3a5f;padding:3px 6px">' +
                 '<span id="' + tbodyId + '-arrow" style="margin-right:5px;display:inline-block;transition:transform .15s">' + (collapsed ? '▶' : '▼') + '</span>' +
                 g.cod +
                 ' &nbsp;·&nbsp; <span style="font-weight:600;color:#334155">' + _sapFmt2(g.ps) + ' Ha</span>' +
@@ -3800,15 +3839,16 @@ function _sapRenderPorCiclo(filteredRows, el, kpiHtml) {
         Object.values(g.mats).sort(function(a,b) { return b.costo - a.costo; }).forEach(function(m) {
             var mHaDia = g.ps > 0 ? m.costo / (g.ps * diasCiclo) : null;
             var dk = g.cid + '||' + (m.code || '(sin código)');
-            html += '<tr style="cursor:pointer" data-dk="' + dk.replace(/"/g,'&quot;') + '" onclick="sapShowMatDetail(this.dataset.dk)" onmouseover="this.style.background=\'#eff6ff\'" onmouseout="this.style.background=\'\'">' +
-                '<td style="padding:1px 4px 1px 16px">' +
-                    '<span style="font-weight:500;font-size:9px">' + m.desc + '</span>' +
+            html += '<tr style="cursor:pointer;font-weight:700;border-top:1px solid #cbd5e1" data-dk="' + dk.replace(/"/g,'&quot;') + '" onclick="sapToggleMatFechas(this)" onmouseover="this.style.background=\'#eff6ff\'" onmouseout="this.style.background=\'\'">' +
+                '<td style="padding:1px 4px 1px 6px">' +
+                    '<span class="mf-arr" style="display:inline-block;width:14px;color:#64748b;font-size:10px">▶</span>' +
+                    '<span style="font-weight:700;font-size:13.5px;color:#1e3a5f">' + m.desc + '</span>' +
                 '</td>' +
-                '<td style="font-size:9px;color:var(--muted);padding:1px 4px">' + m.unidad + '</td>' +
-                '<td class="num" style="padding:1px 4px;font-size:9px">' + _sapFmt2(m.cant) + '</td>' +
-                '<td class="num" style="color:#065f46;padding:1px 4px;font-size:9px">$' + _sapFmt2(m.costo) + '</td>' +
-                '<td class="num" style="padding:1px 4px;font-size:9px">' + (g.ps > 0 ? '$' + _sapFmt2(m.costo / g.ps) : '—') + '</td>' +
-                '<td class="num" style="padding:1px 4px;font-size:9px">' + (mHaDia !== null ? '$' + _sapFmt2(mHaDia) : '—') + '</td>' +
+                '<td style="font-size:13.5px;color:var(--muted);padding:1px 4px">' + m.unidad + '</td>' +
+                '<td class="num" style="padding:1px 4px;font-size:13.5px">' + _sapFmt2(m.cant) + '</td>' +
+                '<td class="num" style="color:#065f46;padding:1px 4px;font-size:13.5px">$' + _sapFmt2(m.costo) + '</td>' +
+                '<td class="num" style="padding:1px 4px;font-size:13.5px">' + (g.ps > 0 ? '$' + _sapFmt2(m.costo / g.ps) : '—') + '</td>' +
+                '<td class="num" style="padding:1px 4px;font-size:13.5px">' + (mHaDia !== null ? '$' + _sapFmt2(mHaDia) : '—') + '</td>' +
                 '</tr>';
         });
         html += '</tbody>';
@@ -3824,7 +3864,7 @@ function _sapRenderPorCiclo(filteredRows, el, kpiHtml) {
             '<div style="flex:1 1 0;min-width:0;display:flex;flex-direction:column;gap:8px;overflow:hidden">' +
                 '<div id="sap-kpi-container">' + (kpiHtml || '') + '</div>' +
                 '<div class="table-card" style="margin-bottom:0;flex:1;min-height:0;display:flex;flex-direction:column;overflow:hidden;padding:10px 14px">' +
-                    '<div class="chart-title" style="flex-shrink:0;font-size:11px;margin-bottom:6px">$/Ha/D&iacute;a por Ciclo</div>' +
+                    '<div class="chart-title" style="flex-shrink:0;font-size:12.5px;margin-bottom:6px">$/Ha/D&iacute;a por Ciclo</div>' +
                     '<div style="position:relative;flex:1;min-height:0">' +
                         '<canvas id="' + canvasId + '"></canvas>' +
                     '</div>' +
@@ -3895,7 +3935,7 @@ function _sapRenderPorCiclo(filteredRows, el, kpiHtml) {
             maxBarThickness: 12,
             datalabels: {
                 display: true, anchor: 'end', align: 'end', offset: 4,
-                font: { size: 10, weight: '400' }, color: '#334155',
+                font: { size: 11.5, weight: '400' }, color: '#334155',
                 formatter: function(v) { return '$' + v.toFixed(2); }
             }
         }];
@@ -3909,7 +3949,7 @@ function _sapRenderPorCiclo(filteredRows, el, kpiHtml) {
             responsive: true, maintainAspectRatio: false,
             layout: { padding: { right: multiCiclo ? 10 : 50 } },
             plugins: {
-                legend: { display: multiCiclo, position: 'bottom', labels: { boxWidth: 12, font: { size: 10 } } },
+                legend: { display: multiCiclo, position: 'bottom', labels: { boxWidth: 12, font: { size: 11.5 } } },
                 datalabels: { display: !multiCiclo },
                 tooltip: { callbacks: { label: function(c) {
                     return ' ' + (c.dataset.label || '') + ': $' + c.raw.toFixed(4) + '/Ha/Día';
@@ -3918,9 +3958,9 @@ function _sapRenderPorCiclo(filteredRows, el, kpiHtml) {
             scales: {
                 x: {
                     grid: { color: '#f1f5f9' },
-                    ticks: { font: { size: 10 }, callback: function(v) { return '$' + v.toFixed(2); } }
+                    ticks: { font: { size: 11.5 }, callback: function(v) { return '$' + v.toFixed(2); } }
                 },
-                y: { categoryPercentage: 0.7, barPercentage: 0.8, ticks: { font: { size: 10 } } }
+                y: { categoryPercentage: 0.7, barPercentage: 0.8, ticks: { font: { size: 11.5 } } }
             }
         }
     });
@@ -4037,22 +4077,22 @@ function _fptRender() {
 
     // Métrica actual
     var mTotal = _sapTendMetric === 'total', mHa = _sapTendMetric === 'ha', mHaDia = _sapTendMetric === 'hadía';
-    var btnStyle = function(active) { return 'padding:3px 9px;font-size:11px;font-weight:600;border:none;cursor:pointer;' + (active ? 'background:#1e3a5f;color:#fff' : 'background:#e2e8f0;color:#475569'); };
+    var btnStyle = function(active) { return 'padding:3px 9px;font-size:12.5px;font-weight:600;border:none;cursor:pointer;' + (active ? 'background:#1e3a5f;color:#fff' : 'background:#e2e8f0;color:#475569'); };
 
     slot.innerHTML =
         '<div style="position:relative;display:inline-block">' +
-            '<button id="fpt-toggle-btn" onclick="_fptToggle()" style="padding:4px 10px;font-size:11px;font-weight:600;border:1px solid #cbd5e1;border-radius:6px;background:#fff;color:#1e3a5f;cursor:pointer;white-space:nowrap">' + btnLabel + '</button>' +
+            '<button id="fpt-toggle-btn" onclick="_fptToggle()" style="padding:4px 10px;font-size:12.5px;font-weight:600;border:1px solid #cbd5e1;border-radius:6px;background:#fff;color:#1e3a5f;cursor:pointer;white-space:nowrap">' + btnLabel + '</button>' +
             '<div id="fpt-panel" style="display:none;position:absolute;right:0;top:calc(100% + 4px);background:#fff;border:1px solid #e2e8f0;border-radius:10px;box-shadow:0 4px 20px rgba(0,0,0,.12);padding:14px 16px;z-index:200;min-width:320px">' +
                 '<div style="display:flex;flex-direction:column;gap:10px">' +
                     '<div>' +
-                        '<label style="font-size:10px;font-weight:700;color:#6b7280;text-transform:uppercase;display:block;margin-bottom:3px">Vista</label>' +
+                        '<label style="font-size:11.5px;font-weight:700;color:#6b7280;text-transform:uppercase;display:block;margin-bottom:3px">Vista</label>' +
                         '<div style="display:flex;border:1px solid #cbd5e1;border-radius:6px;overflow:hidden">' +
                             '<button onclick="_sapTendSetView(\'sub\')" style="' + btnStyle(vSub) + ';flex:1">Sucursal</button>' +
                             '<button onclick="_sapTendSetView(\'mat\')" style="' + btnStyle(vMat) + ';flex:1">Material</button>' +
                         '</div>' +
                     '</div>' +
                     '<div>' +
-                        '<label style="font-size:10px;font-weight:700;color:#6b7280;text-transform:uppercase;display:block;margin-bottom:3px">Métrica</label>' +
+                        '<label style="font-size:11.5px;font-weight:700;color:#6b7280;text-transform:uppercase;display:block;margin-bottom:3px">Métrica</label>' +
                         '<div style="display:flex;border:1px solid #cbd5e1;border-radius:6px;overflow:hidden">' +
                             '<button data-tend-btn="total" onclick="_sapTendChangeMetric(\'total\')" style="' + btnStyle(mTotal) + ';flex:1">$ Total</button>' +
                             '<button data-tend-btn="ha" onclick="_sapTendChangeMetric(\'ha\')" style="' + btnStyle(mHa) + ';flex:1">$/Ha</button>' +
@@ -4061,7 +4101,7 @@ function _fptRender() {
                     '</div>' +
                 '</div>' +
                 '<div style="margin-top:10px;display:flex;justify-content:flex-end">' +
-                    '<button onclick="_fptClear()" style="font-size:11px;color:#6b7280;background:none;border:none;cursor:pointer;text-decoration:underline">Limpiar</button>' +
+                    '<button onclick="_fptClear()" style="font-size:12.5px;color:#6b7280;background:none;border:none;cursor:pointer;text-decoration:underline">Limpiar</button>' +
                 '</div>' +
             '</div>' +
         '</div>';
@@ -4149,10 +4189,10 @@ function _sapRenderTendencia(filteredRows, el) {
     }
 
     var _budgetVal  = parseFloat((document.getElementById('sap-tend-budget') || {}).value) || 2.67;
-    var _th = 'padding:4px 5px;font-weight:700;white-space:nowrap;border-bottom:1px solid var(--border);font-size:10px';
+    var _th = 'padding:4px 5px;font-weight:700;white-space:nowrap;border-bottom:1px solid var(--border);font-size:11.5px';
     var _thTop = _th + ';position:sticky;top:0;z-index:3;background:#f8fafc;color:#334155';
-    var _tdBase = 'padding:4px 5px;border-bottom:1px solid var(--border);font-size:10px';
-    var _tdHdr = 'padding:4px 5px;font-weight:700;white-space:nowrap;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:3;background:#f8fafc;color:#334155;text-align:right;font-size:10px';
+    var _tdBase = 'padding:4px 5px;border-bottom:1px solid var(--border);font-size:11.5px';
+    var _tdHdr = 'padding:4px 5px;font-weight:700;white-space:nowrap;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:3;background:#f8fafc;color:#334155;text-align:right;font-size:11.5px';
 
     // Helpers para métrica seleccionada
     function _calcVal(costo, ha, dias) {
@@ -4174,7 +4214,7 @@ function _sapRenderTendencia(filteredRows, el) {
     var _metricLabels = { total: '$ Total', ha: '$/Ha', 'hadía': '$/Ha/D&iacute;a' };
     function _metricBtn(id, lbl) {
         var active = _sapTendMetric === id;
-        return '<button data-tend-btn="' + id + '" onclick="_sapTendChangeMetric(\'' + id + '\')" style="padding:3px 10px;font-size:11px;font-weight:600;border:none;cursor:pointer;transition:background .12s;' +
+        return '<button data-tend-btn="' + id + '" onclick="_sapTendChangeMetric(\'' + id + '\')" style="padding:3px 10px;font-size:12.5px;font-weight:600;border:none;cursor:pointer;transition:background .12s;' +
             (active ? 'background:#1e3a5f;color:#fff;' : 'background:#e2e8f0;color:#475569;') + '">' + lbl + '</button>';
     }
 
@@ -4183,7 +4223,7 @@ function _sapRenderTendencia(filteredRows, el) {
         var p = m.split('-');
         return '<th style="' + _thTop + ';text-align:right">' +
             (SAP_MESES[parseInt(p[1],10)-1] || p[1]) +
-            '<br><span style="font-size:10px;font-weight:400;opacity:.8">' + p[0] + '</span></th>';
+            '<br><span style="font-size:11.5px;font-weight:400;opacity:.8">' + p[0] + '</span></th>';
     }).join('');
 
     var thead = '<thead><tr style="background:#f8fafc;color:#334155">' +
@@ -4259,17 +4299,17 @@ function _sapRenderTendencia(filteredRows, el) {
         campList.forEach(function(camp) {
             if (!subMatMeses[camp] || !subMatMeses[camp][mc]) return;
             tbodyMat += '<tr style="background:#ffffff">';
-            tbodyMat += '<td style="' + _tdBase + ';padding-left:28px;position:sticky;left:0;background:#ffffff;z-index:1;font-size:11px;white-space:nowrap">' + (subNames[camp] || camp) + '</td>';
+            tbodyMat += '<td style="' + _tdBase + ';padding-left:28px;position:sticky;left:0;background:#ffffff;z-index:1;font-size:12.5px;white-space:nowrap">' + (subNames[camp] || camp) + '</td>';
             mesesList.forEach(function(m) {
                 var costo = (subMatMeses[camp][mc]||{})[m] || 0;
-                if (!costo) { tbodyMat += '<td style="' + _tdBase + ';text-align:right;color:#cbd5e1;font-size:11px">—</td>'; return; }
+                if (!costo) { tbodyMat += '<td style="' + _tdBase + ';text-align:right;color:#cbd5e1;font-size:12.5px">—</td>'; return; }
                 var ha   = mesHaBySub[camp][m] || 0;
                 var pts  = m.split('-');
                 var dias = 30;
                 var val      = _calcVal(costo, ha, dias);
                 var matHaDia = ha > 0 && dias > 0 ? costo / (ha * dias) : null;
                 var over     = matHaDia !== null && matHaDia > _budgetVal;
-                tbodyMat += '<td data-tend-val data-costo="' + costo + '" data-ha="' + ha + '" data-dias="' + dias + '" data-kind="mat" style="' + _tdBase + ';text-align:right;font-size:11px;color:' + (over ? '#dc2626' : '#065f46') + ';font-weight:' + (over ? '700' : '') + '">' + _fmtMat(val) + '</td>';
+                tbodyMat += '<td data-tend-val data-costo="' + costo + '" data-ha="' + ha + '" data-dias="' + dias + '" data-kind="mat" style="' + _tdBase + ';text-align:right;font-size:12.5px;color:' + (over ? '#dc2626' : '#065f46') + ';font-weight:' + (over ? '700' : '') + '">' + _fmtMat(val) + '</td>';
             });
             tbodyMat += '</tr>';
         });
@@ -4278,7 +4318,7 @@ function _sapRenderTendencia(filteredRows, el) {
 
     // ── Total — tfoot; sticky bottom se aplica por JS ─────────────────────────
     var tfoot = '<tfoot><tr style="background:#f5f5f7;border-top:2px solid var(--primary)">' +
-        '<td style="padding:4px 5px;font-size:10px;font-weight:800;position:sticky;left:0;background:#f5f5f7;z-index:2;color:var(--text)">Total</td>';
+        '<td style="padding:4px 5px;font-size:11.5px;font-weight:800;position:sticky;left:0;background:#f5f5f7;z-index:2;color:var(--text)">Total</td>';
     mesesList.forEach(function(m) {
         var mesCosto = matList.reduce(function(s,mc){ return s + ((matMeses[mc]||{})[m]||0); }, 0);
         var ha   = mesHaTotal[m] || 0;
@@ -4288,7 +4328,7 @@ function _sapRenderTendencia(filteredRows, el) {
         var totHaDia = ha > 0 && dias > 0 ? mesCosto / (ha * dias) : null;
         var over     = totHaDia !== null && totHaDia > _budgetVal;
         tfoot += '<td data-tend-val data-costo="' + mesCosto + '" data-ha="' + ha + '" data-dias="' + dias + '" data-kind="total" ' +
-            'style="padding:4px 5px;font-size:10px;text-align:right;font-weight:800;background:#f5f5f7;color:' + (over ? '#dc2626' : '#065f46') + '">' + _fmtSub(totVal) + '</td>';
+            'style="padding:4px 5px;font-size:11.5px;text-align:right;font-weight:800;background:#f5f5f7;color:' + (over ? '#dc2626' : '#065f46') + '">' + _fmtSub(totVal) + '</td>';
     });
     tfoot += '</tr></tfoot>';
 
@@ -4312,11 +4352,11 @@ function _sapRenderTendencia(filteredRows, el) {
     el.innerHTML =
         '<div id="tend-table-card" class="table-card" style="margin-bottom:0;flex:1;min-height:0;display:flex;flex-direction:column;overflow:hidden">' +
             '<div style="display:flex;justify-content:space-between;align-items:center;padding-bottom:6px;margin-bottom:4px;border-bottom:1px solid var(--border);flex-shrink:0">' +
-                '<span style="color:var(--text);font-size:14px;font-weight:700">Tendencia de Consumos</span>' +
+                '<span style="color:var(--text);font-size:15.5px;font-weight:700">Tendencia de Consumos</span>' +
                 '<div id="fpt-action-bar-slot"></div>' +
             '</div>' +
             '<div id="tend-scroll-wrap" style="flex:1;overflow-y:auto;min-height:0">' +
-                '<table style="border-collapse:separate;border-spacing:0;width:100%;height:100%;font-size:10px">' +
+                '<table style="border-collapse:separate;border-spacing:0;width:100%;height:100%;font-size:11.5px">' +
                     _tableBody +
                 '</table>' +
                 '<div class="chart-card" style="margin:14px;padding:14px 16px">' +
@@ -4410,11 +4450,11 @@ function _sapRenderTendencia(filteredRows, el) {
                     }
                 },
                 scales: {
-                    x: { grid: { color: '#f1f5f9' }, ticks: { font: { size: 10 } } },
+                    x: { grid: { color: '#f1f5f9' }, ticks: { font: { size: 11.5 } } },
                     y: {
                         grid: { color: '#f1f5f9' },
                         ticks: {
-                            font: { size: 10 },
+                            font: { size: 11.5 },
                             callback: function(v) {
                                 return '$' + (_sapTendMetric === 'hadía' ? v.toFixed(4) : v.toFixed(2));
                             }
@@ -4429,7 +4469,7 @@ function _sapRenderTendencia(filteredRows, el) {
 
 // ── Vista Sucursal: fetch directo desde D1 (mismo endpoint que la app) ────────
 async function _sapRenderTendenciaSubD1(filteredRows, el) {
-    el.innerHTML = '<div style="padding:24px;text-align:center;color:var(--muted);font-size:13px">Cargando tendencias…</div>';
+    el.innerHTML = '<div style="padding:24px;text-align:center;color:var(--muted);font-size:14.5px">Cargando tendencias…</div>';
 
     // Actualizar botones
     var _vSub = document.getElementById('tend-view-sub-btn');
@@ -4499,9 +4539,9 @@ function _renderTendSubTabla(tendData, filteredRows, el, subSel) {
     var mesesList = [...new Set(tendData.map(function(r) { return r.mes; }))].sort();
 
     var _budgetVal = parseFloat((document.getElementById('sap-tend-budget') || {}).value) || 2.67;
-    var _th = 'padding:4px 5px;font-weight:700;white-space:nowrap;border-bottom:1px solid var(--border);font-size:10px';
+    var _th = 'padding:4px 5px;font-weight:700;white-space:nowrap;border-bottom:1px solid var(--border);font-size:11.5px';
     var _thTop = _th + ';position:sticky;top:0;z-index:3;background:#f8fafc;color:#334155';
-    var _tdBase = 'padding:4px 5px;border-bottom:1px solid var(--border);font-size:10px';
+    var _tdBase = 'padding:4px 5px;border-bottom:1px solid var(--border);font-size:11.5px';
 
     function _calcVal(costo, ha, dias) {
         if (_sapTendMetric === 'total') return costo;
@@ -4520,7 +4560,7 @@ function _renderTendSubTabla(tendData, filteredRows, el, subSel) {
         var p = m.split('-');
         return '<th style="' + _thTop + ';text-align:right">' +
             (SAP_MESES[parseInt(p[1], 10) - 1] || p[1]) +
-            '<br><span style="font-size:10px;font-weight:400;opacity:.8">' + p[0] + '</span></th>';
+            '<br><span style="font-size:11.5px;font-weight:400;opacity:.8">' + p[0] + '</span></th>';
     }).join('');
     var thead = '<thead><tr style="background:#f8fafc;color:#334155">' +
         '<th style="' + _thTop + ';text-align:left;left:0;z-index:4">Sucursal</th>' +
@@ -4570,14 +4610,14 @@ function _renderTendSubTabla(tendData, filteredRows, el, subSel) {
         });
         campMats.forEach(function(mc) {
             tbodySub += '<tr style="background:#fff">';
-            tbodySub += '<td style="' + _tdBase + ';padding-left:28px;position:sticky;left:0;background:#fff;z-index:1;font-size:11px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:175px" title="' + (matDescMap[mc]||mc).replace(/"/g,'&quot;') + '">' + (matDescMap[mc]||mc) + '</td>';
+            tbodySub += '<td style="' + _tdBase + ';padding-left:28px;position:sticky;left:0;background:#fff;z-index:1;font-size:12.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:175px" title="' + (matDescMap[mc]||mc).replace(/"/g,'&quot;') + '">' + (matDescMap[mc]||mc) + '</td>';
             mesesList.forEach(function(m) {
                 var costo = (mergedMats[mc]||{})[m] || 0;
-                if (!costo) { tbodySub += '<td style="' + _tdBase + ';text-align:right;color:#cbd5e1;font-size:11px">—</td>'; return; }
+                if (!costo) { tbodySub += '<td style="' + _tdBase + ';text-align:right;color:#cbd5e1;font-size:12.5px">—</td>'; return; }
                 var ha = campHaByMes[m] || 0;
                 var val = _calcVal(costo, ha, 30);
                 var over = ha > 0 && costo / (ha * 30) > _budgetVal;
-                tbodySub += '<td data-tend-val data-costo="' + costo + '" data-ha="' + ha + '" data-dias="30" data-kind="mat" style="' + _tdBase + ';text-align:right;font-size:11px;color:' + (over ? '#dc2626' : '#065f46') + ';font-weight:' + (over ? '700' : 'normal') + '">' + _fmtV(val, true) + '</td>';
+                tbodySub += '<td data-tend-val data-costo="' + costo + '" data-ha="' + ha + '" data-dias="30" data-kind="mat" style="' + _tdBase + ';text-align:right;font-size:12.5px;color:' + (over ? '#dc2626' : '#065f46') + ';font-weight:' + (over ? '700' : 'normal') + '">' + _fmtV(val, true) + '</td>';
             });
             tbodySub += '</tr>';
         });
@@ -4586,15 +4626,15 @@ function _renderTendSubTabla(tendData, filteredRows, el, subSel) {
 
     // Fila promedio
     var tbodyProm = '<tbody class="tend-prom"><tr style="background:#f5f5f7;border-top:2px solid var(--primary)">' +
-        '<td style="padding:4px 5px;font-size:10px;font-weight:800;position:sticky;left:0;background:#f5f5f7;z-index:2;color:var(--text)">Promedio</td>';
+        '<td style="padding:4px 5px;font-size:11.5px;font-weight:800;position:sticky;left:0;background:#f5f5f7;z-index:2;color:var(--text)">Promedio</td>';
     mesesList.forEach(function(m) {
         var t = mesPromTot[m];
-        if (!t || !t.ha) { tbodyProm += '<td style="padding:4px 5px;font-size:10px;text-align:right;font-weight:800;background:#f5f5f7;color:#94a3b8">—</td>'; return; }
+        if (!t || !t.ha) { tbodyProm += '<td style="padding:4px 5px;font-size:11.5px;text-align:right;font-weight:800;background:#f5f5f7;color:#94a3b8">—</td>'; return; }
         var promVal  = _calcVal(t.costo, t.ha, 30);
         var promHaDia = t.ha > 0 ? t.costo / (t.ha * 30) : null;
         var over = promHaDia !== null && promHaDia > _budgetVal;
         tbodyProm += '<td data-tend-val data-costo="' + t.costo + '" data-ha="' + t.ha + '" data-dias="30" data-kind="prom" ' +
-            'style="padding:4px 5px;font-size:10px;text-align:right;font-weight:800;background:#f5f5f7;' + (over ? 'color:#dc2626' : 'color:#065f46') + '">' +
+            'style="padding:4px 5px;font-size:11.5px;text-align:right;font-weight:800;background:#f5f5f7;' + (over ? 'color:#dc2626' : 'color:#065f46') + '">' +
             _fmtV(promVal, false) + '</td>';
     });
     tbodyProm += '</tr></tbody>';
@@ -4602,11 +4642,11 @@ function _renderTendSubTabla(tendData, filteredRows, el, subSel) {
     el.innerHTML =
         '<div id="tend-table-card" class="table-card" style="margin-bottom:0;flex:1;min-height:0;display:flex;flex-direction:column;overflow:hidden">' +
             '<div style="display:flex;justify-content:space-between;align-items:center;padding-bottom:6px;margin-bottom:4px;border-bottom:1px solid var(--border);flex-shrink:0">' +
-                '<span style="color:var(--text);font-size:14px;font-weight:700">Tendencia de Consumos</span>' +
+                '<span style="color:var(--text);font-size:15.5px;font-weight:700">Tendencia de Consumos</span>' +
                 '<div id="fpt-action-bar-slot"></div>' +
             '</div>' +
             '<div id="tend-scroll-wrap" style="flex:1;overflow-y:auto;min-height:0">' +
-                '<table style="border-collapse:separate;border-spacing:0;width:100%;font-size:10px">' +
+                '<table style="border-collapse:separate;border-spacing:0;width:100%;font-size:11.5px">' +
                     thead + tbodySub + tbodyProm +
                 '</table>' +
             '</div>' +
@@ -4628,7 +4668,7 @@ function _tendUpdateLegend() {
             'display:flex;align-items:center;gap:5px;padding:3px 6px;width:100%;text-align:left;' +
             'border:1px solid ' + (selected ? col : 'transparent') + ';border-radius:4px;cursor:pointer;' +
             'background:' + (active ? col + '18' : 'transparent') + ';' +
-            'color:' + (active ? '#334155' : '#94a3b8') + ';font-size:10px;font-weight:500;line-height:1.3">' +
+            'color:' + (active ? '#334155' : '#94a3b8') + ';font-size:11.5px;font-weight:500;line-height:1.3">' +
             '<span style="width:8px;height:8px;border-radius:50%;flex-shrink:0;background:' + (active ? col : '#cbd5e1') + '"></span>' +
             '<span style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;' + (active ? '' : 'text-decoration:line-through;opacity:.5') + '">' + ds.label + '</span>' +
             '</button>';
@@ -4673,15 +4713,15 @@ function sapOpenManualHaModal() {
     window._mhaCamps  = camps;
     window._mhaMeses  = MES_KEYS;
 
-    var th = 'padding:8px 14px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;background:#f1f5f9;color:#475569;border-bottom:2px solid #e2e8f0;white-space:nowrap';
+    var th = 'padding:8px 14px;font-size:12.5px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;background:#f1f5f9;color:#475569;border-bottom:2px solid #e2e8f0;white-space:nowrap';
     var html = '<table style="width:100%;border-collapse:collapse">';
     html += '<thead><tr><th style="'+th+';text-align:left;position:sticky;top:0;z-index:2">Sucursal</th>';
     MES_LBLS.forEach(function(l) { html += '<th style="'+th+';text-align:center;position:sticky;top:0;z-index:2">'+l+'</th>'; });
     html += '</tr></thead><tbody>';
-    var inp = 'type="number" step="0.1" min="0" style="width:76px;text-align:right;padding:4px 7px;border:1px solid #e2e8f0;border-radius:5px;font-size:12px"';
+    var inp = 'type="number" step="0.1" min="0" style="width:76px;text-align:right;padding:4px 7px;border:1px solid #e2e8f0;border-radius:5px;font-size:13.5px"';
     camps.forEach(function(camp, ri) {
         html += '<tr style="background:'+(ri%2===0?'#f8fafc':'#fff')+'">';
-        html += '<td style="padding:7px 14px;font-size:13px;font-weight:600;white-space:nowrap">'+campNames[camp]+'</td>';
+        html += '<td style="padding:7px 14px;font-size:14.5px;font-weight:600;white-space:nowrap">'+campNames[camp]+'</td>';
         MES_KEYS.forEach(function(mes) {
             var val = (_manualHa[camp]||{})[mes]||'';
             html += '<td style="padding:5px 8px;text-align:center"><input '+inp+' placeholder="—" id="mha-'+camp.replace(/\W/g,'_')+'-'+mes.replace('-','_')+'" value="'+val+'"></td>';
@@ -4823,7 +4863,7 @@ function sapOpenHaHistModal() {
     // Encabezado
     var headerCells = months.map(function(m) {
         var p = m.split('-'), isCur = m === curMesStr;
-        var lbl = SAP_MESES[parseInt(p[1],10)-1] + '<br><span style="font-size:10px;font-weight:400;opacity:.75">' + p[0] + (isCur ? ' 🔴' : '') + '</span>';
+        var lbl = SAP_MESES[parseInt(p[1],10)-1] + '<br><span style="font-size:11.5px;font-weight:400;opacity:.75">' + p[0] + (isCur ? ' 🔴' : '') + '</span>';
         return '<th style="' + (isCur ? thCur : thBase) + '">' + lbl + '</th>';
     }).join('');
     var thead = '<thead><tr>' +
@@ -4870,7 +4910,7 @@ function sapOpenHaHistModal() {
         totalCells + '</tr></tfoot>';
 
     body.innerHTML =
-        '<table style="border-collapse:separate;border-spacing:0;width:100%;font-size:10px">' +
+        '<table style="border-collapse:separate;border-spacing:0;width:100%;font-size:11.5px">' +
         thead + tbody + tfoot + '</table>';
 
     modal.style.display = 'flex';
@@ -4939,9 +4979,9 @@ function sapOpenMaterialesModal() {
     let rows = '';
     items.forEach(function(i) {
         rows += '<tr>' +
-            '<td style="font-size:11px;color:var(--muted);white-space:nowrap">' + i.code + '</td>' +
+            '<td style="font-size:12.5px;color:var(--muted);white-space:nowrap">' + i.code + '</td>' +
             '<td style="font-weight:500">' + i.desc + '</td>' +
-            '<td style="text-align:center;font-size:12px;color:var(--muted)">' + i.unidad + '</td>' +
+            '<td style="text-align:center;font-size:13.5px;color:var(--muted)">' + i.unidad + '</td>' +
             '<td style="text-align:right;font-weight:600">' + fmt2(i.cantidad) + '</td>' +
             '<td style="text-align:right;font-weight:600;color:#065f46">$' + fmt2(i.importe) + '</td>' +
             '</tr>';
@@ -4952,7 +4992,7 @@ function sapOpenMaterialesModal() {
 
     titleEl.textContent = items.length + ' materiales — ' + periodoLabel;
     body.innerHTML =
-        '<table style="width:100%;border-collapse:collapse;font-size:13px">' +
+        '<table style="width:100%;border-collapse:collapse;font-size:14.5px">' +
         '<thead><tr style="background:#f8fafc;border-bottom:2px solid var(--border)">' +
             '<th style="padding:10px 12px;text-align:left;font-weight:600;color:var(--muted)">Código</th>' +
             '<th style="padding:10px 12px;text-align:left;font-weight:600">Descripción</th>' +
@@ -5036,16 +5076,16 @@ function _sapOpenMatDetail(matCode) {
     var ordRows = Object.values(byOrd).sort(function(a, b) { return b.costo - a.costo; }).slice(0, 15);
     var ordHtml = ordRows.map(function(o, i) {
         return '<tr style="border-bottom:1px solid var(--border)">' +
-            '<td style="padding:6px 10px;text-align:center;color:var(--muted);font-size:11px">' + (i + 1) + '</td>' +
-            '<td style="padding:6px 10px;font-size:11px;font-family:monospace;color:var(--muted)">' + o.ord + '</td>' +
+            '<td style="padding:6px 10px;text-align:center;color:var(--muted);font-size:12.5px">' + (i + 1) + '</td>' +
+            '<td style="padding:6px 10px;font-size:12.5px;font-family:monospace;color:var(--muted)">' + o.ord + '</td>' +
             '<td style="padding:6px 10px;font-weight:600">' + o.sub + '</td>' +
-            '<td style="padding:6px 10px;font-size:11px;color:var(--muted)">' + o.pool + '</td>' +
+            '<td style="padding:6px 10px;font-size:12.5px;color:var(--muted)">' + o.pool + '</td>' +
             '<td style="padding:6px 10px;text-align:right">' + _sapFmt2(o.cant) + '</td>' +
             '<td style="padding:6px 10px;text-align:right;font-weight:600;color:#065f46">$' + _sapFmt2(o.costo) + '</td>' +
             '</tr>';
     }).join('');
 
-    titleEl.innerHTML = '<span style="font-size:11px;font-weight:400;color:var(--muted)">' + matCode + ' &nbsp;·&nbsp; ' + unidad + '</span><br>' + desc;
+    titleEl.innerHTML = '<span style="font-size:12.5px;font-weight:400;color:var(--muted)">' + matCode + ' &nbsp;·&nbsp; ' + unidad + '</span><br>' + desc;
     var _periodEl = document.getElementById('sap-mat-modal-period');
     if (_periodEl) {
         var _pYr = (document.getElementById('sap-mat-year')  || {}).value || (document.getElementById('sap-year')  || {}).value || '';
@@ -5083,7 +5123,7 @@ function _sapOpenMatDetail(matCode) {
                 borderRadius: 4, borderSkipped: false,
                 datalabels: {
                     anchor: 'start', align: 'end', offset: 4, rotation: -90,
-                    font: { size: 10, weight: '700' }, color: '#1e3a5f',
+                    font: { size: 11.5, weight: '700' }, color: '#1e3a5f',
                     formatter: function(v) { return '$' + v.toFixed(4); }
                 }
             }]
@@ -5099,8 +5139,8 @@ function _sapOpenMatDetail(matCode) {
                 }}}
             },
             scales: {
-                x: { ticks: { font: { size: 10, weight: '600' }, maxRotation: 35, minRotation: 20 } },
-                y: { grid: { color: '#f1f5f9' }, ticks: { font: { size: 10 }, callback: function(v) { return '$' + v.toFixed(2); } } }
+                x: { ticks: { font: { size: 11.5, weight: '600' }, maxRotation: 35, minRotation: 20 } },
+                y: { grid: { color: '#f1f5f9' }, ticks: { font: { size: 11.5 }, callback: function(v) { return '$' + v.toFixed(2); } } }
             }
         }
     });
@@ -5196,7 +5236,7 @@ function _apFindHeader(card) {
     if (f.classList.contains('chart-title')) return f;
     if (f.tagName === 'DIV' && !f.querySelector('table,canvas')) {
         var sp = f.firstElementChild;
-        if (sp && sp.tagName === 'SPAN' && /font-size:\s*14px/.test(sp.getAttribute('style') || '')) return f;
+        if (sp && sp.tagName === 'SPAN' && /font-size:\s*(14|15\.5)px/.test(sp.getAttribute('style') || '')) return f;
     }
     return null;
 }
@@ -5518,7 +5558,7 @@ function _mapaUpdateLegend() {
         var rangeStr = mx > 0 ? (loFmt + ' – ' + hiFmt) : '—';
         return '<div style="display:flex;align-items:center;gap:6px;margin-bottom:3px">' +
             '<div style="width:10px;height:10px;border-radius:50%;background:' + r.color + ';flex-shrink:0"></div>' +
-            '<div style="font-size:9px;color:#374151;line-height:1.2">' +
+            '<div style="font-size:10.5px;color:#374151;line-height:1.2">' +
                 '<span style="font-weight:600">' + r.label + '</span><br>' +
                 '<span style="color:#6b7280">' + rangeStr + '</span>' +
             '</div>' +
@@ -5606,7 +5646,7 @@ function _mapaPopupHtml(layer, consump, ps, dias) {
     var popupRows = '';
     if (popupMetricVal > 0) {
         if (_mapaMetric !== 'qty') {
-            popupRows += '<tr style="background:#f8fafc;border-bottom:2px solid #e2e8f0"><td style="padding:7px 8px;color:#1a3a5c;font-size:11px;font-weight:700">' + _metricLabel + '</td><td style="padding:7px 8px;text-align:right;font-weight:800;font-size:14px;color:#1a3a5c">' + _fmtMetric(popupMetricVal) + '</td></tr>';
+            popupRows += '<tr style="background:#f8fafc;border-bottom:2px solid #e2e8f0"><td style="padding:7px 8px;color:#1a3a5c;font-size:12.5px;font-weight:700">' + _metricLabel + '</td><td style="padding:7px 8px;text-align:right;font-weight:800;font-size:15.5px;color:#1a3a5c">' + _fmtMetric(popupMetricVal) + '</td></tr>';
         }
         if (consump && consump.materials) {
             var mats = Object.entries(consump.materials).sort(function(a, b) {
@@ -5626,23 +5666,23 @@ function _mapaPopupHtml(layer, consump, ps, dias) {
                 } else {
                     dispVal = _mapaFmt(m[1].qty || 0) + ' ' + (m[1].unit || 'KG');
                 }
-                popupRows += '<tr><td style="padding:4px 8px;color:#64748b;font-size:11px;max-width:160px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">' + (_mapaAllMatsMap[m[0]] || m[0]) + '</td><td style="padding:4px 8px;text-align:right;font-weight:600;font-size:11px;white-space:nowrap">' + dispVal + '</td></tr>';
+                popupRows += '<tr><td style="padding:4px 8px;color:#64748b;font-size:12.5px;max-width:160px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">' + (_mapaAllMatsMap[m[0]] || m[0]) + '</td><td style="padding:4px 8px;text-align:right;font-weight:600;font-size:12.5px;white-space:nowrap">' + dispVal + '</td></tr>';
             });
         }
     } else {
-        popupRows = '<tr><td colspan="2" style="padding:10px 8px;color:#94a3b8;font-style:italic;font-size:11px;text-align:center">Sin consumo registrado</td></tr>';
+        popupRows = '<tr><td colspan="2" style="padding:10px 8px;color:#94a3b8;font-style:italic;font-size:12.5px;text-align:center">Sin consumo registrado</td></tr>';
     }
-    return '<div style="min-width:210px;font-size:12px;border-radius:10px;overflow:hidden;box-shadow:0 4px 16px rgba(0,0,0,0.18)">' +
+    return '<div style="min-width:210px;font-size:13.5px;border-radius:10px;overflow:hidden;box-shadow:0 4px 16px rgba(0,0,0,0.18)">' +
         '<div class="mapa-popup-hdr" style="background:' + popupHdrColor + ';padding:10px 36px 10px 12px;user-select:none;display:flex;align-items:center;justify-content:space-between;gap:8px">' +
         '<div style="display:flex;flex-direction:column;gap:2px">' +
-        '<span style="font-weight:700;font-size:13px;color:#fff;letter-spacing:0.5px">' + (_mapaView === 'mes' ? (layer.poolCode || '') : (layer.cycleCode || layer.poolCode || '')) + '</span>' +
+        '<span style="font-weight:700;font-size:14.5px;color:#fff;letter-spacing:0.5px">' + (_mapaView === 'mes' ? (layer.poolCode || '') : (layer.cycleCode || layer.poolCode || '')) + '</span>' +
         '<div style="display:flex;gap:10px">' +
-        (ps > 0 ? '<span style="font-size:11px;color:rgba(255,255,255,0.85);font-weight:600">' + ps.toLocaleString('es-EC', { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + ' ha</span>' : '') +
-        (_mapaView !== 'mes' && dias > 0 ? '<span style="font-size:11px;color:rgba(255,255,255,0.85)">' + dias + ' días</span>' : '') +
+        (ps > 0 ? '<span style="font-size:12.5px;color:rgba(255,255,255,0.85);font-weight:600">' + ps.toLocaleString('es-EC', { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + ' ha</span>' : '') +
+        (_mapaView !== 'mes' && dias > 0 ? '<span style="font-size:12.5px;color:rgba(255,255,255,0.85)">' + dias + ' días</span>' : '') +
         '</div></div>' +
         (_mapaView !== 'mes' && (popupUse || popupEstado) ? '<div style="display:flex;flex-direction:column;align-items:flex-end;gap:2px">' +
-        (popupUse    ? '<span style="font-size:11px;color:#fff;font-weight:700;text-transform:uppercase">' + popupUse + '</span>' : '') +
-        (popupEstado ? '<span style="font-size:10px;color:rgba(255,255,255,0.85)">' + popupEstado + '</span>' : '') +
+        (popupUse    ? '<span style="font-size:12.5px;color:#fff;font-weight:700;text-transform:uppercase">' + popupUse + '</span>' : '') +
+        (popupEstado ? '<span style="font-size:11.5px;color:rgba(255,255,255,0.85)">' + popupEstado + '</span>' : '') +
         '</div>' : '') +
         '</div>' +
         '<div style="max-height:260px;overflow-y:auto"><table style="width:100%;border-collapse:collapse;background:#fff">' + popupRows + '</table></div>' +
@@ -5680,50 +5720,50 @@ async function _sapRenderMapa(container) {
     // Preparar contenedor del mapa
     container.innerHTML = '<div style="position:relative;width:100%;height:100%;min-height:500px">' +
         '<div id="map-leaflet" style="width:100%;height:100%;min-height:500px"></div>' +
-        '<div id="map-loading" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,0.85);z-index:9999;font-size:14px;color:#1a3a5c;font-weight:600">' +
+        '<div id="map-loading" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,0.85);z-index:9999;font-size:15.5px;color:#1a3a5c;font-weight:600">' +
         '<span class="spinner"></span> Cargando mapa…</div>' +
         '<div id="map-rotate-ctrl" style="position:absolute;bottom:90px;left:10px;z-index:1000;display:flex;flex-direction:column;gap:2px">' +
-        '<button title="Girar izquierda" onclick="_mapaRotate(-15)" style="width:30px;height:30px;border:2px solid rgba(0,0,0,0.25);border-radius:4px;background:white;cursor:pointer;font-size:14px;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 4px rgba(0,0,0,0.2)">↺</button>' +
-        '<button title="Norte" onclick="_mapaRotate(0,true)" id="map-btn-north" style="width:30px;height:30px;border:2px solid rgba(0,0,0,0.25);border-radius:4px;background:white;cursor:pointer;font-size:13px;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 4px rgba(0,0,0,0.2);font-weight:700;color:#1a3a5c">N</button>' +
-        '<button title="Girar derecha" onclick="_mapaRotate(15)" style="width:30px;height:30px;border:2px solid rgba(0,0,0,0.25);border-radius:4px;background:white;cursor:pointer;font-size:14px;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 4px rgba(0,0,0,0.2)">↻</button>' +
+        '<button title="Girar izquierda" onclick="_mapaRotate(-15)" style="width:30px;height:30px;border:2px solid rgba(0,0,0,0.25);border-radius:4px;background:white;cursor:pointer;font-size:15.5px;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 4px rgba(0,0,0,0.2)">↺</button>' +
+        '<button title="Norte" onclick="_mapaRotate(0,true)" id="map-btn-north" style="width:30px;height:30px;border:2px solid rgba(0,0,0,0.25);border-radius:4px;background:white;cursor:pointer;font-size:14.5px;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 4px rgba(0,0,0,0.2);font-weight:700;color:#1a3a5c">N</button>' +
+        '<button title="Girar derecha" onclick="_mapaRotate(15)" style="width:30px;height:30px;border:2px solid rgba(0,0,0,0.25);border-radius:4px;background:white;cursor:pointer;font-size:15.5px;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 4px rgba(0,0,0,0.2)">↻</button>' +
         '</div>' +
         '<div id="map-color-legend" style="position:absolute;bottom:10px;right:10px;z-index:1000;background:rgba(255,255,255,0.95);border:1px solid #e2e8f0;border-radius:8px;padding:8px 10px;box-shadow:0 2px 8px rgba(0,0,0,0.15);min-width:130px">' +
-        '<div style="font-size:9px;font-weight:700;color:#64748b;text-transform:uppercase;margin-bottom:5px">Costo/Ha</div>' +
+        '<div style="font-size:10.5px;font-weight:700;color:#64748b;text-transform:uppercase;margin-bottom:5px">Costo/Ha</div>' +
         '<div id="map-legend-rows"></div>' +
         '</div>' +
         '<div id="map-controls" style="position:absolute;top:10px;right:10px;z-index:1000">' +
         '<div style="position:relative;display:inline-block">' +
-          '<button id="fpm-map-btn" onclick="_fpmapToggle()" style="padding:5px 12px;font-size:11px;font-weight:600;border:1px solid #cbd5e1;border-radius:6px;background:rgba(255,255,255,0.97);color:#1e3a5f;cursor:pointer;white-space:nowrap;box-shadow:0 2px 8px rgba(0,0,0,0.15)">⚙ Filtros</button>' +
+          '<button id="fpm-map-btn" onclick="_fpmapToggle()" style="padding:5px 12px;font-size:12.5px;font-weight:600;border:1px solid #cbd5e1;border-radius:6px;background:rgba(255,255,255,0.97);color:#1e3a5f;cursor:pointer;white-space:nowrap;box-shadow:0 2px 8px rgba(0,0,0,0.15)">⚙ Filtros</button>' +
           '<div id="fpm-map-panel" style="display:none;position:absolute;right:0;top:calc(100% + 4px);background:#fff;border:1px solid #e2e8f0;border-radius:10px;box-shadow:0 4px 20px rgba(0,0,0,.15);padding:14px 16px;z-index:200;min-width:300px">' +
             '<div style="display:flex;flex-direction:column;gap:10px">' +
               '<div>' +
-                '<label style="font-size:10px;font-weight:700;color:#6b7280;text-transform:uppercase;display:block;margin-bottom:3px">Sucursal</label>' +
-                '<select id="mapi-sub" onchange="_mapaOnSubChange()" style="width:100%;padding:5px 8px;border:1px solid #d1d5db;border-radius:6px;font-size:12px;color:#1a3a5c"><option value="">— Todas —</option></select>' +
+                '<label style="font-size:11.5px;font-weight:700;color:#6b7280;text-transform:uppercase;display:block;margin-bottom:3px">Sucursal</label>' +
+                '<select id="mapi-sub" onchange="_mapaOnSubChange()" style="width:100%;padding:5px 8px;border:1px solid #d1d5db;border-radius:6px;font-size:13.5px;color:#1a3a5c"><option value="">— Todas —</option></select>' +
               '</div>' +
               '<div>' +
-                '<label style="font-size:10px;font-weight:700;color:#6b7280;text-transform:uppercase;display:block;margin-bottom:3px">Vista</label>' +
+                '<label style="font-size:11.5px;font-weight:700;color:#6b7280;text-transform:uppercase;display:block;margin-bottom:3px">Vista</label>' +
                 '<div style="display:flex;border:1px solid #cbd5e1;border-radius:6px;overflow:hidden">' +
-                  '<button id="mapi-btn-ciclo" onclick="_mapaSetView(\'ciclo\')" style="flex:1;padding:4px 10px;font-size:11px;font-weight:600;border:none;cursor:pointer;background:' + (_mapaView==='ciclo'?'#1e3a5f':'#e2e8f0') + ';color:' + (_mapaView==='ciclo'?'#fff':'#475569') + '">Por Ciclo</button>' +
-                  '<button id="mapi-btn-mes"   onclick="_mapaSetView(\'mes\')"   style="flex:1;padding:4px 10px;font-size:11px;font-weight:600;border:none;cursor:pointer;background:' + (_mapaView==='mes'?'#1e3a5f':'#e2e8f0') + ';color:' + (_mapaView==='mes'?'#fff':'#475569') + '">Por Mes</button>' +
+                  '<button id="mapi-btn-ciclo" onclick="_mapaSetView(\'ciclo\')" style="flex:1;padding:4px 10px;font-size:12.5px;font-weight:600;border:none;cursor:pointer;background:' + (_mapaView==='ciclo'?'#1e3a5f':'#e2e8f0') + ';color:' + (_mapaView==='ciclo'?'#fff':'#475569') + '">Por Ciclo</button>' +
+                  '<button id="mapi-btn-mes"   onclick="_mapaSetView(\'mes\')"   style="flex:1;padding:4px 10px;font-size:12.5px;font-weight:600;border:none;cursor:pointer;background:' + (_mapaView==='mes'?'#1e3a5f':'#e2e8f0') + ';color:' + (_mapaView==='mes'?'#fff':'#475569') + '">Por Mes</button>' +
                 '</div>' +
               '</div>' +
               '<div style="display:flex;gap:10px">' +
                 '<div style="flex:1">' +
-                  '<label style="font-size:10px;font-weight:700;color:#6b7280;text-transform:uppercase;display:block;margin-bottom:3px">Año</label>' +
-                  '<select id="mapi-year" onchange="_mapaOnSubChange()" style="width:100%;padding:5px 8px;border:1px solid #d1d5db;border-radius:6px;font-size:12px;color:#1a3a5c"><option value="">———</option></select>' +
+                  '<label style="font-size:11.5px;font-weight:700;color:#6b7280;text-transform:uppercase;display:block;margin-bottom:3px">Año</label>' +
+                  '<select id="mapi-year" onchange="_mapaOnSubChange()" style="width:100%;padding:5px 8px;border:1px solid #d1d5db;border-radius:6px;font-size:13.5px;color:#1a3a5c"><option value="">———</option></select>' +
                 '</div>' +
                 '<div style="flex:1">' +
-                  '<label style="font-size:10px;font-weight:700;color:#6b7280;text-transform:uppercase;display:block;margin-bottom:3px">Mes</label>' +
-                  '<select id="mapi-month" onchange="_mapaOnSubChange()" style="width:100%;padding:5px 8px;border:1px solid #d1d5db;border-radius:6px;font-size:12px;color:#1a3a5c"><option value="">———</option></select>' +
+                  '<label style="font-size:11.5px;font-weight:700;color:#6b7280;text-transform:uppercase;display:block;margin-bottom:3px">Mes</label>' +
+                  '<select id="mapi-month" onchange="_mapaOnSubChange()" style="width:100%;padding:5px 8px;border:1px solid #d1d5db;border-radius:6px;font-size:13.5px;color:#1a3a5c"><option value="">———</option></select>' +
                 '</div>' +
               '</div>' +
               '<div>' +
-                '<label style="font-size:10px;font-weight:700;color:#6b7280;text-transform:uppercase;display:block;margin-bottom:3px">Métrica</label>' +
+                '<label style="font-size:11.5px;font-weight:700;color:#6b7280;text-transform:uppercase;display:block;margin-bottom:3px">Métrica</label>' +
                 '<div style="display:flex;border:1px solid #cbd5e1;border-radius:6px;overflow:hidden">' +
                 ['qty','costo_total','costo_ha','costo_ha_dia'].map(function(m) {
                   var lbl={qty:'Consumo',costo_total:'Costo Total',costo_ha:'Costo/Ha',costo_ha_dia:'Costo/Ha/Día'}[m];
                   var active = m===_mapaMetric;
-                  return '<button id="mapi-metric-'+m+'" onclick="_mapaSetMetric(\''+m+'\')" style="flex:1;padding:4px 4px;font-size:10px;border:none;cursor:pointer;white-space:nowrap;background:'+(active?'#1e3a5f':'#e2e8f0')+';color:'+(active?'#fff':'#475569')+';font-weight:'+(active?'700':'400')+'">'+lbl+'</button>';
+                  return '<button id="mapi-metric-'+m+'" onclick="_mapaSetMetric(\''+m+'\')" style="flex:1;padding:4px 4px;font-size:11.5px;border:none;cursor:pointer;white-space:nowrap;background:'+(active?'#1e3a5f':'#e2e8f0')+';color:'+(active?'#fff':'#475569')+';font-weight:'+(active?'700':'400')+'">'+lbl+'</button>';
                 }).join('') +
                 '</div>' +
               '</div>' +
@@ -5733,11 +5773,11 @@ async function _sapRenderMapa(container) {
         '</div>' +
         '<div style="position:absolute;top:10px;left:10px;z-index:1000">' +
           '<div style="position:relative;display:inline-block">' +
-            '<button id="fpm-mat-btn" onclick="_fpmapMatToggle()" style="padding:5px 12px;font-size:11px;font-weight:600;border:1px solid #cbd5e1;border-radius:6px;background:rgba(255,255,255,0.97);color:#1e3a5f;cursor:pointer;white-space:nowrap;box-shadow:0 2px 8px rgba(0,0,0,0.15)">☰ Materiales</button>' +
-            '<div id="map-mat-panel" style="display:none;position:absolute;left:0;top:calc(100% + 4px);background:rgba(255,255,255,0.97);border:1px solid #e2e8f0;border-radius:10px;box-shadow:0 4px 20px rgba(0,0,0,.15);font-size:11.5px;width:220px;flex-direction:column;max-height:calc(100vh - 80px);overflow:hidden">' +
+            '<button id="fpm-mat-btn" onclick="_fpmapMatToggle()" style="padding:5px 12px;font-size:12.5px;font-weight:600;border:1px solid #cbd5e1;border-radius:6px;background:rgba(255,255,255,0.97);color:#1e3a5f;cursor:pointer;white-space:nowrap;box-shadow:0 2px 8px rgba(0,0,0,0.15)">☰ Materiales</button>' +
+            '<div id="map-mat-panel" style="display:none;position:absolute;left:0;top:calc(100% + 4px);background:rgba(255,255,255,0.97);border:1px solid #e2e8f0;border-radius:10px;box-shadow:0 4px 20px rgba(0,0,0,.15);font-size:13px;width:220px;flex-direction:column;max-height:calc(100vh - 80px);overflow:hidden">' +
               '<div style="padding:8px 10px;border-bottom:1px solid #e5e5ea;display:flex;align-items:center;justify-content:space-between;flex-shrink:0">' +
-                '<span style="font-weight:700;font-size:11px;color:#1a3a5c;text-transform:uppercase;letter-spacing:0.4px">Materiales</span>' +
-                '<button onclick="_mapaMatTodos()" style="font-size:10px;padding:2px 8px;border:1px solid #e5e5ea;border-radius:4px;background:#f8fafc;cursor:pointer;font-weight:600;color:#475569">Todos</button>' +
+                '<span style="font-weight:700;font-size:12.5px;color:#1a3a5c;text-transform:uppercase;letter-spacing:0.4px">Materiales</span>' +
+                '<button onclick="_mapaMatTodos()" style="font-size:11.5px;padding:2px 8px;border:1px solid #e5e5ea;border-radius:4px;background:#f8fafc;cursor:pointer;font-weight:600;color:#475569">Todos</button>' +
               '</div>' +
               '<div id="map-mat-list" style="overflow-y:auto;padding:4px 4px 6px;flex:1"></div>' +
             '</div>' +
@@ -5892,7 +5932,7 @@ async function _sapRenderMapa(container) {
 
     if (!layers.length) {
         var el = document.getElementById('map-leaflet');
-        if (el) el.insertAdjacentHTML('afterend','<div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;z-index:500;pointer-events:none"><div style="background:white;border-radius:8px;padding:16px 24px;box-shadow:0 2px 8px rgba(0,0,0,0.2);font-size:13px;color:#64748b">No se pudieron cargar los polígonos de las piscinas</div></div>');
+        if (el) el.insertAdjacentHTML('afterend','<div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;z-index:500;pointer-events:none"><div style="background:white;border-radius:8px;padding:16px 24px;box-shadow:0 2px 8px rgba(0,0,0,0.2);font-size:14.5px;color:#64748b">No se pudieron cargar los polígonos de las piscinas</div></div>');
         map.setView([-2.2, -79.9], 9);
         return;
     }
@@ -5907,7 +5947,7 @@ async function _sapRenderMapa(container) {
             var color    = _mapaMatColors[m] || '#94a3b8';
             var nombre   = allMatsMap[m] || m;
             var dotStyle = 'width:10px;height:10px;border-radius:50%;flex-shrink:0;display:inline-block;transition:background 0.15s;background:' + (dimmed ? '#d1d5db' : color);
-            var txtStyle = 'overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:11.5px;transition:color 0.15s;' + (dimmed ? 'color:#b0b7c3;text-decoration:line-through' : isActive ? 'font-weight:700;color:#0f172a' : 'color:#334155');
+            var txtStyle = 'overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:13px;transition:color 0.15s;' + (dimmed ? 'color:#b0b7c3;text-decoration:line-through' : isActive ? 'font-weight:700;color:#0f172a' : 'color:#334155');
             var rowBg    = isActive ? 'background:#f0f4ff' : '';
             return '<div onclick="_mapaMatClick(\'' + m.replace(/'/g,"\\'") + '\')" ' +
                 'style="display:flex;align-items:center;gap:7px;padding:5px 6px;border-radius:5px;cursor:pointer;' + rowBg + '" ' +

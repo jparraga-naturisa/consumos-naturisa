@@ -36,23 +36,23 @@
         body { overflow: hidden; }
         .sidebar { position: fixed; top: 0; left: 0; bottom: 0; width: 175px; background: var(--primary); display: flex; flex-direction: column; z-index: 200; transition: width 0.22s ease; overflow: hidden; }
         .sb-logo { display: flex; align-items: center; gap: 9px; padding: 14px 16px 12px; border-bottom: 1px solid rgba(255,255,255,0.1); min-height: 64px; position: relative; }
-        .sb-logo .accent { color: var(--accent); font-size: 15px; font-weight: 800; }
+        .sb-logo .accent { color: var(--accent); font-size: 16px; font-weight: 800; }
         .sb-logo .sep { opacity: 0.35; margin: 0 3px; color: #fff; }
         .sb-app-switcher { position: relative; }
-        .sb-app-btn { background: none; border: none; color: rgba(255,255,255,0.75); font-size: 11px; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 5px; padding: 0; white-space: nowrap; }
+        .sb-app-btn { background: none; border: none; color: rgba(255,255,255,0.75); font-size: 12.5px; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 5px; padding: 0; white-space: nowrap; }
         .sb-app-btn:hover { color: #fff; }
         .sb-app-menu { display: none; position: absolute; top: calc(100% + 8px); left: 0; background: #1e2d45; border: 1px solid #2e4a6e; border-radius: 8px; box-shadow: 0 8px 24px rgba(0,0,0,.4); min-width: 200px; z-index: 9999; overflow: hidden; }
-        .sb-app-menu a { display: block; padding: 10px 16px; color: #e2e8f0; text-decoration: none; font-size: 13px; transition: background 0.12s; }
+        .sb-app-menu a { display: block; padding: 10px 16px; color: #e2e8f0; text-decoration: none; font-size: 14.5px; transition: background 0.12s; }
         .sb-app-menu a:hover { background: rgba(255,255,255,0.08); }
         .sb-app-menu a.active { background: #0f2744; font-weight: 700; }
 
         /* Toggle collapse button */
-        .sb-toggle { position: absolute; top: 50%; right: 10px; transform: translateY(-50%); width: 20px; height: 20px; border-radius: 50%; background: rgba(255,255,255,0.15); border: none; color: rgba(255,255,255,0.8); cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 11px; transition: background 0.15s; flex-shrink: 0; }
+        .sb-toggle { position: absolute; top: 50%; right: 10px; transform: translateY(-50%); width: 20px; height: 20px; border-radius: 50%; background: rgba(255,255,255,0.15); border: none; color: rgba(255,255,255,0.8); cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 12.5px; transition: background 0.15s; flex-shrink: 0; }
         .sb-toggle:hover { background: rgba(255,255,255,0.28); }
 
         /* Sidebar nav */
         .sb-nav { flex: 1; padding: 10px 0; overflow-y: auto; overflow-x: hidden; }
-        .sb-nav-item { display: flex; align-items: center; gap: 11px; width: 100%; padding: 10px 18px; background: none; border: none; border-left: 3px solid transparent; color: rgba(255,255,255,0.6); font-size: 13px; font-weight: 500; cursor: pointer; text-align: left; transition: color 0.15s, background 0.15s, border-color 0.15s; white-space: nowrap; }
+        .sb-nav-item { display: flex; align-items: center; gap: 11px; width: 100%; padding: 10px 18px; background: none; border: none; border-left: 3px solid transparent; color: rgba(255,255,255,0.6); font-size: 14.5px; font-weight: 500; cursor: pointer; text-align: left; transition: color 0.15s, background 0.15s, border-color 0.15s; white-space: nowrap; }
         .sb-nav-item:hover { background: rgba(255,255,255,0.07); color: rgba(255,255,255,0.9); }
         .sb-nav-item.active { background: rgba(255,255,255,0.1); color: #fff; border-left-color: var(--accent); font-weight: 700; }
         .sb-nav-icon { width: 18px; height: 18px; flex-shrink: 0; opacity: 0.85; }
@@ -76,13 +76,13 @@
 
         /* Sidebar footer (user) */
         .sb-footer { border-top: 1px solid rgba(255,255,255,0.1); padding: 12px 14px; position: relative; }
-        .hdr-user-btn { display: flex; align-items: center; gap: 7px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 18px; padding: 4px 8px 4px 4px; cursor: pointer; color: white; font-size: 10.5px; font-weight: 600; transition: background 0.15s; white-space: nowrap; width: 100%; overflow: hidden; }
+        .hdr-user-btn { display: flex; align-items: center; gap: 7px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 18px; padding: 4px 8px 4px 4px; cursor: pointer; color: white; font-size: 12px; font-weight: 600; transition: background 0.15s; white-space: nowrap; width: 100%; overflow: hidden; }
         .hdr-user-btn:hover { background: rgba(255,255,255,0.2); }
-        .hdr-user-av { width: 26px; height: 26px; border-radius: 50%; background: var(--accent); color: #0a2540; display: inline-flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 800; flex-shrink: 0; }
+        .hdr-user-av { width: 26px; height: 26px; border-radius: 50%; background: var(--accent); color: #0a2540; display: inline-flex; align-items: center; justify-content: center; font-size: 12.5px; font-weight: 800; flex-shrink: 0; }
         .hdr-user-dd { position: absolute; bottom: calc(100% + 6px); left: 14px; right: 14px; background: white; border-radius: 10px; box-shadow: var(--shadow-md), 0 8px 24px rgba(0,0,0,0.18); overflow: hidden; display: none; z-index: 9999; border: 1px solid var(--border); }
         .hdr-user-dd.open { display: block; }
-        .hdr-dd-head { padding: 10px 14px; font-size: 12.5px; font-weight: 700; color: var(--text); background: #fafafa; border-bottom: 1px solid var(--border); }
-        .hdr-dd-item { display: flex; align-items: center; gap: 9px; width: 100%; padding: 8px 14px; background: none; border: none; font-size: 12.5px; font-weight: 500; color: var(--text); cursor: pointer; text-align: left; transition: background 0.12s; }
+        .hdr-dd-head { padding: 10px 14px; font-size: 14px; font-weight: 700; color: var(--text); background: #fafafa; border-bottom: 1px solid var(--border); }
+        .hdr-dd-item { display: flex; align-items: center; gap: 9px; width: 100%; padding: 8px 14px; background: none; border: none; font-size: 14px; font-weight: 500; color: var(--text); cursor: pointer; text-align: left; transition: background 0.12s; }
         .hdr-dd-item:hover { background: #f5f5f7; }
         .hdr-dd-item.danger { color: #dc2626; }
         .hdr-dd-item.danger:hover { background: #fef2f2; }
@@ -91,67 +91,67 @@
         .hdr-dd-item.amber { color: #b45309; }
         .hdr-dd-item.amber:hover { background: #fef3c7; }
         .hdr-dd-sep { height: 1px; background: var(--border); margin: 4px 0; }
-        .hdr-dd-upload { display: flex; align-items: center; gap: 9px; width: 100%; padding: 8px 14px; font-size: 12.5px; font-weight: 500; color: var(--text); cursor: pointer; transition: background 0.12s; box-sizing: border-box; }
+        .hdr-dd-upload { display: flex; align-items: center; gap: 9px; width: 100%; padding: 8px 14px; font-size: 14px; font-weight: 500; color: var(--text); cursor: pointer; transition: background 0.12s; box-sizing: border-box; }
         .hdr-dd-upload:hover { background: #f5f5f7; }
 
         /* Topbar (thin, above main content) */
         .topbar { display: none; }
-        .sb-date { font-size: 9px; color: rgba(255,255,255,0.5); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-top: 1px; }
+        .sb-date { font-size: 10.5px; color: rgba(255,255,255,0.5); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-top: 1px; }
 
         /* Content wrapper */
         .content-wrap { position: fixed; left: 175px; top: 0; right: 0; bottom: 0; display: flex; flex-direction: column; overflow: hidden; transition: left 0.22s ease; }
 
         /* Filter panel (Linear style) */
         .fp-bar { display: flex; align-items: center; gap: 8px; padding: 0; background: transparent; flex-shrink: 0; }
-        .fp-btn { display: flex; align-items: center; gap: 6px; padding: 4px 10px; border: 1px solid var(--border); border-radius: 6px; background: white; font-size: 12px; font-weight: 600; color: var(--text); cursor: pointer; transition: background 0.12s; }
+        .fp-btn { display: flex; align-items: center; gap: 6px; padding: 4px 10px; border: 1px solid var(--border); border-radius: 6px; background: white; font-size: 13.5px; font-weight: 600; color: var(--text); cursor: pointer; transition: background 0.12s; }
         .fp-btn:hover { background: var(--bg); }
         .fp-btn.active { background: #eff6ff; border-color: #bfdbfe; color: #1d4ed8; }
-        .fp-badge { background: #1d4ed8; color: white; border-radius: 10px; font-size: 10px; font-weight: 700; padding: 0 5px; min-width: 16px; text-align: center; }
-        .fp-chip { display: flex; align-items: center; gap: 5px; padding: 3px 8px; background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 20px; font-size: 11.5px; font-weight: 600; color: #1e40af; }
-        .fp-chip-x { cursor: pointer; opacity: 0.6; font-size: 13px; line-height: 1; }
+        .fp-badge { background: #1d4ed8; color: white; border-radius: 10px; font-size: 11.5px; font-weight: 700; padding: 0 5px; min-width: 16px; text-align: center; }
+        .fp-chip { display: flex; align-items: center; gap: 5px; padding: 3px 8px; background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 20px; font-size: 13px; font-weight: 600; color: #1e40af; }
+        .fp-chip-x { cursor: pointer; opacity: 0.6; font-size: 14.5px; line-height: 1; }
         .fp-chip-x:hover { opacity: 1; }
         .fp-panel { position: fixed; z-index: 8000; background: white; border: 1px solid var(--border); border-radius: 10px; box-shadow: 0 8px 32px rgba(0,0,0,0.14); min-width: 400px; padding: 14px 16px 10px; display: none; }
         .fp-panel.open { display: block; }
-        .fp-panel-title { font-size: 11px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px; }
+        .fp-panel-title { font-size: 12.5px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px; }
         .fp-row { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
-        .fp-row select { height: 30px; padding: 0 8px; border: 1px solid var(--border); border-radius: 6px; font-size: 12.5px; background: white; cursor: pointer; }
-        .fp-label { font-size: 12px; color: var(--muted); min-width: 36px; }
+        .fp-row select { height: 30px; padding: 0 8px; border: 1px solid var(--border); border-radius: 6px; font-size: 14px; background: white; cursor: pointer; }
+        .fp-label { font-size: 13.5px; color: var(--muted); min-width: 36px; }
         .fp-actions { display: flex; align-items: center; justify-content: space-between; margin-top: 10px; padding-top: 8px; border-top: 1px solid var(--border); }
-        .fp-clear { font-size: 12px; color: var(--muted); background: none; border: none; cursor: pointer; }
+        .fp-clear { font-size: 13.5px; color: var(--muted); background: none; border: none; cursor: pointer; }
         .fp-clear:hover { color: var(--danger); }
 
         /* Login Bar */
-        .login-bar { background: #fffbeb; border-bottom: 1px solid #fde68a; padding: 6px 20px; display: flex; align-items: center; gap: 8px; font-size: 12.5px; flex-wrap: wrap; flex-shrink: 0; }
+        .login-bar { background: #fffbeb; border-bottom: 1px solid #fde68a; padding: 6px 20px; display: flex; align-items: center; gap: 8px; font-size: 14px; flex-wrap: wrap; flex-shrink: 0; }
         .login-bar.connected { background: #f0fdf4; border-color: #bbf7d0; }
-        .login-bar input[type="text"], .login-bar input[type="password"] { padding: 5px 10px; border: 1px solid #d1d5db; border-radius: 6px; font-size: 12.5px; width: 150px; }
-        .btn { padding: 5px 14px; border: none; border-radius: 6px; cursor: pointer; font-size: 12px; font-weight: 600; transition: opacity 0.15s; }
+        .login-bar input[type="text"], .login-bar input[type="password"] { padding: 5px 10px; border: 1px solid #d1d5db; border-radius: 6px; font-size: 14px; width: 150px; }
+        .btn { padding: 5px 14px; border: none; border-radius: 6px; cursor: pointer; font-size: 13.5px; font-weight: 600; transition: opacity 0.15s; }
         .btn:hover { opacity: 0.85; }
         .btn-primary { background: var(--primary); color: white; }
         .btn-danger { background: var(--danger); color: white; }
-        #login-status { font-size: 12px; color: #92400e; }
+        #login-status { font-size: 13.5px; color: #92400e; }
         #login-status.ok { color: #166534; font-weight: 600; }
-        .user-avatar { width: 26px; height: 26px; border-radius: 50%; background: var(--primary-light); color: white; display: inline-flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; }
+        .user-avatar { width: 26px; height: 26px; border-radius: 50%; background: var(--primary-light); color: white; display: inline-flex; align-items: center; justify-content: center; font-size: 13.5px; font-weight: 700; }
 
         /* Filters — ahora vive dentro de .fp-panel (panel flotante estilo insumos),
         que ya aporta fondo/borde/sombra; aqui solo el layout de los campos. */
         .filters { display: flex; flex-wrap: wrap; gap: 10px; align-items: flex-end; max-width: 520px; }
         .fg { display: flex; flex-direction: column; gap: 3px; }
-        .fg label { font-size: 9px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; }
-        .fg select, .fg input[type="date"] { height: 28px; padding: 0 9px; box-sizing: border-box; border: 1px solid var(--border); border-radius: var(--radius-sm); font-size: 12.5px; background: white; min-width: 130px; }
-        .tsm-btn { height:28px; padding:0 10px; box-sizing: border-box; border:1px solid var(--border); border-radius:var(--radius-sm); background:var(--card); cursor:pointer; font-size:12.5px; min-width:200px; max-width:260px; text-align:left; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; color:var(--text); }
+        .fg label { font-size: 10.5px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; }
+        .fg select, .fg input[type="date"] { height: 28px; padding: 0 9px; box-sizing: border-box; border: 1px solid var(--border); border-radius: var(--radius-sm); font-size: 14px; background: white; min-width: 130px; }
+        .tsm-btn { height:28px; padding:0 10px; box-sizing: border-box; border:1px solid var(--border); border-radius:var(--radius-sm); background:var(--card); cursor:pointer; font-size:14px; min-width:200px; max-width:260px; text-align:left; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; color:var(--text); }
         .tsm-dd { display:none; position:absolute; top:calc(100% + 4px); left:0; background:var(--card); border:1px solid var(--border); border-radius:var(--radius-sm); box-shadow:var(--shadow-md), 0 6px 18px rgba(0,0,0,.1); z-index:9999; min-width:240px; max-width:340px; }
-        .tsm-q { width:100%; padding:5px 8px; border:1px solid var(--border); border-radius:6px; font-size:13px; outline:none; background:var(--bg); color:var(--text); }
+        .tsm-q { width:100%; padding:5px 8px; border:1px solid var(--border); border-radius:6px; font-size:14.5px; outline:none; background:var(--bg); color:var(--text); }
         .tsm-list { max-height:175px; overflow-y:auto; padding:0 4px 4px; }
-        .tsm-opt { padding:5px 10px; cursor:pointer; font-size:13px; border-radius:6px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; display:flex; align-items:center; gap:7px; }
+        .tsm-opt { padding:5px 10px; cursor:pointer; font-size:14.5px; border-radius:6px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; display:flex; align-items:center; gap:7px; }
         .tsm-opt:hover { background:var(--bg); }
         .tsm-opt.tsm-active { background:#dbeafe; color:#1d4ed8; font-weight:600; }
-        .tsm-cb { width:14px;height:14px;border:1.5px solid #94a3b8;border-radius:3px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;font-size:10px;font-weight:700;color:#fff; }
+        .tsm-cb { width:14px;height:14px;border:1.5px solid #94a3b8;border-radius:3px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;font-size:11.5px;font-weight:700;color:#fff; }
         .toggle-group { display: flex; border: 1px solid var(--border); border-radius: var(--radius-sm); overflow: hidden; }
-        .toggle-btn { padding: 6px 14px; border: none; background: white; cursor: pointer; font-size: 12px; font-weight: 600; color: var(--muted); transition: background 0.15s; }
+        .toggle-btn { padding: 6px 14px; border: none; background: white; cursor: pointer; font-size: 13.5px; font-weight: 600; color: var(--muted); transition: background 0.15s; }
         .toggle-btn.active { background: var(--primary); color: white; }
-        .btn-apply { padding: 7px 18px; background: var(--primary); color: white; border: none; border-radius: var(--radius-sm); cursor: pointer; font-size: 12.5px; font-weight: 600; align-self: flex-end; }
+        .btn-apply { padding: 7px 18px; background: var(--primary); color: white; border: none; border-radius: var(--radius-sm); cursor: pointer; font-size: 14px; font-weight: 600; align-self: flex-end; }
         .btn-apply:hover { background: var(--primary-light); }
-        .nav-btn { padding: 5px 8px; border: 1px solid var(--border); border-radius: 6px; background: white; cursor: pointer; font-size: 11px; color: var(--muted); line-height: 1; transition: background 0.15s, color 0.15s; flex-shrink: 0; }
+        .nav-btn { padding: 5px 8px; border: 1px solid var(--border); border-radius: 6px; background: white; cursor: pointer; font-size: 12.5px; color: var(--muted); line-height: 1; transition: background 0.15s, color 0.15s; flex-shrink: 0; }
         .nav-btn:hover { background: var(--primary); color: white; border-color: var(--primary); }
         .nav-wrap { display: flex; align-items: center; gap: 3px; }
 
@@ -160,21 +160,21 @@
 
         /* KPI Cards */
         .kpi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px; margin-bottom: 12px; }
-        .kpi-inc-row { display:flex; align-items:center; gap:5px; font-size:10px; line-height:1.3; }
-        .kpi-inc-dot { font-size:7px; flex-shrink:0; }
+        .kpi-inc-row { display:flex; align-items:center; gap:5px; font-size:11.5px; line-height:1.3; }
+        .kpi-inc-dot { font-size:8px; flex-shrink:0; }
         .kpi-inc-n   { font-weight:700; min-width:16px; }
         .kpi-card { background: white; border-radius: var(--radius); padding: 10px 10px; box-shadow: var(--shadow-sm); border: 1px solid var(--border); border-left: 3px solid transparent; min-width: 0; overflow: hidden; }
         /* Tabs en el header */
         .hdr-tabs { display:flex;flex:1;overflow-x:auto;scrollbar-width:none;align-self:stretch;padding:0 12px; }
         .hdr-tabs::-webkit-scrollbar { display:none; }
-        .sap-tab { background:none;border:none;border-bottom:2.5px solid transparent;padding:0 16px;height:100%;font-size:12.5px;font-weight:500;color:rgba(255,255,255,0.6);cursor:pointer;white-space:nowrap;transition:color .15s,border-color .15s; }
+        .sap-tab { background:none;border:none;border-bottom:2.5px solid transparent;padding:0 16px;height:100%;font-size:14px;font-weight:500;color:rgba(255,255,255,0.6);cursor:pointer;white-space:nowrap;transition:color .15s,border-color .15s; }
         .sap-tab:hover { color:rgba(255,255,255,0.9); }
         .sap-tab-active { color:#fff;border-bottom-color:#00b4d8;font-weight:700; }
-        .sap-tbl { width:100%;border-collapse:collapse;font-size:12px; }
+        .sap-tbl { width:100%;border-collapse:collapse;font-size:13.5px; }
         .sap-tbl th { padding:7px 10px;text-align:left;font-weight:700;color:#334155;background:#f8fafc;border-bottom:1px solid var(--border);white-space:nowrap; }
         .sap-tbl td { padding:6px 10px;border-bottom:1px solid #f1f1f3; }
         /* Tabla resumen compacta para ver todas las sucursales */
-        .sap-tbl-compact { font-size:10px; }
+        .sap-tbl-compact { font-size:11.5px; }
         .sap-tbl-compact th { padding:2px 6px; white-space:nowrap; }
         .sap-tbl-compact td { padding:1px 6px; white-space:nowrap; }
         .sap-tbl tbody tr:not(.cic-hdr):hover td { background:#f8fafc; }
@@ -187,28 +187,28 @@
         .kpi-card.green  { border-left-color: var(--success); }
         .kpi-card.orange { border-left-color: var(--warning); }
         .kpi-card.cyan   { border-left-color: var(--accent); }
-        .kpi-label { font-size: 10px; color: var(--muted); font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .kpi-label { font-size: 11.5px; color: var(--muted); font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
         .kpi-value { font-size: 21px; font-weight: 700; color: var(--text); line-height: 1.1; letter-spacing: -0.2px; }
-        .kpi-sub { font-size: 10px; color: var(--muted); margin-top: 4px; }
+        .kpi-sub { font-size: 11.5px; color: var(--muted); margin-top: 4px; }
 
         /* Charts */
         .charts-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin-bottom: 12px; align-items: start; }
         .charts-grid-2 { display: grid; grid-template-columns: 1fr; gap: 12px; margin-bottom: 12px; align-items: start; }
         .chart-card { background: white; border-radius: var(--radius); padding: 14px 16px; box-shadow: var(--shadow-sm); border: 1px solid var(--border); min-width: 0; }
-        .chart-title { font-size: 13px; font-weight: 600; color: var(--text); margin-bottom: 10px; display: flex; align-items: center; justify-content: space-between; }
-        .chart-sub { font-size: 11px; font-weight: 400; color: var(--muted); }
+        .chart-title { font-size: 14.5px; font-weight: 600; color: var(--text); margin-bottom: 10px; display: flex; align-items: center; justify-content: space-between; }
+        .chart-sub { font-size: 12.5px; font-weight: 400; color: var(--muted); }
         .chart-scroll { overflow-y: auto; max-height: 420px; }
 
         /* Table */
         .table-card { background: white; border-radius: var(--radius); padding: 12px 14px; box-shadow: var(--shadow-sm); border: 1px solid var(--border); margin-bottom: 16px; }
         .table-wrapper { overflow-x: auto; }
-        table { width: 100%; border-collapse: collapse; font-size: 13px; }
-        th { background: #f8fafc; padding: 8px 12px; text-align: left; font-weight: 700; font-size: 11px; text-transform: uppercase; letter-spacing: 0.4px; color: #334155; border-bottom: 1px solid var(--border); white-space: nowrap; }
+        table { width: 100%; border-collapse: collapse; font-size: 14.5px; }
+        th { background: #f8fafc; padding: 8px 12px; text-align: left; font-weight: 700; font-size: 12.5px; text-transform: uppercase; letter-spacing: 0.4px; color: #334155; border-bottom: 1px solid var(--border); white-space: nowrap; }
         td { padding: 8px 12px; border-bottom: 1px solid #f1f1f3; }
         tbody tr:hover td { background: #f8fafc; }
         tbody tr.row-navy:hover td { background: inherit; }
         tfoot tr:hover td { background: inherit; }
-        .badge { padding: 2px 8px; border-radius: 20px; font-size: 11px; font-weight: 600; white-space: nowrap; }
+        .badge { padding: 2px 8px; border-radius: 20px; font-size: 12.5px; font-weight: 600; white-space: nowrap; }
         .badge-consumo     { background: #d1fae5; color: #065f46; }
         .badge-planificado { background: #dbeafe; color: #1e40af; }
         .badge-tolva       { background: #fef3c7; color: #92400e; }
@@ -221,7 +221,7 @@
         .pb-fill { height: 100%; border-radius: 4px; }
 
         /* States */
-        .loading { text-align: center; padding: 40px; color: var(--muted); font-size: 14px; }
+        .loading { text-align: center; padding: 40px; color: var(--muted); font-size: 15.5px; }
         .spinner { display: inline-block; width: 20px; height: 20px; border: 2.5px solid #e5e5ea; border-top-color: var(--primary); border-radius: 50%; animation: spin 0.7s linear infinite; margin-right: 8px; vertical-align: middle; }
         @keyframes spin { to { transform: rotate(360deg); } }
         .empty-state { text-align: center; padding: 48px 20px; color: var(--muted); }
@@ -260,7 +260,7 @@
         .ap-brand { display: flex; align-items: center; gap: 6px; color: #fff; font-size: 22px; font-weight: 700; letter-spacing: -.5px; }
         .ap-top .sb-nav { display: flex; flex-direction: row; align-items: stretch; padding: 0 0 0 4px; overflow-x: auto; overflow-y: hidden; scrollbar-width: none; flex: 1; min-width: 0; }
         .ap-top .sb-nav::-webkit-scrollbar { display: none; }
-        .ap-top .sb-nav-item { width: auto; padding: 0 9px; gap: 6px; border-left: none; border-bottom: 3px solid transparent; border-top: 3px solid transparent; color: #fff; font-size: 13.5px; font-weight: 500; opacity: .82; }
+        .ap-top .sb-nav-item { width: auto; padding: 0 9px; gap: 6px; border-left: none; border-bottom: 3px solid transparent; border-top: 3px solid transparent; color: #fff; font-size: 15px; font-weight: 500; opacity: .82; }
         .ap-top .sb-nav-item:hover { background: rgba(255,255,255,.08); opacity: 1; }
         .ap-top .sb-nav-item.active { background: rgba(255,255,255,.1); border-left: none; border-bottom-color: var(--accent); opacity: 1; font-weight: 600; }
         .ap-top .sb-nav-icon { width: 16px; height: 16px; opacity: 1; }
@@ -269,15 +269,15 @@
         .ap-app::before, .ap-top .sb-footer::before { content: ''; position: absolute; inset: 0; background: var(--ap-navy-2); clip-path: polygon(16px 0, 100% 0, 100% 100%, 0 100%); }
         .ap-top .sb-footer::before { background: #eef1f4; }
         .ap-app > svg, .ap-app > .sb-app-btn, .ap-top .hdr-user-btn { position: relative; z-index: 1; }
-        .ap-app .sb-app-btn { color: #fff; font-size: 15px; font-weight: 700; gap: 8px; }
+        .ap-app .sb-app-btn { color: #fff; font-size: 16px; font-weight: 700; gap: 8px; }
         .ap-app-txt { display: flex; flex-direction: column; align-items: flex-start; line-height: 1.05; }
-        .ap-app-name { font-size: 15px; font-weight: 700; }
-        .ap-top .sb-date { font-size: 10px; font-weight: 500; color: rgba(255,255,255,.65); margin-top: 2px; }
+        .ap-app-name { font-size: 16px; font-weight: 700; }
+        .ap-top .sb-date { font-size: 11.5px; font-weight: 500; color: rgba(255,255,255,.65); margin-top: 2px; }
         .ap-app .sb-app-menu { left: auto; right: 0; top: calc(100% + 4px); }
         .ap-top .sb-footer { border-top: none; padding: 0 14px 0 28px; display: flex; align-items: center; margin-left: -16px; position: relative; }
-        .ap-top .hdr-user-btn { background: none; border: none; color: #334155; font-size: 13px; font-weight: 600; gap: 8px; padding: 0; width: auto; max-width: 200px; border-radius: 0; }
+        .ap-top .hdr-user-btn { background: none; border: none; color: #334155; font-size: 14.5px; font-weight: 600; gap: 8px; padding: 0; width: auto; max-width: 200px; border-radius: 0; }
         .ap-top .hdr-user-btn:hover { background: none; color: #0f172a; }
-        .ap-top .hdr-user-av { width: 32px; height: 32px; background: #9aa5b1; color: #fff; font-size: 13px; }
+        .ap-top .hdr-user-av { width: 32px; height: 32px; background: #9aa5b1; color: #fff; font-size: 14.5px; }
         .ap-top .hdr-user-dd { position: fixed; bottom: auto; top: 54px; left: auto; right: 8px; min-width: 240px; }
         body.sb-collapsed .ap-top .sb-nav-label { opacity: 1; width: auto; display: none; }
         body.sb-collapsed .ap-top .sb-nav-item { padding: 0 14px; border-right: none; }
@@ -299,17 +299,17 @@
         /* Panel tipo ventana */
         .ap-panel { background: #fff !important; border: 1px solid #c9d1da !important; border-radius: 2px !important; box-shadow: 0 1px 2px rgba(15,23,42,.08) !important; padding: 0 !important; margin-bottom: 0 !important; display: flex !important; flex-direction: column; overflow: hidden; min-height: 0; }
         #sap-results > .ap-panel { flex: 1; }
-        .ap-panel > .ap-ph { flex-shrink: 0; display: flex !important; align-items: center !important; gap: 8px; height: 36px; padding: 0 6px 0 12px !important; margin: 0 !important; background: var(--ap-ph) !important; border-bottom: 1px solid var(--ap-line) !important; font-size: 15px !important; font-weight: 600 !important; color: #1f2f44 !important; }
-        .ap-ph > span:first-child { font-size: 15px !important; font-weight: 600 !important; color: #1f2f44 !important; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-        .ap-ph .chart-sub { font-size: 11.5px; }
-        .ap-ph button { font-size: 11.5px !important; padding: 3px 10px !important; border-radius: 3px !important; }
+        .ap-panel > .ap-ph { flex-shrink: 0; display: flex !important; align-items: center !important; gap: 8px; height: 36px; padding: 0 6px 0 12px !important; margin: 0 !important; background: var(--ap-ph) !important; border-bottom: 1px solid var(--ap-line) !important; font-size: 16px !important; font-weight: 600 !important; color: #1f2f44 !important; }
+        .ap-ph > span:first-child { font-size: 16px !important; font-weight: 600 !important; color: #1f2f44 !important; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .ap-ph .chart-sub { font-size: 13px; }
+        .ap-ph button { font-size: 13px !important; padding: 3px 10px !important; border-radius: 3px !important; }
         .ap-panel > div[style*="position:relative"] { margin: 6px 10px 10px; }
         .ap-panel .chart-card { border-radius: 2px; box-shadow: none; }
         .kpi-card.ap-panel { border-left: 1px solid #c9d1da !important; }
 
         /* Tablas estilo AP1 */
-        .ap-panel .sap-tbl-compact { font-size: 12.5px; }
-        .ap-panel .sap-tbl-compact th { font-size: 12.5px; padding: 6px 8px; }
+        .ap-panel .sap-tbl-compact { font-size: 14px; }
+        .ap-panel .sap-tbl-compact th { font-size: 14px; padding: 6px 8px; }
         .ap-panel .sap-tbl-compact td { padding: 3px 8px; }
         .ap-panel .sap-mat-tbl th, .ap-panel .sap-mat-tbl td { padding-left: 5px; padding-right: 5px; }
         /* Columna Sucursal fija al desplazarse horizontalmente (muchos combustibles) */
@@ -318,8 +318,8 @@
         .sap-mat-tbl tbody td:first-child { background: #fff; }
         .sap-mat-tbl tfoot td:first-child { background: #f5f5f7; }
         .sap-mat-tbl thead tr:first-child th:first-child { z-index: 3; }
-        .ap-panel .sap-tbl-compact tfoot td { font-size: 13px !important; padding-top: 7px !important; padding-bottom: 7px !important; }
-        .ap-panel table th { background: var(--ap-head) !important; color: #fff !important; font-size: 12px; font-weight: 700; text-transform: none; letter-spacing: 0; text-align: center !important; border-bottom: none !important; border-right: 1px solid rgba(255,255,255,.16); padding-top: 7px; padding-bottom: 7px; }
+        .ap-panel .sap-tbl-compact tfoot td { font-size: 14.5px !important; padding-top: 7px !important; padding-bottom: 7px !important; }
+        .ap-panel table th { background: var(--ap-head) !important; color: #fff !important; font-size: 13.5px; font-weight: 700; text-transform: none; letter-spacing: 0; text-align: center !important; border-bottom: none !important; border-right: 1px solid rgba(255,255,255,.16); padding-top: 7px; padding-bottom: 7px; }
         .ap-panel table th * { color: inherit !important; }
         .ap-panel table th:first-child { text-align: left !important; }
         .ap-panel table tbody td { border-bottom: 1px solid #e8ebef; border-right: 1px solid #edf0f3; }
@@ -333,14 +333,14 @@
         .ap-f-right { display: flex; align-items: center; gap: 12px; height: 30px; margin-left: auto; }
         .ap-filters .filters { max-width: none; gap: 6px 14px; align-items: flex-end; }
         .ap-filters .fg { gap: 2px; }
-        .ap-filters .fg label { font-size: 12px; font-weight: 600; color: #1f2f44; text-transform: none; letter-spacing: 0; }
-        .ap-filters .fg select, .ap-filters .fg input[type="date"], .ap-filters .tsm-btn { height: 30px !important; min-width: 200px !important; max-width: 280px; padding: 0 32px 0 10px !important; border: 1px solid #b9c3cd !important; border-radius: 4px !important; font-size: 13px !important; color: #334155; background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23334155' stroke-width='2.2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E") no-repeat right 10px center / 14px !important; -webkit-appearance: none; appearance: none; cursor: pointer; }
+        .ap-filters .fg label { font-size: 13.5px; font-weight: 600; color: #1f2f44; text-transform: none; letter-spacing: 0; }
+        .ap-filters .fg select, .ap-filters .fg input[type="date"], .ap-filters .tsm-btn { height: 30px !important; min-width: 200px !important; max-width: 280px; padding: 0 32px 0 10px !important; border: 1px solid #b9c3cd !important; border-radius: 4px !important; font-size: 14.5px !important; color: #334155; background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23334155' stroke-width='2.2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E") no-repeat right 10px center / 14px !important; -webkit-appearance: none; appearance: none; cursor: pointer; }
         .ap-filters .fg input[type="date"] { background-image: none !important; padding-right: 10px !important; }
         .ap-filters .fg select:focus, .ap-filters .fg input:focus, .ap-filters .tsm-btn:focus { outline: none; border-color: var(--ap-navy) !important; box-shadow: 0 0 0 2px rgba(27,60,94,.15); }
         .ap-fg-group { display: flex; flex-wrap: wrap; gap: 6px 14px; align-items: flex-end; }
         .ap-fg-group[style*="flex"] { display: contents !important; }  /* campos de Detalle fluyen junto a los demas */
         .ap-filters .fg > div > div[style*="border:1px solid #cbd5e1"] { height: 30px; border-color: #b9c3cd !important; border-radius: 4px !important; }
-        .ap-filters .fg > div > div > button { height: 100%; padding: 0 12px !important; font-size: 12px !important; }
+        .ap-filters .fg > div > div > button { height: 100%; padding: 0 12px !important; font-size: 13.5px !important; }
         #sap-tend-metric-fg { margin-left: 0 !important; padding-left: 0 !important; border-left: none !important; }
         .ap-f-right .ap-sq { width: 32px; height: 30px; }
         .ap-sq svg { width: 15px; height: 15px; }
@@ -352,48 +352,48 @@
         .tsm-opt.gsub-cl { font-weight: 700; color: #0369a1; }
         /* Detalle dividido por combustible / compartidos */
         .det-sec { margin-bottom: 14px; }
-        .det-sec-h { position: sticky; left: 0; display: flex; align-items: baseline; gap: 12px; padding: 10px 12px 6px; font-size: 15px; font-weight: 700; color: #1f2f44; background: #fff; }
-        .det-sec-sub { font-size: 12px; font-weight: 500; color: #64748b; }
+        .det-sec-h { position: sticky; left: 0; display: flex; align-items: baseline; gap: 12px; padding: 10px 12px 6px; font-size: 16px; font-weight: 700; color: #1f2f44; background: #fff; }
+        .det-sec-sub { font-size: 13.5px; font-weight: 500; color: #64748b; }
         /* Tabla "Aparte" (compartidos por centro de costo + maquinaria alquilada) */
         .ap-aparte { flex-shrink: 0; max-height: 38%; display: flex; flex-direction: column; border-top: 3px solid #94a3b8; background: #f1f5f9; }
-        .ap-aparte-h { padding: 7px 12px; font-size: 14px; font-weight: 700; color: #334155; }
-        .ap-aparte-h span { font-size: 12px; font-weight: 500; }
+        .ap-aparte-h { padding: 7px 12px; font-size: 15.5px; font-weight: 700; color: #334155; }
+        .ap-aparte-h span { font-size: 13.5px; font-weight: 500; }
         .ap-aparte-w { overflow: auto; min-height: 0; }
         .ap-panel .ap-aparte table th { background: #475569 !important; }
         .ap-aparte td { color: #334155; background: #ffffff; }
         .ap-aparte tfoot td { background: #e2e8f0; color: #334155; border-top: 2px solid #94a3b8; }
         /* Pantalla Reparto CC */
-        .rep-chip { display: inline-block; margin: 1px 4px 1px 0; padding: 1px 7px; border-radius: 10px; background: #eef2f7; font-size: 11.5px; color: #1f2f44; white-space: nowrap; }
-        .rep-st { display: inline-block; padding: 1px 8px; border-radius: 10px; font-size: 11px; font-weight: 700; background: #f1f5f9; color: #475569; }
+        .rep-chip { display: inline-block; margin: 1px 4px 1px 0; padding: 1px 7px; border-radius: 10px; background: #eef2f7; font-size: 13px; color: #1f2f44; white-space: nowrap; }
+        .rep-st { display: inline-block; padding: 1px 8px; border-radius: 10px; font-size: 12.5px; font-weight: 700; background: #f1f5f9; color: #475569; }
         .rep-st.rep-ok { background: #dcfce7; color: #166534; }
         .rep-st.rep-ap { background: #fee2e2; color: #991b1b; }
         .rep-st.rep-es { background: #dbeafe; color: #1e40af; }
         .rep-st.rep-pr { background: #ede9fe; color: #5b21b6; }
-        .rep-btn { min-width: 64px; font-size: 12px; padding: 3px 10px; border: 1px solid #b9c3cd; border-radius: 4px; background: #fff; color: #1b3c5e; cursor: pointer; font-weight: 600; }
+        .rep-btn { min-width: 64px; font-size: 13.5px; padding: 3px 10px; border: 1px solid #b9c3cd; border-radius: 4px; background: #fff; color: #1b3c5e; cursor: pointer; font-weight: 600; }
         .rep-btn:hover { background: #eef2f6; }
         .rep-btn-p { background: #1b3c5e; color: #fff; border-color: #1b3c5e; }
         .rep-btn-p:hover { background: #234d76; }
         .vista-tg { display: inline-flex; border: 1px solid #cbd5e1; border-radius: 4px; overflow: hidden; height: 30px; flex-shrink: 0; }
-        .vista-tg button { border: 0; background: #fff; color: #475569; font-size: 12.5px; font-weight: 600; padding: 0 12px; cursor: pointer; font-family: inherit; }
+        .vista-tg button { border: 0; background: #fff; color: #475569; font-size: 14px; font-weight: 600; padding: 0 12px; cursor: pointer; font-family: inherit; }
         .vista-tg button + button { border-left: 1px solid #cbd5e1; }
         .vista-tg button.on { background: #1f3a5f; color: #fff; }
         #sap-results.vista-grafico .tend-tabla { display: none; }
         #sap-results.vista-tabla .tend-chart { display: none; }
-        .rep-f { font-size: 12px; padding: 4px 10px; border: 1px solid #cbd5e1; border-radius: 4px; background: #fff; color: #475569; cursor: pointer; font-weight: 600; }
+        .rep-f { font-size: 13.5px; padding: 4px 10px; border: 1px solid #cbd5e1; border-radius: 4px; background: #fff; color: #475569; cursor: pointer; font-weight: 600; }
         .rep-f.on { background: #1b3c5e; color: #fff; border-color: #1b3c5e; }
-        .rep-dm { font-family: monospace; font-size: 11px; max-width: 230px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-        .cfg-alerta { display: inline-flex; align-items: center; justify-content: center; min-width: 17px; height: 17px; padding: 0 4px; border-radius: 9px; background: #dc2626; color: #fff; font-size: 10.5px; font-weight: 800; margin-left: 2px; }
-        .rep-aviso { flex-shrink: 0; margin: 0 0 8px; padding: 7px 12px; border-radius: 4px; font-size: 12.5px; line-height: 1.4; }
+        .rep-dm { font-family: monospace; font-size: 12.5px; max-width: 230px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .cfg-alerta { display: inline-flex; align-items: center; justify-content: center; min-width: 17px; height: 17px; padding: 0 4px; border-radius: 9px; background: #dc2626; color: #fff; font-size: 12px; font-weight: 800; margin-left: 2px; }
+        .rep-aviso { flex-shrink: 0; margin: 0 0 8px; padding: 7px 12px; border-radius: 4px; font-size: 14px; line-height: 1.4; }
         .rep-aviso.warn { background: #fef2f2; border: 1px solid #fecaca; color: #991b1b; }
         .rep-aviso.ok { background: #f0fdf4; border: 1px solid #bbf7d0; color: #166534; }
         .nav-cfg-menu { display: none; position: fixed; z-index: 9000; min-width: 260px; background: #fff; border: 1px solid #d3d9e0; border-radius: 0 0 6px 6px; box-shadow: 0 8px 24px rgba(0,0,0,.18); padding: 4px 0; }
         .nav-cfg-menu.open { display: block; }
-        .nav-cfg-menu button { display: block; width: 100%; text-align: left; border: none; background: none; padding: 8px 14px; font-size: 13.5px; font-weight: 600; color: #1f2f44; cursor: pointer; }
-        .nav-cfg-menu button small { display: block; font-size: 11.5px; font-weight: 400; color: #64748b; }
+        .nav-cfg-menu button { display: block; width: 100%; text-align: left; border: none; background: none; padding: 8px 14px; font-size: 15px; font-weight: 600; color: #1f2f44; cursor: pointer; }
+        .nav-cfg-menu button small { display: block; font-size: 13px; font-weight: 400; color: #64748b; }
         .nav-cfg-menu button:hover { background: #eef2f6; }
         .nav-cfg-menu button.active { background: #e0ecf8; }
-        .tipo-sel { height: 26px; padding: 0 6px; border: 1px solid #b9c3cd; border-radius: 4px; font-size: 12.5px; background: #fff; color: #1f2f44; }
-        .rep-q { height: 28px; width: 220px; padding: 0 8px; border: 1px solid #b9c3cd; border-radius: 4px; font-size: 12.5px; }
+        .tipo-sel { height: 26px; padding: 0 6px; border: 1px solid #b9c3cd; border-radius: 4px; font-size: 14px; background: #fff; color: #1f2f44; }
+        .rep-q { height: 28px; width: 220px; padding: 0 8px; border: 1px solid #b9c3cd; border-radius: 4px; font-size: 14px; }
         /* Pantalla Graficos */
         /* Pantallas medianas: pestañas solo con texto para que entren todas */
         @media (max-width: 1400px) {
@@ -413,22 +413,22 @@
         .lg-head { background: #1b3c5e; padding: 26px 24px 20px; text-align: center; color: #fff; border-bottom: 3px solid #00b4d8; }
         .lg-head svg { display: block; margin: 0 auto 6px; }
         .lg-brand { font-size: 26px; font-weight: 700; letter-spacing: -.5px; line-height: 1.1; }
-        .lg-app { font-size: 13px; color: rgba(255,255,255,.75); margin-top: 4px; }
+        .lg-app { font-size: 14.5px; color: rgba(255,255,255,.75); margin-top: 4px; }
         .lg-body { padding: 22px 26px 18px; }
-        .lg-lbl { display: block; font-size: 12px; font-weight: 600; color: #1f2f44; margin: 0 0 4px; }
-        .lg-inp { display: block; width: 100%; height: 38px; padding: 0 12px; margin-bottom: 14px; border: 1px solid #b9c3cd; border-radius: 4px; font-size: 14px; color: #1f2f44; background: #fff; box-sizing: border-box; outline: none; font-family: inherit; }
+        .lg-lbl { display: block; font-size: 13.5px; font-weight: 600; color: #1f2f44; margin: 0 0 4px; }
+        .lg-inp { display: block; width: 100%; height: 38px; padding: 0 12px; margin-bottom: 14px; border: 1px solid #b9c3cd; border-radius: 4px; font-size: 15.5px; color: #1f2f44; background: #fff; box-sizing: border-box; outline: none; font-family: inherit; }
         .lg-inp:focus { border-color: #1b3c5e; box-shadow: 0 0 0 2px rgba(27,60,94,.15); }
-        .lg-mono { font-family: monospace; font-size: 12px; }
+        .lg-mono { font-family: monospace; font-size: 13.5px; }
         .lg-btn { display: block; width: 100%; height: 40px; margin-top: 4px; border: none; border-radius: 4px; background: #1b3c5e; color: #fff; font-size: 14.5px; font-weight: 700; cursor: pointer; font-family: inherit; }
         .lg-btn:hover { background: #234d76; }
         .lg-btn:disabled { opacity: .7; cursor: wait; }
-        .lg-btn-2 { background: #0f766e; font-size: 13px; height: 36px; }
+        .lg-btn-2 { background: #0f766e; font-size: 14.5px; height: 36px; }
         .lg-btn-2:hover { background: #0d6660; }
-        .lg-status { min-height: 18px; margin-top: 10px; text-align: center; font-size: 13px; color: #dc2626; }
+        .lg-status { min-height: 18px; margin-top: 10px; text-align: center; font-size: 14.5px; color: #dc2626; }
         .lg-tok { margin-top: 8px; padding-top: 12px; border-top: 1px solid #e8ebef; text-align: center; }
-        .lg-tok-link { border: none; background: none; color: #64748b; font-size: 11.5px; cursor: pointer; font-family: inherit; }
+        .lg-tok-link { border: none; background: none; color: #64748b; font-size: 13px; cursor: pointer; font-family: inherit; }
         .lg-tok-link:hover { color: #1b3c5e; }
-        .lg-tok-help { font-size: 11px; color: #64748b; line-height: 1.5; margin: 8px 0; text-align: left; }
+        .lg-tok-help { font-size: 12.5px; color: #64748b; line-height: 1.5; margin: 8px 0; text-align: left; }
     </style>
 </head>
 <body>
@@ -438,10 +438,10 @@
   <div style="background:#fff;border-radius:12px;width:100%;max-width:1100px;max-height:90vh;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 12px 32px rgba(0,0,0,0.2)">
     <div style="display:flex;justify-content:space-between;align-items:center;padding:12px 18px;border-bottom:1px solid #e5e5ea;flex-shrink:0;background:#1e3a5f;border-radius:12px 12px 0 0">
       <div>
-        <div style="color:#fff;font-size:14px;font-weight:700">Historial de Hectáreas por Sucursal</div>
-        <div style="color:#93c5fd;font-size:11px;margin-top:2px">Meses pasados: Ha fija (manual). Mes actual: Ha activa en tiempo real.</div>
+        <div style="color:#fff;font-size:15.5px;font-weight:700">Historial de Hectáreas por Sucursal</div>
+        <div style="color:#93c5fd;font-size:12.5px;margin-top:2px">Meses pasados: Ha fija (manual). Mes actual: Ha activa en tiempo real.</div>
       </div>
-      <button onclick="document.getElementById('ha-hist-modal').style.display='none'" style="background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.3);color:#fff;border-radius:7px;padding:5px 12px;font-size:12px;cursor:pointer;font-weight:600">Cerrar</button>
+      <button onclick="document.getElementById('ha-hist-modal').style.display='none'" style="background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.3);color:#fff;border-radius:7px;padding:5px 12px;font-size:13.5px;cursor:pointer;font-weight:600">Cerrar</button>
     </div>
     <div id="ha-hist-body" style="overflow:auto;flex:1"></div>
   </div>
@@ -451,8 +451,8 @@
 <div id="sap-mat-modal" onclick="if(event.target===this)this.style.display='none'" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.4);z-index:9500;align-items:center;justify-content:center;padding:20px">
   <div style="background:var(--bg,#fff);border:1px solid var(--border,#e5e5ea);border-radius:14px;width:100%;max-width:900px;max-height:90vh;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 12px 32px rgba(0,0,0,0.2)">
     <div style="display:flex;justify-content:space-between;align-items:center;padding:14px 18px;border-bottom:1px solid var(--border,#e5e5ea);flex-shrink:0">
-      <div id="sap-mat-modal-title" style="font-size:14px;font-weight:700;flex:1">Materiales</div>
-      <div id="sap-mat-modal-period" style="font-size:12px;font-weight:600;color:#1e3a5f;background:#e0f2fe;padding:3px 10px;border-radius:20px;margin-right:12px"></div>
+      <div id="sap-mat-modal-title" style="font-size:15.5px;font-weight:700;flex:1">Materiales</div>
+      <div id="sap-mat-modal-period" style="font-size:13.5px;font-weight:600;color:#1e3a5f;background:#e0f2fe;padding:3px 10px;border-radius:20px;margin-right:12px"></div>
       <button onclick="document.getElementById('sap-mat-modal').style.display='none'" style="background:none;border:none;font-size:20px;cursor:pointer;color:var(--text-muted,#64748b);line-height:1;padding:0 4px">&times;</button>
     </div>
     <div id="sap-mat-modal-body" style="overflow-y:auto;flex:1;padding:0"></div>
@@ -464,8 +464,8 @@
   <div style="background:var(--bg,#fff);border:1px solid var(--border,#e5e5ea);border-radius:14px;width:100%;max-width:860px;max-height:85vh;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 12px 32px rgba(0,0,0,0.2)">
     <div style="display:flex;justify-content:space-between;align-items:center;padding:14px 18px;border-bottom:1px solid var(--border,#e5e5ea);flex-shrink:0">
       <div style="display:flex;align-items:center;gap:10px">
-        <span style="font-size:13px;font-weight:400;color:var(--muted)">Centro de Costo</span>
-        <span style="font-size:15px;font-weight:700;color:var(--text)" id="sap-ceco-modal-title"></span>
+        <span style="font-size:14.5px;font-weight:400;color:var(--muted)">Centro de Costo</span>
+        <span style="font-size:16px;font-weight:700;color:var(--text)" id="sap-ceco-modal-title"></span>
       </div>
       <button onclick="document.getElementById('sap-ceco-modal').style.display='none'" style="background:none;border:none;font-size:20px;cursor:pointer;color:var(--text-muted,#64748b);line-height:1;padding:0 4px">&times;</button>
     </div>
@@ -478,8 +478,8 @@
   <div style="background:var(--bg,#fff);border:1px solid var(--border,#e5e5ea);border-radius:14px;width:100%;max-width:900px;max-height:85vh;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 12px 32px rgba(0,0,0,0.2)">
     <div style="display:flex;justify-content:space-between;align-items:center;padding:14px 18px;border-bottom:1px solid var(--border,#e5e5ea);flex-shrink:0">
       <div style="display:flex;align-items:center;gap:10px">
-        <span style="font-size:13px;font-weight:400;color:var(--muted)">Consumo</span>
-        <span style="font-size:15px;font-weight:700;color:var(--text)" id="sap-ceco-sub-modal-title"></span>
+        <span style="font-size:14.5px;font-weight:400;color:var(--muted)">Consumo</span>
+        <span style="font-size:16px;font-weight:700;color:var(--text)" id="sap-ceco-sub-modal-title"></span>
       </div>
       <button onclick="document.getElementById('sap-ceco-sub-modal').style.display='none'" style="background:none;border:none;font-size:20px;cursor:pointer;color:var(--text-muted,#64748b);line-height:1;padding:0 4px">&times;</button>
     </div>
@@ -613,11 +613,11 @@
     <button class="btn btn-danger" id="btn-logout" onclick="doLogout()" style="display:none;margin-left:auto;">Cerrar sesión</button>
 </div>
 <!-- Token Fallback -->
-<div id="token-fallback" style="display:none;background:#fef9c3;border-bottom:1px solid #fde047;padding:7px 24px;align-items:center;gap:10px;font-size:12px;flex-wrap:wrap;">
+<div id="token-fallback" style="display:none;background:#fef9c3;border-bottom:1px solid #fde047;padding:7px 24px;align-items:center;gap:10px;font-size:13.5px;flex-wrap:wrap;">
     <span>🔑 <strong>Login bloqueado por CORS.</strong> Copia el Bearer token desde DevTools → Network → cualquier request → Headers → Authorization:</span>
-    <input type="password" id="inp-token" placeholder="Pega el Bearer token aquí..." style="flex:1;min-width:200px;max-width:500px;padding:4px 10px;border:1px solid #d1d5db;border-radius:5px;font-size:12px;font-family:monospace;">
-    <button class="btn btn-primary" onclick="saveManualToken()" style="font-size:12px">Conectar con token</button>
-    <button onclick="document.getElementById('token-fallback').style.display='none'" style="background:none;border:none;cursor:pointer;font-size:16px;color:#666">✕</button>
+    <input type="password" id="inp-token" placeholder="Pega el Bearer token aquí..." style="flex:1;min-width:200px;max-width:500px;padding:4px 10px;border:1px solid #d1d5db;border-radius:5px;font-size:13.5px;font-family:monospace;">
+    <button class="btn btn-primary" onclick="saveManualToken()" style="font-size:13.5px">Conectar con token</button>
+    <button onclick="document.getElementById('token-fallback').style.display='none'" style="background:none;border:none;cursor:pointer;font-size:17px;color:#666">✕</button>
 </div>
 
 <!-- ── PANTALLA: Consumos SAP ─────────────────────────────── -->
@@ -754,10 +754,10 @@
             <label>Vista</label>
             <div style="display:flex;gap:4px;align-items:center">
                 <div style="display:flex;border:1px solid #cbd5e1;border-radius:6px;overflow:hidden">
-                    <button id="tend-view-sub-btn" onclick="_sapTendSetView('sub')" style="padding:4px 10px;font-size:11px;font-weight:600;border:none;cursor:pointer;background:#1e3a5f;color:#fff">Por Sucursal</button>
-                    <button id="tend-view-mat-btn" onclick="_sapTendSetView('mat')" style="padding:4px 10px;font-size:11px;font-weight:600;border:none;cursor:pointer;background:#e2e8f0;color:#475569">Por Material</button>
-                    <button id="tend-view-ceco-btn" onclick="_sapTendSetView('ceco')" style="padding:4px 10px;font-size:11px;font-weight:600;border:none;cursor:pointer;background:#e2e8f0;color:#475569">Por Centro de Costo</button>
-                    <button id="tend-view-tipo-btn" onclick="_sapTendSetView('tipo')" style="padding:4px 10px;font-size:11px;font-weight:600;border:none;cursor:pointer;background:#e2e8f0;color:#475569">Por Tipo</button>
+                    <button id="tend-view-sub-btn" onclick="_sapTendSetView('sub')" style="padding:4px 10px;font-size:12.5px;font-weight:600;border:none;cursor:pointer;background:#1e3a5f;color:#fff">Por Sucursal</button>
+                    <button id="tend-view-mat-btn" onclick="_sapTendSetView('mat')" style="padding:4px 10px;font-size:12.5px;font-weight:600;border:none;cursor:pointer;background:#e2e8f0;color:#475569">Por Material</button>
+                    <button id="tend-view-ceco-btn" onclick="_sapTendSetView('ceco')" style="padding:4px 10px;font-size:12.5px;font-weight:600;border:none;cursor:pointer;background:#e2e8f0;color:#475569">Por Centro de Costo</button>
+                    <button id="tend-view-tipo-btn" onclick="_sapTendSetView('tipo')" style="padding:4px 10px;font-size:12.5px;font-weight:600;border:none;cursor:pointer;background:#e2e8f0;color:#475569">Por Tipo</button>
                 </div>
             </div>
         </div>
@@ -766,8 +766,8 @@
             <label>Ver</label>
             <div style="display:flex;gap:4px;align-items:center">
                 <div style="display:flex;border:1px solid #cbd5e1;border-radius:6px;overflow:hidden">
-                    <button id="tend-per-mes-btn" onclick="_sapTendSetPeriodo('mes')" style="padding:4px 10px;font-size:11px;font-weight:600;border:none;cursor:pointer;background:#1e3a5f;color:#fff">Por mes</button>
-                    <button id="tend-per-dia-btn" onclick="_sapTendSetPeriodo('dia')" style="padding:4px 10px;font-size:11px;font-weight:600;border:none;cursor:pointer;background:#e2e8f0;color:#475569">Por día</button>
+                    <button id="tend-per-mes-btn" onclick="_sapTendSetPeriodo('mes')" style="padding:4px 10px;font-size:12.5px;font-weight:600;border:none;cursor:pointer;background:#1e3a5f;color:#fff">Por mes</button>
+                    <button id="tend-per-dia-btn" onclick="_sapTendSetPeriodo('dia')" style="padding:4px 10px;font-size:12.5px;font-weight:600;border:none;cursor:pointer;background:#e2e8f0;color:#475569">Por día</button>
                 </div>
             </div>
         </div>
@@ -780,9 +780,9 @@
             <label>Métrica</label>
             <div style="display:flex;align-items:center;gap:8px">
                 <div style="display:flex;border:1px solid #cbd5e1;border-radius:6px;overflow:hidden">
-                    <button data-tend-btn="total" onclick="_sapTendChangeMetric('total')" style="padding:4px 10px;font-size:11px;font-weight:600;border:none;cursor:pointer;background:#e2e8f0;color:#475569">$ Total</button>
-                    <button data-tend-btn="ha" onclick="_sapTendChangeMetric('ha')" style="padding:4px 10px;font-size:11px;font-weight:600;border:none;cursor:pointer;background:#e2e8f0;color:#475569">$/Ha</button>
-                    <button data-tend-btn="hadía" onclick="_sapTendChangeMetric('hadía')" style="padding:4px 10px;font-size:11px;font-weight:600;border:none;cursor:pointer;background:#1e3a5f;color:#fff">$/Ha/Día</button>
+                    <button data-tend-btn="total" onclick="_sapTendChangeMetric('total')" style="padding:4px 10px;font-size:12.5px;font-weight:600;border:none;cursor:pointer;background:#e2e8f0;color:#475569">$ Total</button>
+                    <button data-tend-btn="ha" onclick="_sapTendChangeMetric('ha')" style="padding:4px 10px;font-size:12.5px;font-weight:600;border:none;cursor:pointer;background:#e2e8f0;color:#475569">$/Ha</button>
+                    <button data-tend-btn="hadía" onclick="_sapTendChangeMetric('hadía')" style="padding:4px 10px;font-size:12.5px;font-weight:600;border:none;cursor:pointer;background:#1e3a5f;color:#fff">$/Ha/Día</button>
                 </div>
             </div>
         </div>
@@ -1437,6 +1437,8 @@ function _combMovModal(key, title) {
     var fecha = function(f) { var p = (f || '').split('-'); return p.length === 3 ? p[2] + '/' + p[1] + '/' + p[0] : '—'; };
     var td = 'padding:6px 10px';
     var tq = 0, ti = 0;
+    var ccName = {};
+    _combCostCenters.forEach(function(cc) { if (cc.code) ccName[String(cc.code)] = cc.name || ''; });
     var trs = rows.map(function(r) {
         tq += r.q || 0; ti += r.i || 0;
         var cc = _combResolvedCC(r);
@@ -1445,12 +1447,15 @@ function _combMovModal(key, title) {
         return '<tr>' +
             '<td style="' + td + ';white-space:nowrap">' + fecha(r.f) + '</td>' +
             '<td style="' + td + '">' + esc(suc) + '</td>' +
-            '<td style="' + td + ';font-family:monospace;font-size:11px;color:var(--muted)">' + esc(cc || '—') + '</td>' +
+            '<td style="' + td + '">' + (cc
+                ? (ccName[cc] ? esc(ccName[cc]) + '<div style="font-family:monospace;font-size:11.5px;color:var(--muted)">' + esc(cc) + '</div>'
+                              : '<span style="font-family:monospace;font-size:12.5px;color:var(--muted)">' + esc(cc) + '</span>')
+                : (_combEsMaqAlquilada(r) ? esc(_COMB_MAQ_ALQ_NOMBRE) : '—')) + '</td>' +
             '<td style="' + td + '">' + esc(r.a || '—') + '</td>' +
-            '<td style="' + td + ';font-family:monospace;font-size:11px;color:var(--muted)">' + esc(r.dm || '—') + '</td>' +
+            '<td style="' + td + ';font-family:monospace;font-size:12.5px;color:var(--muted)">' + esc(r.dm || '—') + '</td>' +
             '<td style="' + td + '">' + esc(r.d || '—') + '</td>' +
             '<td style="' + td + '">' + esc(r.nu || '—') + '</td>' +
-            '<td style="' + td + ';font-size:11px">' + esc(r.tx || '') + '</td>' +
+            '<td style="' + td + ';font-size:12.5px">' + esc(r.tx || '') + '</td>' +
             '<td class="num" style="' + td + '">' + _sapFmt2(r.q) + '</td>' +
             '<td class="num" style="' + td + ';font-weight:600;color:#065f46">$' + _sapFmt2(r.i) + '</td></tr>';
     }).join('');
@@ -1805,7 +1810,7 @@ function _combRenderReparto(resultsDiv) {
             ? '<button class="rep-btn' + (x.estado === 'sin' ? ' rep-btn-p' : '') + '" onclick="_repEditar(\'' + esc(x.code) + '\')">' + (x.estado === 'sin' ? 'Asignar' : 'Editar') + '</button>'
             : '';
         return '<tr>' +
-            '<td style="font-family:monospace;font-size:11.5px">' + esc(x.code) + '</td>' +
+            '<td style="font-family:monospace;font-size:13px">' + esc(x.code) + '</td>' +
             '<td style="font-weight:600">' + esc(x.name || '—') + '</td>' +
             '<td style="color:var(--muted)">' + esc(x.tipo) + '</td>' +
             '<td class="rep-dm" title="' + esc(x.dm) + '">' + esc(x.dm) + '</td>' +
@@ -1829,7 +1834,7 @@ function _combRenderReparto(resultsDiv) {
     resultsDiv.innerHTML =
         '<div class="table-card" style="flex:1;min-height:0;display:flex;flex-direction:column;overflow:hidden">' +
         '<div style="display:flex;align-items:center;gap:10px;padding-bottom:10px;margin-bottom:6px;border-bottom:1px solid var(--border);flex-shrink:0">' +
-            '<span style="color:var(--text);font-size:14px;font-weight:700">Reparto de Centros de Costo</span>' +
+            '<span style="color:var(--text);font-size:15.5px;font-weight:700">Reparto de Centros de Costo</span>' +
             '<span style="margin-left:auto;display:flex;gap:6px;align-items:center">' +
                 '<input id="rep-q" class="rep-q" placeholder="Buscar código o nombre…" value="' + esc(_repBuscar) + '" oninput="_repBuscar=this.value;clearTimeout(window._repT);window._repT=setTimeout(function(){updateSapResults();setTimeout(function(){var i=document.getElementById(\'rep-q\');if(i){i.focus();i.setSelectionRange(i.value.length,i.value.length);}},0)},300)">' +
                 fb('todos', 'Todos') + fb('sin', 'Sin asignar (' + nCnt.sin + ')') + fb('estr', 'Según estructura (' + nCnt.estr + ')') +
@@ -1865,12 +1870,12 @@ function _repEditar(code) {
     ov.innerHTML =
         '<div style="background:#fff;border-radius:12px;width:100%;max-width:720px;max-height:88vh;display:flex;flex-direction:column;box-shadow:0 12px 40px rgba(0,0,0,.25)">' +
             '<div style="display:flex;align-items:center;padding:14px 18px;border-bottom:1px solid var(--border)">' +
-                '<div><div style="font-size:15px;font-weight:700">' + nombre + ' <span style="font-family:monospace;font-size:12px;color:var(--muted)">' + code + '</span></div>' +
-                '<div style="font-size:12px;color:var(--muted)">Marca los campamentos que reparten este costo. Se divide según sus Ha activas.</div></div>' +
+                '<div><div style="font-size:16px;font-weight:700">' + nombre + ' <span style="font-family:monospace;font-size:13.5px;color:var(--muted)">' + code + '</span></div>' +
+                '<div style="font-size:13.5px;color:var(--muted)">Marca los campamentos que reparten este costo. Se divide según sus Ha activas.</div></div>' +
                 '<button onclick="document.getElementById(\'rep-modal\').remove()" style="margin-left:auto;border:none;background:none;font-size:20px;cursor:pointer;color:var(--muted)">×</button>' +
             '</div>' +
             '<div id="rep-list" style="overflow:auto;padding:10px 18px;display:grid;grid-template-columns:1fr 1fr;gap:4px 18px"></div>' +
-            '<div id="rep-prev" style="padding:10px 18px;border-top:1px solid var(--border);font-size:12.5px;max-height:120px;overflow:auto"></div>' +
+            '<div id="rep-prev" style="padding:10px 18px;border-top:1px solid var(--border);font-size:14px;max-height:120px;overflow:auto"></div>' +
             '<div style="display:flex;gap:8px;padding:12px 18px;border-top:1px solid var(--border)">' +
                 '<button class="rep-btn" onclick="_repGuardar(\'' + code + '\', [])" title="Volver a lo de la data maestra">Quitar reparto</button>' +
                 '<span style="flex:1"></span>' +
@@ -1884,9 +1889,9 @@ function _repEditar(code) {
         var cur = null, html = '';
         opts.forEach(function(o) {
             if (o.cluster !== cur) { cur = o.cluster; html += '<div style="grid-column:1/-1;font-weight:700;color:#0369a1;margin-top:6px">' + cur + '</div>'; }
-            html += '<label style="display:flex;align-items:center;gap:8px;padding:3px 0;cursor:pointer;font-size:13px">' +
+            html += '<label style="display:flex;align-items:center;gap:8px;padding:3px 0;cursor:pointer;font-size:14.5px">' +
                 '<input type="checkbox" data-id="' + o.id + '"' + (sel[o.id] ? ' checked' : '') + '> ' + o.name +
-                ' <span style="color:var(--muted);font-size:11.5px;margin-left:auto">' + _sapFmt2(haById[o.id] || 0) + ' Ha</span></label>';
+                ' <span style="color:var(--muted);font-size:13px;margin-left:auto">' + _sapFmt2(haById[o.id] || 0) + ' Ha</span></label>';
         });
         document.getElementById('rep-list').innerHTML = html;
         document.querySelectorAll('#rep-list input').forEach(function(cb) {
@@ -3166,7 +3171,7 @@ function _combUpProgress(msg) {
     if (!el) return;
     el.style.display = msg ? 'block' : 'none';
     el.innerHTML = msg ? '<span class="spinner" style="width:14px;height:14px;border-width:2px"></span>' +
-        '<span style="font-size:13px;font-weight:600;color:#1e3a8a">' + msg + '</span>' : '';
+        '<span style="font-size:14.5px;font-weight:600;color:#1e3a8a">' + msg + '</span>' : '';
 }
 
 function sapSubirNuevoExcel(input) {
@@ -3338,7 +3343,7 @@ async function sapCargarCiclos(force) {
     const progressEl = document.getElementById('sap-progress');
     progressEl.style.display = '';
     const setP = function(msg) {
-        progressEl.innerHTML = '<div style="display:flex;align-items:center;gap:8px;font-size:12px;color:#1e40af"><span class="spinner" style="width:14px;height:14px;border-width:2px"></span>' + msg + '</div>';
+        progressEl.innerHTML = '<div style="display:flex;align-items:center;gap:8px;font-size:13.5px;color:#1e40af"><span class="spinner" style="width:14px;height:14px;border-width:2px"></span>' + msg + '</div>';
     };
     const authHdrs = { Authorization: 'Bearer ' + token, Accept: 'application/json' };
     const SAP_CYCLES_API = _PROXY + '/bff/web/ap1/backoffice/api/cycles';
@@ -3675,8 +3680,8 @@ function sapUpdateStatus() {
         var m = /^(\d{4})-(\d{2})-(\d{2})/.exec(lastF);
         var txt = m ? m[3] + '/' + m[2] + '/' + m[1] : (_sapExcelMeta && _sapExcelMeta.savedAt) || '';
         _upd.style.display = txt ? 'flex' : 'none';
-        _upd.innerHTML = '<span style="font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#94a3b8">Actualizado</span>' +
-            '<span style="font-size:12px;font-weight:600;color:#475569">' + txt + '</span>';
+        _upd.innerHTML = '<span style="font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#94a3b8">Actualizado</span>' +
+            '<span style="font-size:13.5px;font-weight:600;color:#475569">' + txt + '</span>';
     }
 
     const el = document.getElementById('sap-status-bar');
@@ -3747,42 +3752,42 @@ function _sapBuildKpiHtml(imp, ha, dias, subLabel, diasCiclo) {
     var costoXHaDia = ha > 0 && dias > 0 ? imp / (ha * dias) : null;
     var _sep = 'border-right:1px solid rgba(255,255,255,0.25)';
     var _cel = 'flex:1;padding:7px 12px;display:flex;flex-direction:column;justify-content:center;gap:2px';
-    var _lbl = 'font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.4px;opacity:0.85';
+    var _lbl = 'font-size:11.5px;font-weight:700;text-transform:uppercase;letter-spacing:0.4px;opacity:0.85';
     var _val = 'font-size:19px;font-weight:800;line-height:1.1';
     var banner = subLabel
-        ? '<div style="background:rgba(0,0,0,0.16);padding:4px 12px;font-size:12px;font-weight:700;display:flex;justify-content:space-between;align-items:center">' +
+        ? '<div style="background:rgba(0,0,0,0.16);padding:4px 12px;font-size:13.5px;font-weight:700;display:flex;justify-content:space-between;align-items:center">' +
               '<span>' + subLabel + '</span>' +
-              '<span style="cursor:pointer;opacity:0.7;font-size:10px;font-weight:600" onclick="sapClearResumenRow()">✕ Ver total</span>' +
+              '<span style="cursor:pointer;opacity:0.7;font-size:11.5px;font-weight:600" onclick="sapClearResumenRow()">✕ Ver total</span>' +
           '</div>'
         : '';
     var diasCard = diasCiclo
         ? '<div style="' + _cel + ';' + _sep + '">' +
-              '<div style="font-size:16px;line-height:1;margin-bottom:2px">&#x23F1;</div>' +
+              '<div style="font-size:17px;line-height:1;margin-bottom:2px">&#x23F1;</div>' +
               '<div style="' + _lbl + '">D&iacute;as ciclo</div>' +
-              '<div style="' + _val + '">' + diasCiclo + ' <span style="font-size:11px;font-weight:500;opacity:0.8">días</span></div>' +
+              '<div style="' + _val + '">' + diasCiclo + ' <span style="font-size:12.5px;font-weight:500;opacity:0.8">días</span></div>' +
           '</div>'
         : '';
     return '<div class="kpi-card cyan" style="display:flex;flex-direction:column;padding:0;overflow:hidden">' +
         banner +
         '<div style="display:flex;flex:1">' +
             '<div style="' + _cel + ';' + _sep + '">' +
-                '<div style="font-size:16px;line-height:1;margin-bottom:2px">&#x1F4B5;</div>' +
+                '<div style="font-size:17px;line-height:1;margin-bottom:2px">&#x1F4B5;</div>' +
                 '<div style="' + _lbl + '">Costo total</div>' +
                 '<div style="' + _val + '">$' + fmt(imp) + '</div>' +
             '</div>' +
             '<div style="' + _cel + ';' + _sep + '">' +
-                '<div style="font-size:16px;line-height:1;margin-bottom:2px">&#x1F30A;</div>' +
+                '<div style="font-size:17px;line-height:1;margin-bottom:2px">&#x1F30A;</div>' +
                 '<div style="' + _lbl + '">Hect&aacute;reas</div>' +
-                '<div style="' + _val + '">' + (ha > 0 ? ha.toLocaleString('es-EC',{minimumFractionDigits:2,maximumFractionDigits:2}) : '—') + ' <span style="font-size:11px;font-weight:500;opacity:0.8">Ha</span></div>' +
+                '<div style="' + _val + '">' + (ha > 0 ? ha.toLocaleString('es-EC',{minimumFractionDigits:2,maximumFractionDigits:2}) : '—') + ' <span style="font-size:12.5px;font-weight:500;opacity:0.8">Ha</span></div>' +
             '</div>' +
             diasCard +
             '<div style="' + _cel + ';' + _sep + '">' +
-                '<div style="font-size:16px;line-height:1;margin-bottom:2px">&#x1F4CA;</div>' +
+                '<div style="font-size:17px;line-height:1;margin-bottom:2px">&#x1F4CA;</div>' +
                 '<div style="' + _lbl + '">Costo / Ha</div>' +
                 '<div style="' + _val + '">' + (costoXHa !== null ? '$' + fmt(costoXHa) : '—') + '</div>' +
             '</div>' +
             '<div style="' + _cel + '">' +
-                '<div style="font-size:16px;line-height:1;margin-bottom:2px">&#x1F4C5;</div>' +
+                '<div style="font-size:17px;line-height:1;margin-bottom:2px">&#x1F4C5;</div>' +
                 '<div style="' + _lbl + '">Costo Ha/D&iacute;a</div>' +
                 '<div style="' + _val + '">' + (costoXHaDia !== null ? '$' + fmt(costoXHaDia) : '—') + '</div>' +
             '</div>' +
@@ -4218,9 +4223,9 @@ function updateSapResults() {
             : '<td style="color:transparent;border-top:none">·</td>';
         lastFecha = i.fecha;
         trows += '<tr>' + fechaCell +
-            '<td>' + (i.matCode ? '<span style="display:block;font-size:10px;color:var(--muted);line-height:1.2">' + i.matCode + '</span>' : '') +
-                '<span style="font-weight:500;font-size:13px">' + i.desc + '</span></td>' +
-            '<td style="font-size:11px;color:var(--muted)">' + alm + '</td>' +
+            '<td>' + (i.matCode ? '<span style="display:block;font-size:11.5px;color:var(--muted);line-height:1.2">' + i.matCode + '</span>' : '') +
+                '<span style="font-weight:500;font-size:14.5px">' + i.desc + '</span></td>' +
+            '<td style="font-size:12.5px;color:var(--muted)">' + alm + '</td>' +
             '<td style="text-align:right;font-weight:600">' + fmt2(i.cantidad) + '</td>' +
             '<td style="text-align:right;font-weight:600;color:#065f46">$' + fmt2(i.importe) + '</td></tr>';
     });
@@ -4459,7 +4464,7 @@ function _detSubPopover(el, names, title) {
     // Header
     var header = document.createElement('div');
     header.style.cssText = 'display:flex;justify-content:space-between;align-items:center;padding:14px 18px;border-bottom:1px solid var(--border,#e5e5ea)';
-    header.innerHTML = '<span style="font-size:14px;font-weight:700;color:var(--text,#1c1c1e)">' + (title || 'Subsidiarias').replace(/</g, '&lt;') + '</span>' +
+    header.innerHTML = '<span style="font-size:15.5px;font-weight:700;color:var(--text,#1c1c1e)">' + (title || 'Subsidiarias').replace(/</g, '&lt;') + '</span>' +
         '<button onclick="document.getElementById(\'_det-sub-pop\').remove()" style="background:none;border:none;font-size:20px;cursor:pointer;color:var(--muted,#64748b);line-height:1;padding:0 2px">&times;</button>';
     modal.appendChild(header);
 
@@ -4468,7 +4473,7 @@ function _detSubPopover(el, names, title) {
     list.style.cssText = 'padding:14px 18px;display:grid;grid-template-columns:repeat(3,1fr);gap:8px';
     names.forEach(function(name) {
         var item = document.createElement('div');
-        item.style.cssText = 'padding:8px 10px;font-size:13px;color:var(--text,#1c1c1e);background:var(--bg2,#f9fafb);border-radius:8px;word-break:break-word;line-height:1.35';
+        item.style.cssText = 'padding:8px 10px;font-size:14.5px;color:var(--text,#1c1c1e);background:var(--bg2,#f9fafb);border-radius:8px;word-break:break-word;line-height:1.35';
         item.textContent = name;
         list.appendChild(item);
     });
@@ -4610,8 +4615,8 @@ function _combRenderTipoEquipo(resultsDiv) {
     resultsDiv.innerHTML =
         '<div class="table-card" style="flex:1;min-height:0;display:flex;flex-direction:column;overflow:hidden">' +
         '<div style="display:flex;align-items:center;gap:10px;padding-bottom:10px;margin-bottom:6px;border-bottom:1px solid var(--border);flex-shrink:0">' +
-            '<span style="color:var(--text);font-size:14px;font-weight:700">Tipo de Equipo por Centro de Costo</span>' +
-            '<span style="font-size:12px;color:var(--muted)">' + list.length + ' nombres · por defecto el Grupo CeCo de la estructura SAP</span>' +
+            '<span style="color:var(--text);font-size:15.5px;font-weight:700">Tipo de Equipo por Centro de Costo</span>' +
+            '<span style="font-size:13.5px;color:var(--muted)">' + list.length + ' nombres · por defecto el Grupo CeCo de la estructura SAP</span>' +
             '<span style="margin-left:auto;display:flex;gap:6px;align-items:center">' +
                 '<input id="tipo-q" class="rep-q" placeholder="Buscar nombre, tipo o código…" value="' + esc(_tipoBuscar) + '" oninput="_tipoBuscar=this.value;clearTimeout(window._tipoT);window._tipoT=setTimeout(function(){updateSapResults();setTimeout(function(){var i=document.getElementById(\'tipo-q\');if(i){i.focus();i.setSelectionRange(i.value.length,i.value.length);}},0)},300)">' +
                 fb('todos', 'Todos') + fb('manual', 'Asignados a mano (' + nManual + ')') +
@@ -4755,7 +4760,7 @@ function _combRenderPorTipo(resultsDiv) {
     resultsDiv.innerHTML =
         '<div class="table-card" style="flex:1;min-height:0;display:flex;flex-direction:column;overflow:hidden">' +
         '<div style="padding-bottom:10px;margin-bottom:6px;border-bottom:1px solid var(--border);flex-shrink:0">' +
-            '<span style="color:var(--text);font-size:14px;font-weight:700">Resumen por Tipo de Equipo</span>' +
+            '<span style="color:var(--text);font-size:15.5px;font-weight:700">Resumen por Tipo de Equipo</span>' +
         '</div>' +
         '<div class="table-wrapper" style="flex:1;overflow:auto;min-height:0">' +
         '<table class="sap-tbl sap-tbl-compact"><thead style="position:sticky;top:0;z-index:2">' + thead1 + thead2 + '</thead>' +
@@ -4866,13 +4871,13 @@ function _combRenderDetalle(resultsDiv) {
             '<td style="text-align:right;font-variant-numeric:tabular-nums">' + (r.q || 0).toLocaleString('es-EC', {minimumFractionDigits:2, maximumFractionDigits:2}) + '</td>' +
             '<td>' + (r.u || '') + '</td>' +
             '<td style="text-align:right;font-variant-numeric:tabular-nums;color:' + (iNeg ? '#dc2626' : 'inherit') + '">' + (r.i || 0).toLocaleString('es-EC', {minimumFractionDigits:2, maximumFractionDigits:2}) + '</td>' +
-            '<td style="font-size:11px;font-family:monospace">' + (r.dm || '') + '</td>' +
+            '<td style="font-size:12.5px;font-family:monospace">' + (r.dm || '') + '</td>' +
             '<td style="text-align:center">' + (r.mv || '') + '</td>' +
-            '<td style="font-size:11px">' + (r.nu || '') + '</td>' +
-            '<td style="font-size:11px">' + (r.tx || '') + '</td>' +
-            '<td><code style="font-size:11px;background:#f1f5f9;padding:1px 5px;border-radius:3px;color:#334155">' + (r.o || '') + '</code></td>' +
-            '<td><code style="font-size:11px;background:#f1f5f9;padding:1px 5px;border-radius:3px;color:#334155">' + (_rcc || '') + '</code></td>' +
-            '<td style="font-size:11px">' + ccName + '</td>' +
+            '<td style="font-size:12.5px">' + (r.nu || '') + '</td>' +
+            '<td style="font-size:12.5px">' + (r.tx || '') + '</td>' +
+            '<td><code style="font-size:12.5px;background:#f1f5f9;padding:1px 5px;border-radius:3px;color:#334155">' + (r.o || '') + '</code></td>' +
+            '<td><code style="font-size:12.5px;background:#f1f5f9;padding:1px 5px;border-radius:3px;color:#334155">' + (_rcc || '') + '</code></td>' +
+            '<td style="font-size:12.5px">' + ccName + '</td>' +
             '</tr>';
         return tbody;
     }
@@ -4924,9 +4929,9 @@ function _combRenderDetalle(resultsDiv) {
         SAP_MESES_DET.forEach(function(m,i) { var v=String(i+1).padStart(2,'0'); s += '<option value="'+v+'"'+(cur===v?' selected':'')+'>'+m+'</option>'; });
         return s;
     }
-    var INP = 'onchange="_combDetRead();_combRenderDetalle(document.getElementById(\'sap-results\'))" style="padding:5px 8px;border:1px solid #cbd5e1;border-radius:6px;font-size:12px;background:#fff;cursor:pointer"';
-    var INP_DATE = 'onchange="_combDetRead();_combRenderDetalle(document.getElementById(\'sap-results\'))" style="padding:5px 8px;border:1px solid #cbd5e1;border-radius:6px;font-size:12px"';
-    var INP_YM   = 'onchange="_combYMChange()" style="padding:5px 8px;border:1px solid #cbd5e1;border-radius:6px;font-size:12px;background:#fff;cursor:pointer"';
+    var INP = 'onchange="_combDetRead();_combRenderDetalle(document.getElementById(\'sap-results\'))" style="padding:5px 8px;border:1px solid #cbd5e1;border-radius:6px;font-size:13.5px;background:#fff;cursor:pointer"';
+    var INP_DATE = 'onchange="_combDetRead();_combRenderDetalle(document.getElementById(\'sap-results\'))" style="padding:5px 8px;border:1px solid #cbd5e1;border-radius:6px;font-size:13.5px"';
+    var INP_YM   = 'onchange="_combYMChange()" style="padding:5px 8px;border:1px solid #cbd5e1;border-radius:6px;font-size:13.5px;background:#fff;cursor:pointer"';
 
     function fg(label, inner) { return '<div class="fg"><label>' + label + '</label>' + inner + '</div>'; }
     var filtersHtml =
@@ -4964,12 +4969,12 @@ function _sapRenderCyclesOnly(cycles, resultsDiv) {
         var subCode = (cc.subsidiariesCode || '').split('-')[0];
         var sub = _combSucursalPorCodigo(subCode);
         var subName = sub ? sub.name : (cc.subsidiariesCode || '—');
-        rows += '<tr><td><code style="font-size:11px;background:#f1f5f9;padding:2px 6px;border-radius:4px;color:#334155">' + (cc.code || '') + '</code></td>' +
+        rows += '<tr><td><code style="font-size:12.5px;background:#f1f5f9;padding:2px 6px;border-radius:4px;color:#334155">' + (cc.code || '') + '</code></td>' +
             '<td style="font-weight:600">' + (cc.name || '') + '</td>' +
-            '<td style="font-size:12px;color:var(--muted)">' + (cc.subsidiariesCode || '—') + '</td>' +
-            '<td style="font-size:12px">' + subName + '</td></tr>';
+            '<td style="font-size:13.5px;color:var(--muted)">' + (cc.subsidiariesCode || '—') + '</td>' +
+            '<td style="font-size:13.5px">' + subName + '</td></tr>';
     });
-    resultsDiv.innerHTML = '<div class="table-card"><div class="chart-title">' + _combCostCenters.length + ' centros de costo <span style="font-size:12px;font-weight:400;color:var(--muted)">— Sube el Excel SAP para ver los consumos</span></div>' +
+    resultsDiv.innerHTML = '<div class="table-card"><div class="chart-title">' + _combCostCenters.length + ' centros de costo <span style="font-size:13.5px;font-weight:400;color:var(--muted)">— Sube el Excel SAP para ver los consumos</span></div>' +
         '<div class="table-wrapper"><table><thead><tr><th>Código</th><th>Nombre</th><th>Código Subsidiaria</th><th>Sucursal</th></tr></thead><tbody>' + rows + '</tbody></table></div></div>';
 }
 
@@ -5055,9 +5060,9 @@ function _sapRenderResumen(filteredRows, diasMes, el, kpiHtml) {
     var btnLabel = _sapResumenGrupo ? '✕ Sin agrupar' : '⊞ Agrupar por Cluster';
     // html acumula solo el contenido interno (sin el table-card wrapper)
     var html = '<div style="display:flex;justify-content:space-between;align-items:center;padding-bottom:10px;margin-bottom:6px;border-bottom:1px solid var(--border);flex-shrink:0">' +
-            '<span style="color:var(--text);font-size:14px;font-weight:700">Resumen por Sucursal' + titleSuffix + '</span>' +
+            '<span style="color:var(--text);font-size:15.5px;font-weight:700">Resumen por Sucursal' + titleSuffix + '</span>' +
             '<div style="display:flex;gap:8px">' +
-            '<button style="font-size:11.5px;padding:5px 12px;background:#f5f5f7;color:#1e3a5f;border:1px solid var(--border);border-radius:7px;cursor:pointer;font-weight:600;transition:background .15s" onmouseover="this.style.background=\'#e5e5ea\'" onmouseout="this.style.background=\'#f5f5f7\'" onclick="_sapToggleResumenGrupo()">' + btnLabel + '</button>' +
+            '<button style="font-size:13px;padding:5px 12px;background:#f5f5f7;color:#1e3a5f;border:1px solid var(--border);border-radius:7px;cursor:pointer;font-weight:600;transition:background .15s" onmouseover="this.style.background=\'#e5e5ea\'" onmouseout="this.style.background=\'#f5f5f7\'" onclick="_sapToggleResumenGrupo()">' + btnLabel + '</button>' +
             '</div>' +
         '</div>' +
         '<div class="table-wrapper" style="flex:1;overflow-y:auto;min-height:0;margin-top:0"><table class="sap-tbl sap-tbl-compact"><thead style="position:sticky;top:0;z-index:2"><tr>' +
@@ -5178,7 +5183,7 @@ function _sapRenderResumen(filteredRows, diasMes, el, kpiHtml) {
     html += '</tbody>' +
         '<tfoot style="position:sticky;bottom:0;z-index:2">' +
             '<tr style="background:#f5f5f7;border-top:2px solid var(--primary)">' +
-                '<td colspan="' + (_sapResumenGrupo?2:1) + '" style="font-weight:800;font-size:13px;padding:8px 10px;color:var(--text)">TOTAL GENERAL</td>' +
+                '<td colspan="' + (_sapResumenGrupo?2:1) + '" style="font-weight:800;font-size:14.5px;padding:8px 10px;color:var(--text)">TOTAL GENERAL</td>' +
                 '<td class="num" style="font-weight:800;padding:8px 8px 8px 6px;color:var(--text)">' + _sapFmt2(grandHa) + '</td>' +
                 '<td class="num" style="font-weight:800;padding:8px 8px 8px 6px;color:var(--text)">' + _sapFmt2(grandGal) + '</td>' +
                 '<td class="num" style="font-weight:800;padding:8px 8px 8px 6px;color:var(--text)">' + _galHa(grandGal, grandHa) + '</td>' +
@@ -5301,7 +5306,7 @@ function _sapRenderPorMaterial(filteredRows, diasMes, el, kpiHtml, totalHa) {
 
     var html =
         '<div style="display:flex;align-items:center;padding-bottom:10px;margin-bottom:6px;border-bottom:1px solid var(--border);flex-shrink:0">' +
-            '<span style="color:var(--text);font-size:14px;font-weight:700">Consumo por Sucursal y Combustible</span>' +
+            '<span style="color:var(--text);font-size:15.5px;font-weight:700">Consumo por Sucursal y Combustible</span>' +
         '</div>' +
         '<div class="table-wrapper" style="flex:1;overflow:auto;min-height:0;margin-top:0">' +
         '<table class="sap-tbl sap-tbl-compact sap-mat-tbl"><thead style="position:sticky;top:0;z-index:2">' +
@@ -5371,10 +5376,10 @@ function sapShowMatDetail(key) {
 
     var tbody = rows.map(function(r) {
         return '<tr>' +
-            '<td style="padding:7px 12px;font-size:12px">' + r.f + '</td>' +
-            '<td style="padding:7px 12px;font-size:12px;text-align:right">' + _sapFmt2(r.cant) + '</td>' +
-            '<td style="padding:7px 12px;font-size:12px;text-align:right;color:#065f46">$' + _sapFmt2(r.imp) + '</td>' +
-            '<td style="padding:7px 12px;font-size:12px;text-align:center;color:#1e3a5f;font-weight:600">' + r.dias + '</td>' +
+            '<td style="padding:7px 12px;font-size:13.5px">' + r.f + '</td>' +
+            '<td style="padding:7px 12px;font-size:13.5px;text-align:right">' + _sapFmt2(r.cant) + '</td>' +
+            '<td style="padding:7px 12px;font-size:13.5px;text-align:right;color:#065f46">$' + _sapFmt2(r.imp) + '</td>' +
+            '<td style="padding:7px 12px;font-size:13.5px;text-align:center;color:#1e3a5f;font-weight:600">' + r.dias + '</td>' +
         '</tr>';
     }).join('');
 
@@ -5383,25 +5388,25 @@ function sapShowMatDetail(key) {
         '<div style="background:white;border-radius:12px;width:680px;max-width:95vw;max-height:85vh;display:flex;flex-direction:column;box-shadow:0 24px 64px rgba(0,0,0,0.3)">' +
             '<div style="background:#1e3a5f;border-radius:12px 12px 0 0;padding:14px 20px;display:flex;align-items:center;justify-content:space-between">' +
                 '<div>' +
-                    '<div style="color:#fff;font-weight:800;font-size:14px">' + d.mat.desc + '</div>' +
-                    '<div style="color:#93c5fd;font-size:11px;margin-top:2px">' + d.ciclo.cycleCode + ' · ' + _sapFmt2(ps) + ' Ha · Total: $' + _sapFmt2(totalCosto) + '</div>' +
+                    '<div style="color:#fff;font-weight:800;font-size:15.5px">' + d.mat.desc + '</div>' +
+                    '<div style="color:#93c5fd;font-size:12.5px;margin-top:2px">' + d.ciclo.cycleCode + ' · ' + _sapFmt2(ps) + ' Ha · Total: $' + _sapFmt2(totalCosto) + '</div>' +
                 '</div>' +
                 '<button onclick="this.closest(\'[style*=fixed]\').remove()" style="background:none;border:none;color:white;font-size:20px;cursor:pointer;line-height:1">×</button>' +
             '</div>' +
             '<div style="overflow-y:auto;flex:1">' +
             '<table style="width:100%;border-collapse:collapse">' +
             '<thead><tr style="background:#f8fafc;position:sticky;top:0">' +
-                '<th style="padding:8px 12px;text-align:left;font-size:11px;color:#64748b;font-weight:700;text-transform:uppercase;border-bottom:2px solid #e2e8f0">Fecha</th>' +
-                '<th style="padding:8px 12px;text-align:right;font-size:11px;color:#64748b;font-weight:700;text-transform:uppercase;border-bottom:2px solid #e2e8f0">Cantidad</th>' +
-                '<th style="padding:8px 12px;text-align:right;font-size:11px;color:#64748b;font-weight:700;text-transform:uppercase;border-bottom:2px solid #e2e8f0">Valor $</th>' +
-                '<th style="padding:8px 12px;text-align:center;font-size:11px;color:#64748b;font-weight:700;text-transform:uppercase;border-bottom:2px solid #e2e8f0">Días ciclo</th>' +
+                '<th style="padding:8px 12px;text-align:left;font-size:12.5px;color:#64748b;font-weight:700;text-transform:uppercase;border-bottom:2px solid #e2e8f0">Fecha</th>' +
+                '<th style="padding:8px 12px;text-align:right;font-size:12.5px;color:#64748b;font-weight:700;text-transform:uppercase;border-bottom:2px solid #e2e8f0">Cantidad</th>' +
+                '<th style="padding:8px 12px;text-align:right;font-size:12.5px;color:#64748b;font-weight:700;text-transform:uppercase;border-bottom:2px solid #e2e8f0">Valor $</th>' +
+                '<th style="padding:8px 12px;text-align:center;font-size:12.5px;color:#64748b;font-weight:700;text-transform:uppercase;border-bottom:2px solid #e2e8f0">Días ciclo</th>' +
             '</tr></thead>' +
             '<tbody>' + tbody + '</tbody>' +
             '<tfoot><tr style="background:#f0fdf4;border-top:2px solid #e2e8f0">' +
-                '<td style="padding:8px 12px;font-weight:700;font-size:12px">TOTAL</td>' +
+                '<td style="padding:8px 12px;font-weight:700;font-size:13.5px">TOTAL</td>' +
                 '<td></td>' +
-                '<td style="padding:8px 12px;font-weight:800;font-size:13px;text-align:right;color:#065f46">$' + _sapFmt2(totalCosto) + '</td>' +
-                '<td style="padding:8px 12px;text-align:center;font-size:12px;color:#1e3a5f;font-weight:700">' + (_cycleDias(d.ciclo) || '—') + ' días</td>' +
+                '<td style="padding:8px 12px;font-weight:800;font-size:14.5px;text-align:right;color:#065f46">$' + _sapFmt2(totalCosto) + '</td>' +
+                '<td style="padding:8px 12px;text-align:center;font-size:13.5px;color:#1e3a5f;font-weight:700">' + (_cycleDias(d.ciclo) || '—') + ' días</td>' +
             '</tr></tfoot>' +
             '</table></div>' +
         '</div></div>';
@@ -5459,7 +5464,7 @@ function _sapRenderPorCiclo(filteredRows, el, kpiHtml) {
 
     var html =
         '<div style="display:flex;align-items:center;padding-bottom:10px;margin-bottom:6px;border-bottom:1px solid var(--border);flex-shrink:0">' +
-            '<span style="color:var(--text);font-size:14px;font-weight:700">Consumos por Ciclo</span>' +
+            '<span style="color:var(--text);font-size:15.5px;font-weight:700">Consumos por Ciclo</span>' +
         '</div>' +
         '<div class="table-wrapper" style="flex:1;overflow-y:auto;min-height:0;margin-top:0">' +
         '<table class="sap-tbl sap-tbl-compact"><thead style="position:sticky;top:0;z-index:2"><tr>' +
@@ -5478,7 +5483,7 @@ function _sapRenderPorCiclo(filteredRows, el, kpiHtml) {
         // Fila cabecera del ciclo (clickable para expandir/contraer)
         html += '<tbody>' +
             '<tr class="cic-hdr" style="background:#dbeafe;cursor:pointer" onclick="sapToggleCicMats(\'' + tbodyId + '\',this)">' +
-            '<td colspan="2" style="font-weight:800;font-size:12px;color:#1e3a5f;padding:6px 10px">' +
+            '<td colspan="2" style="font-weight:800;font-size:13.5px;color:#1e3a5f;padding:6px 10px">' +
                 '<span id="' + tbodyId + '-arrow" style="margin-right:5px;display:inline-block;transition:transform .15s">' + (collapsed ? '▶' : '▼') + '</span>' +
                 g.pool + ' &nbsp;·&nbsp; ' + g.cod +
                 ' &nbsp;·&nbsp; <span style="font-weight:600;color:#334155">' + _sapFmt2(g.ps) + ' Ha</span>' +
@@ -5497,13 +5502,13 @@ function _sapRenderPorCiclo(filteredRows, el, kpiHtml) {
             var dk = g.cid + '||' + (m.code || '(sin código)');
             html += '<tr style="cursor:pointer" data-dk="' + dk.replace(/"/g,'&quot;') + '" onclick="sapShowMatDetail(this.dataset.dk)" onmouseover="this.style.background=\'#eff6ff\'" onmouseout="this.style.background=\'\'">' +
                 '<td style="padding-left:28px">' +
-                    '<span style="font-size:10px;color:var(--muted);display:block">' + m.code + '</span>' +
-                    '<span style="font-weight:500;font-size:12px">' + m.desc + '</span>' +
+                    '<span style="font-size:11.5px;color:var(--muted);display:block">' + m.code + '</span>' +
+                    '<span style="font-weight:500;font-size:13.5px">' + m.desc + '</span>' +
                 '</td>' +
-                '<td style="font-size:11px;color:var(--muted)">' + m.unidad + '</td>' +
+                '<td style="font-size:12.5px;color:var(--muted)">' + m.unidad + '</td>' +
                 '<td class="num" style="padding-right:18px">' + _sapFmt2(m.cant) + '</td>' +
                 '<td class="num" style="color:#065f46;padding-right:18px">$' + _sapFmt2(m.costo) + '</td>' +
-                '<td class="num" style="padding-right:18px;font-size:11px">' + (mHaDia !== null ? '$' + _sapFmt2(mHaDia) : '—') + '</td>' +
+                '<td class="num" style="padding-right:18px;font-size:12.5px">' + (mHaDia !== null ? '$' + _sapFmt2(mHaDia) : '—') + '</td>' +
                 '</tr>';
         });
         html += '</tbody>';
@@ -5519,7 +5524,7 @@ function _sapRenderPorCiclo(filteredRows, el, kpiHtml) {
             '<div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:8px;overflow:hidden">' +
                 '<div id="sap-kpi-container">' + (kpiHtml || '') + '</div>' +
                 '<div class="table-card" style="margin-bottom:0;flex:1;min-height:0;display:flex;flex-direction:column;overflow:hidden;padding:10px 14px">' +
-                    '<div class="chart-title" style="flex-shrink:0;font-size:12px;margin-bottom:6px">$/Ha/D&iacute;a por Ciclo</div>' +
+                    '<div class="chart-title" style="flex-shrink:0;font-size:13.5px;margin-bottom:6px">$/Ha/D&iacute;a por Ciclo</div>' +
                     '<div style="position:relative;flex:1;min-height:0">' +
                         '<canvas id="' + canvasId + '"></canvas>' +
                     '</div>' +
@@ -5584,7 +5589,7 @@ function _sapRenderPorCiclo(filteredRows, el, kpiHtml) {
             borderRadius: 3, borderSkipped: false,
             datalabels: {
                 display: true, anchor: 'end', align: 'end', offset: 4,
-                font: { size: 12, weight: '400' }, color: '#334155',
+                font: { size: 13.5, weight: '400' }, color: '#334155',
                 formatter: function(v) { return '$' + v.toFixed(2); }
             }
         }];
@@ -5598,7 +5603,7 @@ function _sapRenderPorCiclo(filteredRows, el, kpiHtml) {
             responsive: true, maintainAspectRatio: false,
             layout: { padding: { right: multiCiclo ? 10 : 50 } },
             plugins: {
-                legend: { display: multiCiclo, position: 'bottom', labels: { boxWidth: 12, font: { size: 12 } } },
+                legend: { display: multiCiclo, position: 'bottom', labels: { boxWidth: 12, font: { size: 13.5 } } },
                 datalabels: { display: !multiCiclo },
                 tooltip: { callbacks: { label: function(c) {
                     return ' ' + (c.dataset.label || '') + ': $' + c.raw.toFixed(2) + '/Ha/Día';
@@ -5607,9 +5612,9 @@ function _sapRenderPorCiclo(filteredRows, el, kpiHtml) {
             scales: {
                 x: {
                     grid: { color: '#f1f5f9' },
-                    ticks: { font: { size: 12 }, callback: function(v) { return '$' + v.toFixed(2); } }
+                    ticks: { font: { size: 13.5 }, callback: function(v) { return '$' + v.toFixed(2); } }
                 },
-                y: { ticks: { font: { size: 12 } } }
+                y: { ticks: { font: { size: 13.5 } } }
             }
         }
     });
@@ -5770,9 +5775,9 @@ function _sapRenderPorCeco(filteredRows, diasMes, el) {
     var btnLabel = _sapCecoGrupo ? '✕ Sin agrupar' : '⊞ Agrupar por Tipo de Equipo';
     var html =
         '<div style="display:flex;align-items:center;padding-bottom:10px;margin-bottom:6px;border-bottom:1px solid var(--border);flex-shrink:0">' +
-            '<span style="color:var(--text);font-size:14px;font-weight:700">Consumos por Centro de Costo</span>' +
-            '<span style="margin-left:10px;font-size:12px;color:var(--muted)">' + rows.length + ' centros de costo</span>' +
-            '<button style="margin-left:auto;font-size:11.5px;padding:5px 12px;background:#f5f5f7;color:#1e3a5f;border:1px solid var(--border);border-radius:7px;cursor:pointer;font-weight:600" onclick="_sapToggleCecoGrupo()">' + btnLabel + '</button>' +
+            '<span style="color:var(--text);font-size:15.5px;font-weight:700">Consumos por Centro de Costo</span>' +
+            '<span style="margin-left:10px;font-size:13.5px;color:var(--muted)">' + rows.length + ' centros de costo</span>' +
+            '<button style="margin-left:auto;font-size:13px;padding:5px 12px;background:#f5f5f7;color:#1e3a5f;border:1px solid var(--border);border-radius:7px;cursor:pointer;font-weight:600" onclick="_sapToggleCecoGrupo()">' + btnLabel + '</button>' +
         '</div>' +
         '<div class="table-wrapper" style="flex:1;overflow:auto;min-height:0;margin-top:0">' +
         '<table class="sap-tbl sap-tbl-compact"><thead style="position:sticky;top:0;z-index:2"><tr>' +
@@ -5836,7 +5841,7 @@ function _sapRenderPorCeco(filteredRows, diasMes, el) {
         var _ct = { movs: 0, gal: 0, costo: 0 };
         _ccList.forEach(function(x) { _ct.movs += x.movs; _ct.gal += x.gal; _ct.costo += x.costo; });
         html += '<tr style="background:#f1f5f9"><td colspan="6" style="font-weight:800;color:#334155;padding:9px 10px">📂 Aparte' +
-            ' <span style="font-weight:500;font-size:11.5px">— maquinaria alquilada (orden sin centro de costo) y compartidos sin estructura; no se suman al TOTAL</span></td></tr>';
+            ' <span style="font-weight:500;font-size:13px">— maquinaria alquilada (orden sin centro de costo) y compartidos sin estructura; no se suman al TOTAL</span></td></tr>';
         _ccList.forEach(function(x) {
             html += '<tr style="color:#334155">' +
                 '<td style="padding-left:22px">' + x.tipo + '</td>' +
@@ -5883,8 +5888,8 @@ function _sapCecoOpenModal(ccName) {
     var rows = subs.map(function(s) {
         var safeSub = s.subName.replace(/'/g, "\\'");
         return '<tr class="sap-res-row" style="cursor:pointer" onclick="_sapCecoOpenSubModal(\'' + safeCc + '\',\'' + safeSub + '\')" title="Ver detalle de consumo">' +
-            '<td style="font-weight:600;padding:8px 12px">' + s.subName + ' <span style="font-size:10px;color:var(--muted);font-weight:400">›</span></td>' +
-            '<td style="padding:8px 12px;font-size:11px;color:var(--muted)">' + s.codes.join(', ') + '</td>' +
+            '<td style="font-weight:600;padding:8px 12px">' + s.subName + ' <span style="font-size:11.5px;color:var(--muted);font-weight:400">›</span></td>' +
+            '<td style="padding:8px 12px;font-size:12.5px;color:var(--muted)">' + s.codes.join(', ') + '</td>' +
             '<td class="num" style="padding:8px 18px 8px 10px">' + _sapFmt2(s.gal) + '</td>' +
             '<td class="num" style="padding:8px 18px 8px 10px;font-weight:600;color:#065f46">$' + _sapFmt2(s.costo) + '</td>' +
             '</tr>';
@@ -5928,12 +5933,12 @@ function _sapCecoOpenMovModal(ccName) {
         return '<tr>' +
             '<td style="' + td + ';white-space:nowrap">' + fmtFecha(r.f) + '</td>' +
             '<td style="' + td + ';font-weight:600">' + esc(m.sub) + '</td>' +
-            '<td style="' + td + ';font-family:monospace;font-size:11px;color:var(--muted)">' + esc(r.cc || '—') + '</td>' +
+            '<td style="' + td + ';font-family:monospace;font-size:12.5px;color:var(--muted)">' + esc(r.cc || '—') + '</td>' +
             '<td style="' + td + '">' + esc(r.a || '—') + '</td>' +
-            '<td style="' + td + ';font-family:monospace;font-size:11px;color:var(--muted)">' + esc(r.dm || '—') + '</td>' +
+            '<td style="' + td + ';font-family:monospace;font-size:12.5px;color:var(--muted)">' + esc(r.dm || '—') + '</td>' +
             '<td style="' + td + '">' + esc(r.d || '—') + '</td>' +
             '<td style="' + td + '">' + esc(r.nu || '—') + '</td>' +
-            '<td style="' + td + ';font-size:11px">' + esc(r.tx || '') + '</td>' +
+            '<td style="' + td + ';font-size:12.5px">' + esc(r.tx || '') + '</td>' +
             '<td class="num" style="' + td + '">' + _sapFmt2(r.q) + '</td>' +
             '<td class="num" style="' + td + ';font-weight:600;color:#065f46">$' + _sapFmt2(r.i) + '</td>' +
             '</tr>';
@@ -5985,11 +5990,11 @@ function _sapCecoOpenSubModal(ccName, subName) {
         totCant += r.q || 0; totCosto += r.i || 0;
         return '<tr>' +
             '<td style="padding:7px 12px;white-space:nowrap">' + fmtFecha(r.f) + '</td>' +
-            '<td style="padding:7px 12px;font-size:11px;font-family:monospace;color:var(--muted)">' + (r.cc || '—') + '</td>' +
+            '<td style="padding:7px 12px;font-size:12.5px;font-family:monospace;color:var(--muted)">' + (r.cc || '—') + '</td>' +
             '<td style="padding:7px 12px">' + (r.a || '—') + '</td>' +
-            '<td style="padding:7px 12px;font-size:11px;font-family:monospace;color:var(--muted)">' + (r.dm || '—') + '</td>' +
-            '<td style="padding:7px 12px;font-size:11px;font-family:monospace;color:var(--muted)">' + (r.pd || '—') + '</td>' +
-            '<td style="padding:7px 12px;font-size:11px;color:var(--muted)">' + (r.d || '—') + '</td>' +
+            '<td style="padding:7px 12px;font-size:12.5px;font-family:monospace;color:var(--muted)">' + (r.dm || '—') + '</td>' +
+            '<td style="padding:7px 12px;font-size:12.5px;font-family:monospace;color:var(--muted)">' + (r.pd || '—') + '</td>' +
+            '<td style="padding:7px 12px;font-size:12.5px;color:var(--muted)">' + (r.d || '—') + '</td>' +
             '<td class="num" style="padding:7px 12px">' + _sapFmt2(r.q) + '</td>' +
             '<td class="num" style="padding:7px 12px;font-weight:600;color:#065f46">$' + _sapFmt2(r.i) + '</td>' +
             '</tr>';
@@ -6078,10 +6083,10 @@ function _tendLbl(m, sep) {
     var p = m.split('-');
     if (p.length === 3) {   // dia: "05" + dia de la semana
         var wd = new Date(+p[0], +p[1] - 1, +p[2]).toLocaleDateString('es-EC', { weekday: 'short' }).replace('.', '');
-        return sep === 'chart' ? p[2] + ' ' + wd : p[2] + '<br><span style="font-size:10px;font-weight:400;opacity:.8">' + wd + '</span>';
+        return sep === 'chart' ? p[2] + ' ' + wd : p[2] + '<br><span style="font-size:11.5px;font-weight:400;opacity:.8">' + wd + '</span>';
     }
     var mn = SAP_MESES[parseInt(p[1], 10) - 1] || p[1];
-    return sep === 'chart' ? mn + ' ' + p[0].slice(2) : mn + '<br><span style="font-size:10px;font-weight:400;opacity:.8">' + p[0] + '</span>';
+    return sep === 'chart' ? mn + ' ' + p[0].slice(2) : mn + '<br><span style="font-size:11.5px;font-weight:400;opacity:.8">' + p[0] + '</span>';
 }
 function _sapTendFillDiaMes() {
     var sel = document.getElementById('sap-tend-diames');
@@ -6252,15 +6257,15 @@ function _sapRenderTendencia(filteredRows, el) {
         campMats.forEach(function(mc, mi) {
             var matBg = '#ffffff';
             tbodySub += '<tr style="background:' + matBg + '">';
-            tbodySub += '<td style="' + _tdBase + ';padding-left:28px;position:sticky;left:0;background:' + matBg + ';z-index:1;font-size:11px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:220px" title="' + (matDescMap[mc]||mc).replace(/"/g,'&quot;') + '">' + (matDescMap[mc] || mc) + '</td>';
+            tbodySub += '<td style="' + _tdBase + ';padding-left:28px;position:sticky;left:0;background:' + matBg + ';z-index:1;font-size:12.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:220px" title="' + (matDescMap[mc]||mc).replace(/"/g,'&quot;') + '">' + (matDescMap[mc] || mc) + '</td>';
             mesesList.forEach(function(m) {
                 var costo = ((subMatMeses[camp]||{})[mc]||{})[m] || 0;
-                if (!costo) { tbodySub += '<td style="' + _tdBase + ';text-align:right;color:#cbd5e1;font-size:11px">—</td>'; return; }
+                if (!costo) { tbodySub += '<td style="' + _tdBase + ';text-align:right;color:#cbd5e1;font-size:12.5px">—</td>'; return; }
                 var ha   = campHaByMes[m] || 0;
                 var pts  = m.split('-');
                 var dias = _tendDias(m);
                 var val      = _calcVal(costo, ha, dias);
-                tbodySub += '<td data-tend-val data-costo="' + costo + '" data-ha="' + ha + '" data-dias="' + dias + '" data-kind="mat" style="' + _tdBase + ';text-align:right;font-size:11px;color:#065f46">' + _fmtMat(val) + '</td>';
+                tbodySub += '<td data-tend-val data-costo="' + costo + '" data-ha="' + ha + '" data-dias="' + dias + '" data-kind="mat" style="' + _tdBase + ';text-align:right;font-size:12.5px;color:#065f46">' + _fmtMat(val) + '</td>';
             });
             tbodySub += '</tr>';
         });
@@ -6331,14 +6336,14 @@ function _sapRenderTendencia(filteredRows, el) {
             campList.forEach(function(camp) {
                 if (!subGroupMeses[camp] || !subGroupMeses[camp][key]) return;
                 body += '<tr style="background:#ffffff">';
-                body += '<td style="' + _tdBase + ';padding-left:28px;position:sticky;left:0;background:#ffffff;z-index:1;font-size:11px;white-space:nowrap">' + (subNames[camp] || camp) + '</td>';
+                body += '<td style="' + _tdBase + ';padding-left:28px;position:sticky;left:0;background:#ffffff;z-index:1;font-size:12.5px;white-space:nowrap">' + (subNames[camp] || camp) + '</td>';
                 mesesList.forEach(function(m) {
                     var costo = (subGroupMeses[camp][key]||{})[m] || 0;
-                    if (!costo) { body += '<td style="' + _tdBase + ';text-align:right;color:#cbd5e1;font-size:11px">—</td>'; return; }
+                    if (!costo) { body += '<td style="' + _tdBase + ';text-align:right;color:#cbd5e1;font-size:12.5px">—</td>'; return; }
                     var ha = mesHaBySub[camp][m] || 0;
                     var dias = _tendDias(m);
                     var val = _calcVal(costo, ha, dias);
-                    body += '<td data-tend-val data-costo="' + costo + '" data-ha="' + ha + '" data-dias="' + dias + '" data-kind="mat" style="' + _tdBase + ';text-align:right;font-size:11px;color:#065f46">' + _fmtMat(val) + '</td>';
+                    body += '<td data-tend-val data-costo="' + costo + '" data-ha="' + ha + '" data-dias="' + dias + '" data-kind="mat" style="' + _tdBase + ';text-align:right;font-size:12.5px;color:#065f46">' + _fmtMat(val) + '</td>';
                 });
                 body += '</tr>';
             });
@@ -6460,7 +6465,7 @@ function _sapRenderTendencia(filteredRows, el) {
     el.innerHTML =
         '<div class="table-card" style="margin-bottom:0;flex:1;min-height:0;display:flex;flex-direction:column;overflow:hidden">' +
             '<div style="flex:1;overflow:auto">' +
-                '<table class="tend-tabla" style="border-collapse:separate;border-spacing:0;width:100%;font-size:12px">' +
+                '<table class="tend-tabla" style="border-collapse:separate;border-spacing:0;width:100%;font-size:13.5px">' +
                     _tableBody +
                 '</table>' +
                 '<div class="chart-card tend-chart" style="margin:14px;padding:14px 16px">' +
@@ -6550,11 +6555,11 @@ function _sapRenderTendencia(filteredRows, el) {
                     }
                 },
                 scales: {
-                    x: { grid: { color: '#f1f5f9' }, ticks: { font: { size: 12 } } },
+                    x: { grid: { color: '#f1f5f9' }, ticks: { font: { size: 13.5 } } },
                     y: {
                         grid: { color: '#f1f5f9' },
                         ticks: {
-                            font: { size: 12 },
+                            font: { size: 13.5 },
                             callback: function(v) {
                                 return '$' + (_sapTendMetric === 'hadía' ? v.toFixed(2) : v.toFixed(2));
                             }
@@ -6580,7 +6585,7 @@ function _tendUpdateLegend() {
             'display:flex;align-items:center;gap:5px;padding:3px 6px;width:100%;text-align:left;' +
             'border:1px solid ' + (selected ? col : 'transparent') + ';border-radius:4px;cursor:pointer;' +
             'background:' + (active ? col + '18' : 'transparent') + ';' +
-            'color:' + (active ? '#334155' : '#94a3b8') + ';font-size:10px;font-weight:500;line-height:1.3">' +
+            'color:' + (active ? '#334155' : '#94a3b8') + ';font-size:11.5px;font-weight:500;line-height:1.3">' +
             '<span style="width:8px;height:8px;border-radius:50%;flex-shrink:0;background:' + (active ? col : '#cbd5e1') + '"></span>' +
             '<span style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;' + (active ? '' : 'text-decoration:line-through;opacity:.5') + '">' + ds.label + '</span>' +
             '</button>';
@@ -6689,7 +6694,7 @@ function sapOpenHaHistModal() {
     // Encabezado
     var headerCells = months.map(function(m) {
         var p = m.split('-'), isCur = m === curMesStr;
-        var lbl = SAP_MESES[parseInt(p[1],10)-1] + '<br><span style="font-size:10px;font-weight:400;opacity:.75">' + p[0] + (isCur ? ' 🔴' : '') + '</span>';
+        var lbl = SAP_MESES[parseInt(p[1],10)-1] + '<br><span style="font-size:11.5px;font-weight:400;opacity:.75">' + p[0] + (isCur ? ' 🔴' : '') + '</span>';
         return '<th style="' + (isCur ? thCur : thBase) + '">' + lbl + '</th>';
     }).join('');
     var thead = '<thead><tr>' +
@@ -6734,7 +6739,7 @@ function sapOpenHaHistModal() {
         totalCells + '</tr></tfoot>';
 
     body.innerHTML =
-        '<table style="border-collapse:separate;border-spacing:0;width:100%;font-size:12px">' +
+        '<table style="border-collapse:separate;border-spacing:0;width:100%;font-size:13.5px">' +
         thead + tbody + tfoot + '</table>';
 
     modal.style.display = 'flex';
@@ -6803,16 +6808,16 @@ function _sapOpenMatDetail(matCode) {
     var ordRows = Object.values(byOrd).sort(function(a, b) { return b.costo - a.costo; }).slice(0, 15);
     var ordHtml = ordRows.map(function(o, i) {
         return '<tr style="border-bottom:1px solid var(--border)">' +
-            '<td style="padding:6px 10px;text-align:center;color:var(--muted);font-size:11px">' + (i + 1) + '</td>' +
-            '<td style="padding:6px 10px;font-size:11px;font-family:monospace;color:var(--muted)">' + o.ord + '</td>' +
+            '<td style="padding:6px 10px;text-align:center;color:var(--muted);font-size:12.5px">' + (i + 1) + '</td>' +
+            '<td style="padding:6px 10px;font-size:12.5px;font-family:monospace;color:var(--muted)">' + o.ord + '</td>' +
             '<td style="padding:6px 10px;font-weight:600">' + o.sub + '</td>' +
-            '<td style="padding:6px 10px;font-size:11px;color:var(--muted)">' + o.pool + '</td>' +
+            '<td style="padding:6px 10px;font-size:12.5px;color:var(--muted)">' + o.pool + '</td>' +
             '<td style="padding:6px 10px;text-align:right">' + _sapFmt2(o.cant) + '</td>' +
             '<td style="padding:6px 10px;text-align:right;font-weight:600;color:#065f46">$' + _sapFmt2(o.costo) + '</td>' +
             '</tr>';
     }).join('');
 
-    titleEl.innerHTML = '<span style="font-size:11px;font-weight:400;color:var(--muted)">' + matCode + ' &nbsp;·&nbsp; ' + unidad + '</span><br>' + desc;
+    titleEl.innerHTML = '<span style="font-size:12.5px;font-weight:400;color:var(--muted)">' + matCode + ' &nbsp;·&nbsp; ' + unidad + '</span><br>' + desc;
     var _periodEl = document.getElementById('sap-mat-modal-period');
     if (_periodEl) {
         var _pYr = (document.getElementById('sap-mat-year')  || {}).value || (document.getElementById('sap-year')  || {}).value || '';
@@ -6848,7 +6853,7 @@ function _sapOpenMatDetail(matCode) {
                 borderRadius: 4, borderSkipped: false,
                 datalabels: {
                     anchor: 'start', align: 'end', offset: 4, rotation: -90,
-                    font: { size: 12, weight: '700' }, color: '#1e3a5f',
+                    font: { size: 13.5, weight: '700' }, color: '#1e3a5f',
                     formatter: function(v) { return '$' + v.toFixed(2); }
                 }
             }]
@@ -6864,8 +6869,8 @@ function _sapOpenMatDetail(matCode) {
                 }}}
             },
             scales: {
-                x: { ticks: { font: { size: 12, weight: '600' }, maxRotation: 35, minRotation: 20 } },
-                y: { grid: { color: '#f1f5f9' }, ticks: { font: { size: 12 }, callback: function(v) { return '$' + v.toFixed(2); } } }
+                x: { ticks: { font: { size: 13.5, weight: '600' }, maxRotation: 35, minRotation: 20 } },
+                y: { grid: { color: '#f1f5f9' }, ticks: { font: { size: 13.5 }, callback: function(v) { return '$' + v.toFixed(2); } } }
             }
         }
     });
@@ -7018,7 +7023,7 @@ function _apFindHeader(card) {
     if (f.classList.contains('chart-title')) return f;
     if (f.tagName === 'DIV' && !f.querySelector('table,canvas')) {
         var sp = f.firstElementChild;
-        if (sp && sp.tagName === 'SPAN' && /font-size:\s*14px/.test(sp.getAttribute('style') || '')) return f;
+        if (sp && sp.tagName === 'SPAN' && /font-size:\s*(14|15\.5)px/.test(sp.getAttribute('style') || '')) return f;
     }
     return null;
 }
@@ -7150,8 +7155,8 @@ function _vgPanel(res, titulo, sub, ancho) {
     res.innerHTML =
         '<div class="table-card" style="flex:1;min-height:0;display:flex;flex-direction:column;overflow:hidden">' +
             '<div style="display:flex;align-items:center;gap:10px;padding-bottom:10px;margin-bottom:6px;border-bottom:1px solid var(--border);flex-shrink:0">' +
-                '<span style="color:var(--text);font-size:14px;font-weight:700">' + titulo + '</span>' +
-                (sub ? '<span style="font-size:12px;color:var(--muted)">' + sub + '</span>' : '') +
+                '<span style="color:var(--text);font-size:15.5px;font-weight:700">' + titulo + '</span>' +
+                (sub ? '<span style="font-size:13.5px;color:var(--muted)">' + sub + '</span>' : '') +
             '</div>' +
             '<div style="flex:1;min-height:0;overflow-x:auto;overflow-y:hidden">' +
                 '<div style="position:relative;height:calc(100% - 16px);min-height:340px;min-width:100%;width:' + (ancho ? ancho + 'px' : '100%') + ';margin:6px 0 10px"><canvas id="vg-canvas"></canvas></div>' +
@@ -7179,18 +7184,18 @@ function _vgOpcionesV(fmt, multi, etiquetas) {
         responsive: true, maintainAspectRatio: false,
         layout: { padding: { top: 8, right: 8 } },
         plugins: {
-            legend: { display: !!multi, position: 'top', align: 'start', labels: { boxWidth: 12, font: { size: 12 } } },
+            legend: { display: !!multi, position: 'top', align: 'start', labels: { boxWidth: 12, font: { size: 13.5 } } },
             tooltip: { mode: multi ? 'index' : 'nearest', intersect: !multi,
                 filter: function(c) { return !!c.raw; },
                 callbacks: { label: function(c) { return ' ' + (multi ? c.dataset.label + ': ' : '') + fmt(c.raw); } } },
             datalabels: etiquetas
                 ? { display: function(c) { return !!c.dataset.data[c.dataIndex]; }, anchor: 'end', align: 'end', offset: 2, rotation: -90, clamp: true,
-                    font: { size: 11, weight: '600' }, color: '#1f2f44', formatter: fmt }
+                    font: { size: 12.5, weight: '600' }, color: '#1f2f44', formatter: fmt }
                 : { display: false }
         },
         scales: {
-            x: { grid: { display: false }, ticks: { font: { size: 11.5, weight: '600' }, color: '#1f2f44', autoSkip: false, maxRotation: 60, minRotation: 0 } },
-            y: { beginAtZero: true, grace: etiquetas ? '14%' : 0, grid: { color: '#eef1f4' }, ticks: { font: { size: 11 }, color: '#64748b', maxTicksLimit: 7, callback: function(v) { return fmt === _vgMoney ? _vgMoneyK(v) : fmt(v); } } }
+            x: { grid: { display: false }, ticks: { font: { size: 13, weight: '600' }, color: '#1f2f44', autoSkip: false, maxRotation: 60, minRotation: 0 } },
+            y: { beginAtZero: true, grace: etiquetas ? '14%' : 0, grid: { color: '#eef1f4' }, ticks: { font: { size: 12.5 }, color: '#64748b', maxTicksLimit: 7, callback: function(v) { return fmt === _vgMoney ? _vgMoneyK(v) : fmt(v); } } }
         }
     };
 }
