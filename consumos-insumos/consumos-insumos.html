@@ -3717,6 +3717,7 @@ function sapToggleMatFechas(tr) {
     if (estaba) { if (arr) arr.textContent = '▶'; return; }
     var d = _sapCicloDetail[key];
     if (!d) return;
+    if (d.fecha) return _sapToggleFechaMats(tr, key, d, arr);
     var byDate = {};
     d.rows.forEach(function(r) {
         var f = r.f || '—';
@@ -3729,11 +3730,7 @@ function sapToggleMatFechas(tr) {
     var inicio = _cycleInicio(d.ciclo) || (dates[0] && dates[0] !== '—' ? new Date(dates[0]) : null);
     var ps = d.ciclo.ps || 0;
     var html = dates.map(function(f) {
-        var dia = '';
-        if (inicio && f !== '—') {
-            var n = Math.round((new Date(f) - inicio) / 86400000) + 1;
-            dia = n >= 1 ? 'día ' + n : (1 - n) + (n === 0 ? ' día' : ' días') + ' antes del inicio';
-        }
+        var dia = _cicDiaTxt(f, inicio);
         var x = byDate[f];
         return '<tr class="mat-fecha" style="background:#f8fafc">' +
             '<td style="padding:1px 4px 1px 34px;font-size:13px;color:#334155">' + f +
@@ -3751,7 +3748,50 @@ function sapToggleMatFechas(tr) {
     if (arr) arr.textContent = '▼';
 }
 
+// Texto "día N" de una fecha respecto al inicio del ciclo
+function _cicDiaTxt(f, inicio) {
+    if (!inicio || !f || f === '—') return '';
+    var n = Math.round((new Date(f) - inicio) / 86400000) + 1;
+    return n >= 1 ? 'día ' + n : (1 - n) + (n === 0 ? ' día' : ' días') + ' antes del inicio';
+}
+
+// Vista por fecha: despliega debajo de la fecha los materiales que se consumieron ese día
+function _sapToggleFechaMats(tr, key, d, arr) {
+    var byMat = {};
+    d.rows.forEach(function(r) {
+        var mk = r.m || '(sin código)';
+        if (!byMat[mk]) byMat[mk] = { desc: r.d || mk, um: r.u || '', cant: 0, importe: 0 };
+        byMat[mk].cant    += r.q || 0;
+        byMat[mk].importe += r.i || 0;
+    });
+    var mats = Object.values(byMat).sort(function(a, b) { return b.importe - a.importe; });
+    var ps = d.ciclo.ps || 0;
+    var html = mats.map(function(x) {
+        return '<tr class="mat-fecha" style="background:#f8fafc">' +
+            '<td style="padding:1px 4px 1px 34px;font-size:13px;color:#334155">' + x.desc + '</td>' +
+            '<td style="padding:1px 4px;font-size:13px;color:var(--muted)">' + x.um + '</td>' +
+            '<td class="num" style="padding:1px 4px;font-size:13px;color:#334155">' + _sapFmt2(x.cant) + '</td>' +
+            '<td class="num" style="padding:1px 4px;font-size:13px;color:#065f46">$' + _sapFmt2(x.importe) + '</td>' +
+            '<td class="num" style="padding:1px 4px;font-size:13px;color:#334155">' + (ps > 0 ? '$' + _sapFmt2(x.importe / ps) : '—') + '</td>' +
+            '<td></td>' +
+        '</tr>';
+    }).join('');
+    tr.insertAdjacentHTML('afterend', html);
+    var k = tr.nextElementSibling;
+    for (var i = 0; i < mats.length; i++, k = k.nextElementSibling) k.dataset.of = key;
+    if (arr) arr.textContent = '▼';
+}
+
+// Cambia la tabla de Por Ciclo entre agrupar por material y por fecha de consumo
+function sapCicPorFecha() {
+    window._cicPorFecha = !window._cicPorFecha;
+    if (_sapCicLast) _sapRenderPorCiclo.apply(null, _sapCicLast);
+}
+var _sapCicLast = null;
+
 function _sapRenderPorCiclo(filteredRows, el, kpiHtml) {
+    _sapCicLast = [filteredRows, el, kpiHtml];
+    var porFecha = !!window._cicPorFecha;
     if (!filteredRows.length) {
         el.innerHTML = '<div class="empty-state"><div class="empty-icon">🔍</div><div>Sin datos para los filtros seleccionados.</div></div>';
         return;
@@ -3768,11 +3808,18 @@ function _sapRenderPorCiclo(filteredRows, el, kpiHtml) {
             cod: fr.ciclo.cycleCode || String(cid),
             pool: fr.ciclo.poolName || '—',
             ps: fr.ciclo.ps || 0,
+            ciclo: fr.ciclo,
             totalDays: _cycleDias(fr.ciclo) || 0,
             costo: 0,
-            mats: {}
+            mats: {},
+            fechas: {}
         };
         grp[cid].costo += fr.row.i || 0;
+        var fk = cid + '##' + (fr.row.f || '—');
+        if (!_sapCicloDetail[fk]) _sapCicloDetail[fk] = { rows: [], ciclo: fr.ciclo, fecha: fr.row.f || '—', costo: 0 };
+        _sapCicloDetail[fk].rows.push(fr.row);
+        _sapCicloDetail[fk].costo += fr.row.i || 0;
+        grp[cid].fechas[fk] = _sapCicloDetail[fk];
         var mk = fr.row.m || '(sin código)';
         if (!grp[cid].mats[mk]) grp[cid].mats[mk] = { code: fr.row.m||'', desc: fr.row.d||'', unidad: fr.row.u||'', costo: 0, cant: 0 };
         grp[cid].mats[mk].costo += fr.row.i || 0;
@@ -3801,11 +3848,12 @@ function _sapRenderPorCiclo(filteredRows, el, kpiHtml) {
         '<div style="display:flex;justify-content:space-between;align-items:center;padding-bottom:6px;margin-bottom:4px;border-bottom:1px solid var(--border);flex-shrink:0">' +
             '<span style="color:var(--text);font-size:15.5px;font-weight:700">Consumos por Ciclo</span>' +
             '<div id="fpc-action-bar-slot"></div>' +
-            '<button id="cic-todo-btn" onclick="sapCicExpandirTodo(this)" style="margin-left:auto;font-size:13px;padding:5px 12px;background:#f5f5f7;color:#1e3a5f;border:1px solid var(--border);border-radius:7px;cursor:pointer;font-weight:600;white-space:nowrap">⊞ Expandir todo</button>' +
+            '<button id="cic-fecha-btn" onclick="sapCicPorFecha()" title="' + (porFecha ? 'Agrupar los consumos por material' : 'Ordenar los consumos por fecha') + '" style="margin-left:auto;margin-right:8px;font-size:13px;padding:5px 12px;background:' + (porFecha ? '#1e3a5f;color:#fff' : '#f5f5f7;color:#1e3a5f') + ';border:1px solid var(--border);border-radius:7px;cursor:pointer;font-weight:600;white-space:nowrap">' + (porFecha ? '📦 Por material' : '📅 Por fecha') + '</button>' +
+            '<button id="cic-todo-btn" onclick="sapCicExpandirTodo(this)" style="font-size:13px;padding:5px 12px;background:#f5f5f7;color:#1e3a5f;border:1px solid var(--border);border-radius:7px;cursor:pointer;font-weight:600;white-space:nowrap">⊞ Expandir todo</button>' +
         '</div>' +
         '<div class="table-wrapper" style="flex:1;overflow-y:auto;min-height:0;margin-top:0">' +
         '<table class="sap-tbl sap-tbl-compact"><thead style="position:sticky;top:0;z-index:2"><tr>' +
-        '<th style="padding:2px 4px">Material</th>' +
+        '<th style="padding:2px 4px">' + (porFecha ? 'Fecha / Material' : 'Material') + '</th>' +
         '<th style="padding:2px 4px">UM</th>' +
         '<th class="num" style="padding:2px 4px">Cantidad</th>' +
         '<th class="num" style="padding:2px 4px">Costo $</th>' +
@@ -3836,6 +3884,26 @@ function _sapRenderPorCiclo(filteredRows, el, kpiHtml) {
             '</tbody>';
         // Filas de materiales en tbody separado (colapsable)
         html += '<tbody id="' + tbodyId + '"' + (collapsed ? ' style="display:none"' : '') + '>';
+        if (porFecha) {
+            var inicio = _cycleInicio(g.ciclo);
+            Object.keys(g.fechas).sort().forEach(function(fk) {
+                var x = g.fechas[fk];
+                var dia = _cicDiaTxt(x.fecha, inicio);
+                html += '<tr style="cursor:pointer;font-weight:700;border-top:1px solid #cbd5e1" data-dk="' + fk.replace(/"/g,'&quot;') + '" onclick="sapToggleMatFechas(this)" onmouseover="this.style.background=\'#eff6ff\'" onmouseout="this.style.background=\'\'">' +
+                    '<td style="padding:1px 4px 1px 6px">' +
+                        '<span class="mf-arr" style="display:inline-block;width:14px;color:#64748b;font-size:10px">▶</span>' +
+                        '<span style="font-weight:700;font-size:13.5px;color:#1e3a5f">' + x.fecha + '</span>' +
+                        (dia ? ' <span style="color:#64748b;font-size:12.5px;font-weight:600">&nbsp;·&nbsp; ' + dia + '</span>' : '') +
+                    '</td>' +
+                    '<td></td><td></td>' +
+                    '<td class="num" style="color:#065f46;padding:1px 4px;font-size:13.5px">$' + _sapFmt2(x.costo) + '</td>' +
+                    '<td class="num" style="padding:1px 4px;font-size:13.5px">' + (g.ps > 0 ? '$' + _sapFmt2(x.costo / g.ps) : '—') + '</td>' +
+                    '<td></td>' +
+                    '</tr>';
+            });
+            html += '</tbody>';
+            return;
+        }
         Object.values(g.mats).sort(function(a,b) { return b.costo - a.costo; }).forEach(function(m) {
             var mHaDia = g.ps > 0 ? m.costo / (g.ps * diasCiclo) : null;
             var dk = g.cid + '||' + (m.code || '(sin código)');
